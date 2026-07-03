@@ -315,7 +315,10 @@ export default function DiscordDarkModeColorsPage() {
                     Always run text pairs through a{' '}
                     <InlineTagLink href="/tools/contrast-checker">WCAG contrast checker</InlineTagLink>: #B5BAC1 secondary text on #313338 passes for large labels but may fail for 14px body copy depending on font weight. Bump to #DBDEE1 or #F2F3F5 when audit tools flag failures. For neutral anchors beyond Discord&apos;s warm gray, see our{' '}
                     <InlineTagLink href="/blog/charcoal-hex-code">charcoal color code</InlineTagLink> reference and broader{' '}
-                    <InlineTagLink href="/blog/dark-mode-color-palette">dark mode color palette</InlineTagLink> guide.
+                    <InlineTagLink href="/blog/dark-mode-color-palette">dark mode color palette</InlineTagLink> guide. Comparing other app themes? See{' '}
+                    <InlineTagLink href="/blog/spotify-dark-mode-colors">Spotify dark mode colors</InlineTagLink>,{' '}
+                    <InlineTagLink href="/blog/notion-dark-mode-colors">Notion dark mode colors</InlineTagLink>, and{' '}
+                    <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram dark mode colors</InlineTagLink>.
                   </p>
                 </div>
 

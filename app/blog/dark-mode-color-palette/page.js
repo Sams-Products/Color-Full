@@ -330,6 +330,12 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/discord-dark-mode-colors">Discord dark mode colors</InlineTagLink>
                     {' · '}
+                    <InlineTagLink href="/blog/spotify-dark-mode-colors">Spotify dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/notion-dark-mode-colors">Notion dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram dark mode colors</InlineTagLink>
+                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>

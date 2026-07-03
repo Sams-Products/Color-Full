@@ -38,6 +38,9 @@ const CARD_PALETTES = {
   'lavender-hex-code': ['#e6e6fa', '#b57edc', '#9370db', '#734f96', '#4b0082'],
   'pink-purple-color-name': ['#ff69b4', '#ff00ff', '#e0b0ff', '#9966cc', '#374151'],
   'discord-dark-mode-colors': ['#313338', '#2b2d31', '#1e1f22', '#dbdee1', '#5865f2'],
+  'spotify-dark-mode-colors': ['#121212', '#181818', '#282828', '#1db954', '#b3b3b3'],
+  'notion-dark-mode-colors': ['#191919', '#202020', '#2f2f2f', '#e6e6e6', '#2383e2'],
+  'instagram-dark-mode-colors': ['#000000', '#121212', '#262626', '#0095f6', '#dd2a7b'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -185,10 +188,10 @@ const staticPosts = [
   },
   {
     _id: '15',
-    title: 'Sage Green Hex Code #B2AC88 — Copy for Canva',
+    title: 'Sage Green Hex Code #B2AC88 — 10 Shades + Canva',
     slug: { current: 'sage-green-hex-code' },
     excerpt:
-      'Sage green hex code #B2AC88 · RGB(178,172,136). Copy for Canva, CSS & Figma. 10 sage shades + dark sage codes. Free one-click copy.',
+      'Sage green hex code #B2AC88 (RGB 178,172,136) plus 10 sage shades, dark & light sage codes, palette pairings & step-by-step Canva instructions.',
     publishedAt: '2026-05-11',
   },
   {
@@ -339,6 +342,30 @@ const staticPosts = [
     excerpt:
       'Discord dark mode hex codes: background #313338, dark #2B2D31, darker #1E1F22, darkest #111214. Copy all Discord dark theme colors instantly.',
     publishedAt: '2026-06-05',
+  },
+  {
+    _id: '40',
+    title: 'Spotify Dark Mode Colors: Every Hex Code (#121212 & Green)',
+    slug: { current: 'spotify-dark-mode-colors' },
+    excerpt:
+      'Spotify dark mode hex codes: background #121212, cards #181818, elevated #282828, green #1DB954, text #FFFFFF. Copy every Spotify UI color instantly.',
+    publishedAt: '2026-07-02',
+  },
+  {
+    _id: '41',
+    title: 'Notion Dark Mode Colors: Every Hex Code (#191919 & Blue)',
+    slug: { current: 'notion-dark-mode-colors' },
+    excerpt:
+      'Notion dark mode hex codes: background #191919, sidebar #202020, hover #2F2F2F, text #E6E6E6, blue #2383E2. Copy every Notion dark theme color.',
+    publishedAt: '2026-07-02',
+  },
+  {
+    _id: '42',
+    title: 'Instagram Dark Mode Colors: Every Hex Code (#000000 & Gradient)',
+    slug: { current: 'instagram-dark-mode-colors' },
+    excerpt:
+      'Instagram dark mode hex codes: background #000000, surface #121212, blue #0095F6, plus the story-ring gradient. Copy every Instagram color instantly.',
+    publishedAt: '2026-07-02',
   },
 ];
 

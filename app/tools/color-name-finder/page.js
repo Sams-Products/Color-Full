@@ -52,6 +52,18 @@ const faqSchema = buildFaqSchema([
     text: 'Hex #B2AC88 is closest to sage green—a muted gray-green with RGB(178, 172, 136). Designers use it for wellness, organic food, and lifestyle palettes.',
   },
   {
+    name: 'What is the closest color name to #E2725B?',
+    text: 'Hex #E2725B is terracotta—a warm clay orange with RGB(226, 114, 91). It pairs well with sage green and cream in earthy, editorial palettes.',
+  },
+  {
+    name: 'What is the closest color name to #000080?',
+    text: 'Hex #000080 is the CSS named color navy. In RGB it is (0, 0, 128)—a deep blue used for corporate, nautical, and trust-focused branding.',
+  },
+  {
+    name: 'What is the closest color name to #313338?',
+    text: 'Hex #313338 is a dark gray-violet—best known as the Discord dark mode background. In RGB it is (49, 51, 56), close to CSS darkslategray.',
+  },
+  {
     name: 'Can I find a color name from RGB values?',
     text: 'Convert RGB to hex first, then paste into the finder. The tool outputs RGB, HSL, and CMYK from the same hex so developers and print vendors stay aligned.',
   },
@@ -97,7 +109,7 @@ export default function ColorNameFinderPage() {
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Popular Hex Codes &amp; Color Names</h2>
-            <ul className="space-y-2 leading-relaxed">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 leading-relaxed">
               <li>
                 <strong className="text-gray-900 dark:text-white">#228B22</strong> — forestgreen (forest green)
               </li>
@@ -113,12 +125,32 @@ export default function ColorNameFinderPage() {
               <li>
                 <strong className="text-gray-900 dark:text-white">#F97316</strong> — sunset orange
               </li>
+              <li>
+                <strong className="text-gray-900 dark:text-white">#000080</strong> — navy
+              </li>
+              <li>
+                <strong className="text-gray-900 dark:text-white">#800020</strong> — burgundy
+              </li>
+              <li>
+                <strong className="text-gray-900 dark:text-white">#E6E6FA</strong> — lavender
+              </li>
+              <li>
+                <strong className="text-gray-900 dark:text-white">#313338</strong> — Discord dark gray
+              </li>
+              <li>
+                <strong className="text-gray-900 dark:text-white">#1DB954</strong> — Spotify green
+              </li>
             </ul>
             <p className="mt-4 leading-relaxed">
               See full shade tables on our{' '}
               <InlineTagLink href="/blog/sage-green-hex-code">sage green</InlineTagLink>,{' '}
-              <InlineTagLink href="/blog/forest-green-hex-code">forest green</InlineTagLink>, and{' '}
-              <InlineTagLink href="/blog/sunset-color-palette">sunset palette</InlineTagLink> guides.
+              <InlineTagLink href="/blog/forest-green-hex-code">forest green</InlineTagLink>,{' '}
+              <InlineTagLink href="/blog/navy-blue-hex-code">navy blue</InlineTagLink>,{' '}
+              <InlineTagLink href="/blog/burgundy-hex-code">burgundy</InlineTagLink>, and{' '}
+              <InlineTagLink href="/blog/sunset-color-palette">sunset palette</InlineTagLink> guides. Matching an app UI? Try our{' '}
+              <InlineTagLink href="/blog/discord-dark-mode-colors">Discord</InlineTagLink>,{' '}
+              <InlineTagLink href="/blog/spotify-dark-mode-colors">Spotify</InlineTagLink>, and{' '}
+              <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram</InlineTagLink> dark mode color guides.
             </p>
           </section>
 

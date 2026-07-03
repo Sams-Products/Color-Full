@@ -22,9 +22,9 @@ const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sage-green-hex-code',
-  title: 'Sage Green Hex Code #B2AC88 — Copy for Canva',
+  title: 'Sage Green Hex Code #B2AC88 — 10 Shades + Canva',
   description:
-    'Sage green hex code #B2AC88 · RGB(178,172,136). Copy sage green color code for Canva, CSS & Figma. 10 shades + dark sage codes. Free one-click copy.',
+    'Sage green hex code #B2AC88 (RGB 178,172,136) plus 10 sage shades, dark & light sage codes, palette pairings & step-by-step Canva instructions. Copy free.',
   keywords: [
     'sage green hex code',
     'sage green hex code canva',
@@ -53,8 +53,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Sage Green Hex Code #B2AC88 — Copy for Canva',
-  'Sage green hex code #B2AC88 · RGB(178,172,136). Copy sage green color code for Canva, CSS & Figma. 10 shades + dark sage codes. Free one-click copy.',
+  'Sage Green Hex Code #B2AC88 — 10 Shades + Canva',
+  'Sage green hex code #B2AC88 (RGB 178,172,136) plus 10 sage shades, dark & light sage codes, palette pairings & step-by-step Canva instructions. Copy free.',
   'sage-green-hex-code',
   getBlogArticleDatePublished('sage-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

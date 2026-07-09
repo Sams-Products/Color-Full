@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/tools" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
-                  Toolss
+                  Tools
                 </Link>
               </li>
               <li>

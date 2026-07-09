@@ -41,6 +41,8 @@ const CARD_PALETTES = {
   'spotify-dark-mode-colors': ['#121212', '#181818', '#282828', '#1db954', '#b3b3b3'],
   'notion-dark-mode-colors': ['#191919', '#202020', '#2f2f2f', '#e6e6e6', '#2383e2'],
   'instagram-dark-mode-colors': ['#000000', '#121212', '#262626', '#0095f6', '#dd2a7b'],
+  'slack-dark-mode-colors': ['#1a1d21', '#22252a', '#2c2d30', '#1d9bd1', '#d1d2d3'],
+  'whatsapp-dark-mode-colors': ['#111b21', '#202c33', '#2a3942', '#25d366', '#e9edef'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -92,10 +94,10 @@ const staticPosts = [
   },
   {
     _id: '12',
-    title: 'Forest Green Hex Code #228B22 — Copy RGB Code & Shades',
+    title: 'Forest Green Hex Code #228B22 — 10 Shades + Canva',
     slug: { current: 'forest-green-hex-code' },
     excerpt:
-      'Forest green hex code #228B22 · RGB(34,139,34). Copy forest green color code, 10 shades, Canva code & palette pairings. One-click copy.',
+      'Forest green hex code #228B22 (RGB 34,139,34) plus 10 shades, dark UI greens, palette pairings & Canva steps. Copy free.',
     publishedAt: '2026-04-11',
   },
   {
@@ -366,6 +368,22 @@ const staticPosts = [
     excerpt:
       'Instagram dark mode hex codes: background #000000, surface #121212, blue #0095F6, plus the story-ring gradient. Copy every Instagram color instantly.',
     publishedAt: '2026-07-02',
+  },
+  {
+    _id: '43',
+    title: 'Slack Dark Mode Colors: Every Hex Code (#1A1D21 & Blue)',
+    slug: { current: 'slack-dark-mode-colors' },
+    excerpt:
+      'Slack dark mode hex codes: background #1A1D21, sidebar #22252A, hover #2C2D30, blue #1D9BD1. Copy every Slack dark theme color instantly.',
+    publishedAt: '2026-07-09',
+  },
+  {
+    _id: '44',
+    title: 'WhatsApp Dark Mode Colors: Every Hex Code (#111B21 & Green)',
+    slug: { current: 'whatsapp-dark-mode-colors' },
+    excerpt:
+      'WhatsApp dark mode hex codes: background #111B21, panel #202C33, green #25D366, text #E9EDEF. Copy every WhatsApp UI color instantly.',
+    publishedAt: '2026-07-09',
   },
 ];
 

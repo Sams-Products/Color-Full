@@ -336,6 +336,10 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram dark mode colors</InlineTagLink>
                     {' · '}
+                    <InlineTagLink href="/blog/slack-dark-mode-colors">Slack dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/whatsapp-dark-mode-colors">WhatsApp dark mode colors</InlineTagLink>
+                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>

@@ -31,7 +31,7 @@ const homeToolCards = [
 const featuredPalettes = [
   { id: 1, name: 'Ocean Breeze', colors: ['#0EA5E9', '#06B6D4', '#14B8A6', '#10B981'], slug: 'ocean-breeze' },
   { id: 2, name: 'Sunset Vibes', colors: ['#F97316', '#EF4444', '#EC4899', '#8B5CF6'], slug: 'sunset-vibes' },
-  { id: 3, name: 'Forest Green', colors: ['#228B22', '#166534', '#15803D', '#86EFAC', '#DCFCE7'], slug: 'forest-green' },
+  { id: 3, name: 'Forest Green', colors: ['#228B22', '#166534', '#15803D', '#86EFAC', '#DCFCE7'], slug: 'forest-green-hex-code' },
   { id: 4, name: 'Purple Dream', colors: ['#7C3AED', '#8B5CF6', '#A78BFA', '#C4B5FD', '#EDE9FE'], slug: 'purple-dream' },
 ];
 
@@ -67,16 +67,9 @@ const latestPosts = [
   },
   {
     id: 5,
-    title: 'Forest Green Color Palette: Hex Codes, Shades & Pairings',
-    slug: 'forest-green',
-    palette: ['#228B22', '#166534', '#15803D', '#86EFAC', '#DCFCE7'],
-    publishedAt: '2025-02-11',
-  },
-  {
-    id: 6,
-    title: 'Forest Green Hex Code: #228B22, RGB & UI greens (copy-paste)',
+    title: 'Forest Green Hex Code #228B22 — 10 Shades + Canva',
     slug: 'forest-green-hex-code',
-    palette: ['#228b22', '#065f46', '#047857', '#10b981', '#34d399'],
+    palette: ['#228B22', '#166534', '#15803D', '#86EFAC', '#DCFCE7'],
     publishedAt: '2026-04-11',
   },
   {

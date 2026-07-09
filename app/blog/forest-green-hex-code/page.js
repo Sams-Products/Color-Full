@@ -20,13 +20,13 @@ import {
   ForestGreenFormatCodesSection,
 } from './ForestGreenHexLead';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-07-09T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/forest-green-hex-code',
-  title: 'Forest Green Hex Code #228B22 — Copy for Canva',
+  title: 'Forest Green Hex Code #228B22 — 10 Shades + Canva',
   description:
-    'Forest green hex code #228B22 · RGB(34,139,34). Copy forest green color code for Canva, CSS & Figma. 10 shades, RGB & palette pairings.',
+    'Forest green hex code #228B22 (RGB 34,139,34) plus 10 forest green shades, dark UI greens, palette pairings & step-by-step Canva instructions. Copy free.',
   keywords: ['forest green hex', '#228B22', 'green shades', 'RGB', 'HSL', 'palette', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
@@ -38,8 +38,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Forest Green Hex Code #228B22 — Copy for Canva',
-  'Forest green hex code #228B22 · RGB(34,139,34). Copy forest green color code for Canva, CSS & Figma. 10 shades, RGB & palette pairings.',
+  'Forest Green Hex Code #228B22 — 10 Shades + Canva',
+  'Forest green hex code #228B22 (RGB 34,139,34) plus 10 forest green shades, dark UI greens, palette pairings & step-by-step Canva instructions. Copy free.',
   'forest-green-hex-code',
   getBlogArticleDatePublished('forest-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

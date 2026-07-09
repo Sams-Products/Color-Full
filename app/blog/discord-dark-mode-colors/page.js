@@ -318,7 +318,9 @@ export default function DiscordDarkModeColorsPage() {
                     <InlineTagLink href="/blog/dark-mode-color-palette">dark mode color palette</InlineTagLink> guide. Comparing other app themes? See{' '}
                     <InlineTagLink href="/blog/spotify-dark-mode-colors">Spotify dark mode colors</InlineTagLink>,{' '}
                     <InlineTagLink href="/blog/notion-dark-mode-colors">Notion dark mode colors</InlineTagLink>, and{' '}
-                    <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram dark mode colors</InlineTagLink>.
+                    <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram dark mode colors</InlineTagLink>, plus{' '}
+                    <InlineTagLink href="/blog/slack-dark-mode-colors">Slack</InlineTagLink> and{' '}
+                    <InlineTagLink href="/blog/whatsapp-dark-mode-colors">WhatsApp</InlineTagLink> dark palettes.
                   </p>
                 </div>
 

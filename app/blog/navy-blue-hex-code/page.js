@@ -15,15 +15,16 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import NavyBlueHexCopyBox from './NavyBlueHexCopyBox';
 
-const LAST_MODIFIED = '2026-06-15T00:00:00.000Z';
+const LAST_MODIFIED = '2026-07-09T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/navy-blue-hex-code',
-  title: 'Navy Blue Hex Code #000080 — Copy Color Code & Shades',
+  title: 'Navy Blue Hex Code #000080 — 10 Shades + Palettes',
   description:
-    'Navy blue hex code is #000080 (RGB 0, 0, 128). Copy navy color code instantly. 10 navy shades, gold & white pairings, palette schemes. One-click copy.',
+    'Navy blue hex code #000080 (RGB 0,0,128) plus 10 navy shades, gold & white pairings, 6 complete palette schemes & Canva steps. Copy free.',
   keywords: [
     'navy blue hex',
     'navy hex code',
@@ -43,8 +44,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Navy Blue Hex Code: #000080 — Copy Code, Shades & Palettes',
-  'Navy blue hex code is #000080. Copy it instantly, explore 10 shades from light to dark, and see palette pairings for web and brand design.',
+  'Navy Blue Hex Code #000080 — 10 Shades + Palettes',
+  'Navy blue hex code #000080 (RGB 0,0,128) plus 10 navy shades, gold & white pairings, 6 complete palette schemes & Canva steps. Copy free.',
   'navy-blue-hex-code',
   getBlogArticleDatePublished('navy-blue-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -167,8 +168,16 @@ export default function NavyBlueHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Navy Blue Hex Code: #000080 — Copy Code, Shades & Palettes
+              Navy Blue Hex Code: #000080
             </h1>
+            <AeoDirectAnswer
+              question="What is the navy blue hex code?"
+              answer="The navy blue hex code is #000080 — RGB(0, 0, 128). This is the canonical web navy used in corporate, nautical, and trust-focused branding. Copy it plus 10 shades and palette pairings below."
+              codes={[
+                { label: 'Hex', value: '#000080' },
+                { label: 'RGB', value: '0, 0, 128' },
+              ]}
+            />
             <p className="text-blue-100/95 text-lg md:text-xl max-w-3xl mb-5">
               Navy blue hex code is #000080 (RGB 0, 0, 128). Copy it below.
             </p>

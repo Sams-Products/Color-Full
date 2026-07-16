@@ -17,13 +17,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-07-16T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/terracotta-hex-code',
-  title: 'Terracotta Hex Code #E2725B — Copy for Canva',
+  title: 'Terracotta Hex Code #E2725B — 10 Shades + Canva',
   description:
-    'Terracotta hex code #E2725B · RGB(226,114,91). Copy terracotta color code for Canva, CSS & Figma. 10 shades, sage pairings. One-click copy.',
+    'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva steps. Copy free.',
   keywords: ['terracotta hex code', 'terracotta color code', 'terracotta hex', '#E2725B', 'terracotta shades', 'palette', 'UI color', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
@@ -32,8 +32,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Terracotta Hex Code #E2725B — Copy for Canva',
-  'Terracotta hex code #E2725B · RGB(226,114,91). Copy terracotta color code for Canva, CSS & Figma. 10 shades, sage pairings. One-click copy.',
+  'Terracotta Hex Code #E2725B — 10 Shades + Canva',
+  'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva steps. Copy free.',
   'terracotta-hex-code',
   getBlogArticleDatePublished('terracotta-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

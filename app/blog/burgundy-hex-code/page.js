@@ -12,16 +12,17 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import CopyableHex from '../forest-green-hex-code/CopyableHex';
 import { BurgundyQuickAnswer, BurgundyShadesTable } from './BurgundyHexLead';
 
-const LAST_MODIFIED = '2026-06-15T00:00:00.000Z';
+const LAST_MODIFIED = '2026-07-16T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/burgundy-hex-code',
-  title: 'Burgundy Hex Code #800020 — Copy Color Code & Shades',
+  title: 'Burgundy Hex Code #800020 — 10 Shades + Palettes',
   description:
-    'Burgundy hex code is #800020 (RGB 128, 0, 32). Copy burgundy color code instantly. 8 shades, gold & cream pairings, wine red palette. One-click copy.',
+    'Burgundy hex code #800020 (RGB 128,0,32) plus 10 wine-to-oxblood shades, gold & cream pairings, luxury palette schemes. Copy free.',
   keywords: ['burgundy hex code', 'burgundy color code', 'burgundy hex', '#800020', 'burgundy shades', 'wine red', 'RGB', 'HSL', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
@@ -30,8 +31,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Burgundy Hex Code #800020 — Copy Color Code & Shades',
-  'Burgundy hex code is #800020 (RGB 128, 0, 32). Copy burgundy color code instantly. 8 shades, gold & cream pairings, wine red palette. One-click copy.',
+  'Burgundy Hex Code #800020 — 10 Shades + Palettes',
+  'Burgundy hex code #800020 (RGB 128,0,32) plus 10 wine-to-oxblood shades, gold & cream pairings, luxury palette schemes. Copy free.',
   'burgundy-hex-code',
   getBlogArticleDatePublished('burgundy-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -141,8 +142,16 @@ export default function BurgundyHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Burgundy Hex Code: #800020 — Shades, Palettes &amp; Copy-Paste
+              Burgundy Hex Code: #800020
             </h1>
+            <AeoDirectAnswer
+              question="What is the burgundy hex code?"
+              answer="The burgundy hex code is #800020 — RGB(128, 0, 32). Copy 10 wine-to-oxblood shades, gold and cream pairings, and luxury palette schemes below."
+              codes={[
+                { label: 'Hex', value: '#800020' },
+                { label: 'RGB', value: '128, 0, 32' },
+              ]}
+            />
             <p className="text-rose-100/95 text-lg max-w-3xl mb-6">
               Burgundy hex code is <strong className="text-white font-semibold">#800020</strong> (RGB 128, 0, 32). Copy ten wine-to-oxblood shades, four palette pairings with gold and navy, and branding notes below.
             </p>

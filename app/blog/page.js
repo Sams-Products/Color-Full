@@ -43,6 +43,8 @@ const CARD_PALETTES = {
   'instagram-dark-mode-colors': ['#000000', '#121212', '#262626', '#0095f6', '#dd2a7b'],
   'slack-dark-mode-colors': ['#1a1d21', '#22252a', '#2c2d30', '#1d9bd1', '#d1d2d3'],
   'whatsapp-dark-mode-colors': ['#111b21', '#202c33', '#2a3942', '#25d366', '#e9edef'],
+  'youtube-dark-mode-colors': ['#0f0f0f', '#212121', '#272727', '#ff0000', '#aaaaaa'],
+  'vscode-dark-mode-colors': ['#1e1e1e', '#252526', '#333333', '#007acc', '#d4d4d4'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -158,10 +160,10 @@ const staticPosts = [
   },
   {
     _id: '21',
-    title: 'Burgundy Hex Code: #800020 — Shades, Palettes & Copy-Paste',
+    title: 'Burgundy Hex Code #800020 — 10 Shades + Palettes',
     slug: { current: 'burgundy-hex-code' },
     excerpt:
-      'Burgundy hex code is #800020. Copy burgundy shades, pairings with gold, cream and navy, and branding examples for wine and luxury design.',
+      'Burgundy hex code #800020 (RGB 128,0,32) plus 10 wine-to-oxblood shades, gold & cream pairings, luxury palette schemes.',
     publishedAt: '2026-05-21',
   },
   {
@@ -198,10 +200,10 @@ const staticPosts = [
   },
   {
     _id: '16',
-    title: 'Terracotta Hex Code: #E2725B — Shades, Palettes & UI Examples',
+    title: 'Terracotta Hex Code #E2725B — 10 Shades + Canva',
     slug: { current: 'terracotta-hex-code' },
     excerpt:
-      'Terracotta hex code is #E2725B. Copy hex codes for terracotta shades, see palette pairings with sage, cream and navy, and explore branding and UI examples.',
+      'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva steps.',
     publishedAt: '2026-05-12',
   },
   {
@@ -384,6 +386,22 @@ const staticPosts = [
     excerpt:
       'WhatsApp dark mode hex codes: background #111B21, panel #202C33, green #25D366, text #E9EDEF. Copy every WhatsApp UI color instantly.',
     publishedAt: '2026-07-09',
+  },
+  {
+    _id: '45',
+    title: 'YouTube Dark Mode Colors: Every Hex Code (#0F0F0F & Red)',
+    slug: { current: 'youtube-dark-mode-colors' },
+    excerpt:
+      'YouTube dark mode hex codes: background #0F0F0F, elevated #212121, text #FFFFFF, red #FF0000. Copy every YouTube dark theme color.',
+    publishedAt: '2026-07-16',
+  },
+  {
+    _id: '46',
+    title: 'VS Code Dark Mode Colors: Every Hex Code (#1E1E1E & Blue)',
+    slug: { current: 'vscode-dark-mode-colors' },
+    excerpt:
+      'VS Code dark mode hex codes: editor #1E1E1E, sidebar #252526, activity bar #333333, blue #007ACC. Copy every Dark+ color.',
+    publishedAt: '2026-07-16',
   },
 ];
 

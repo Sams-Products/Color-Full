@@ -340,6 +340,10 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/whatsapp-dark-mode-colors">WhatsApp dark mode colors</InlineTagLink>
                     {' · '}
+                    <InlineTagLink href="/blog/youtube-dark-mode-colors">YouTube dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/vscode-dark-mode-colors">VS Code dark mode colors</InlineTagLink>
+                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>

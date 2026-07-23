@@ -344,6 +344,10 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/vscode-dark-mode-colors">VS Code dark mode colors</InlineTagLink>
                     {' · '}
+                    <InlineTagLink href="/blog/github-dark-mode-colors">GitHub dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/figma-dark-mode-colors">Figma dark mode colors</InlineTagLink>
+                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>

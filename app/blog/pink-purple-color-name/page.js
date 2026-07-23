@@ -14,13 +14,13 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 
-const LAST_MODIFIED = '2026-06-19T00:00:00.000Z';
+const LAST_MODIFIED = '2026-07-23T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/pink-purple-color-name',
-  title: 'Pink Purple Color Name: Mauve, Magenta (#E0B0FF)',
+  title: 'Pink Purple Color Name — Mauve #E0B0FF + Magenta',
   description:
-    'Pink purple color name: mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. What color is between pink and purple? Copy all hex codes instantly.',
+    'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. Copy every pink-purple hex name instantly.',
   keywords: [
     'color between pink and purple',
     'what color is between pink and purple',
@@ -39,8 +39,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Pink Purple Color Name: Mauve, Magenta (#E0B0FF)',
-  'Pink purple color name: mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. What color is between pink and purple? Copy all hex codes instantly.',
+  'Pink Purple Color Name — Mauve #E0B0FF + Magenta',
+  'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. Copy every pink-purple hex name instantly.',
   'pink-purple-color-name',
   getBlogArticleDatePublished('pink-purple-color-name'),
   BLOG_ARTICLE_DATE_MODIFIED

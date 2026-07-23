@@ -45,6 +45,8 @@ const CARD_PALETTES = {
   'whatsapp-dark-mode-colors': ['#111b21', '#202c33', '#2a3942', '#25d366', '#e9edef'],
   'youtube-dark-mode-colors': ['#0f0f0f', '#212121', '#272727', '#ff0000', '#aaaaaa'],
   'vscode-dark-mode-colors': ['#1e1e1e', '#252526', '#333333', '#007acc', '#d4d4d4'],
+  'github-dark-mode-colors': ['#0d1117', '#161b22', '#30363d', '#2f81f7', '#e6edf3'],
+  'figma-dark-mode-colors': ['#2c2c2c', '#1e1e1e', '#383838', '#0d99ff', '#9747ff'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -333,10 +335,10 @@ const staticPosts = [
   },
   {
     _id: '32',
-    title: 'Pink Purple Color Name: Mauve, Magenta (#E0B0FF)',
+    title: 'Pink Purple Color Name — Mauve #E0B0FF + Magenta',
     slug: { current: 'pink-purple-color-name' },
     excerpt:
-      'Pink purple color name: mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. What color is between pink and purple? Copy all hex codes instantly.',
+      'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. Copy every pink-purple hex name instantly.',
     publishedAt: '2026-06-05',
   },
   {
@@ -402,6 +404,22 @@ const staticPosts = [
     excerpt:
       'VS Code dark mode hex codes: editor #1E1E1E, sidebar #252526, activity bar #333333, blue #007ACC. Copy every Dark+ color.',
     publishedAt: '2026-07-16',
+  },
+  {
+    _id: '47',
+    title: 'GitHub Dark Mode Colors: Every Hex Code (#0D1117 & Blue)',
+    slug: { current: 'github-dark-mode-colors' },
+    excerpt:
+      'GitHub dark mode hex codes: background #0D1117, canvas #161B22, border #30363D, accent #2F81F7. Copy every GitHub dark theme color.',
+    publishedAt: '2026-07-23',
+  },
+  {
+    _id: '48',
+    title: 'Figma Dark Mode Colors: Every Hex Code (#2C2C2C & Blue)',
+    slug: { current: 'figma-dark-mode-colors' },
+    excerpt:
+      'Figma dark mode hex codes: toolbar #2C2C2C, panels #1E1E1E, blue #0D99FF, component purple #9747FF. Copy every Figma UI color.',
+    publishedAt: '2026-07-23',
   },
 ];
 

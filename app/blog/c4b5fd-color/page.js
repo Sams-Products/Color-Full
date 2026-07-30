@@ -11,16 +11,17 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-11T00:00:00.000Z';
+const LAST_MODIFIED = '2026-07-30T00:00:00.000Z';
 
 const HEX = '#C4B5FD';
 
 export const metadata = buildPageMetadata({
   path: '/blog/c4b5fd-color',
-  title: '#C4B5FD Color: Soft Lavender Purple — Name, RGB & Palettes',
+  title: '#C4B5FD Color Name — Soft Lavender (Copy Hex + RGB)',
   description:
-    '#C4B5FD is soft lavender purple (Tailwind purple-300). RGB(196,181,253) · HSL(252,93%,85%). Copy hex code, see similar colors and palette pairings.',
+    '#C4B5FD is soft lavender purple (Tailwind purple-300). RGB(196,181,253). Copy hex, RGB, similar shades & palette pairings free.',
   keywords: [
     'c4b5fd',
     'c4b5fd color',
@@ -39,8 +40,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  '#C4B5FD Color: Soft Lavender Purple — Name, RGB & Palettes',
-  '#C4B5FD is soft lavender purple (Tailwind purple-300). RGB(196,181,253) · HSL(252,93%,85%). Copy hex code, see similar colors and palette pairings.',
+  '#C4B5FD Color Name — Soft Lavender (Copy Hex + RGB)',
+  '#C4B5FD is soft lavender purple (Tailwind purple-300). RGB(196,181,253). Copy hex, RGB, similar shades & palette pairings free.',
   'c4b5fd-color',
   getBlogArticleDatePublished('c4b5fd-color'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -181,8 +182,17 @@ export default function C4B5fdColorPage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-violet-950">
-              #C4B5FD Color: Soft Lavender Purple — Name, RGB &amp; Palettes
+              #C4B5FD Color Name: Soft Lavender Purple
             </h1>
+            <AeoDirectAnswer
+              question="What color is #C4B5FD?"
+              answer="#C4B5FD is a soft lavender purple—Tailwind CSS purple-300. RGB(196, 181, 253). Copy the hex, RGB, similar shades, and palette pairings below."
+              codes={[
+                { label: 'Hex', value: '#C4B5FD' },
+                { label: 'RGB', value: '196, 181, 253' },
+                { label: 'Name', value: 'lavender purple' },
+              ]}
+            />
             <p className="text-violet-900/90 text-lg max-w-3xl mb-6">
               You found <strong className="font-semibold">#C4B5FD</strong> in Figma, Tailwind, or a codebase—here is the{' '}
               <strong className="font-semibold">c4b5fd color</strong> name, RGB values, similar swatches, and palette pairings.
@@ -193,7 +203,7 @@ export default function C4B5fdColorPage() {
               aria-label="Large swatch of color C4B5FD lavender purple"
             />
             <div className="flex items-center gap-4 text-violet-900/80 text-sm">
-              <time dateTime="2026-06-11">Updated June 11, 2026</time>
+              <time dateTime="2026-07-30">Updated July 30, 2026</time>
               <span>•</span>
               <span>6 min read</span>
             </div>

@@ -348,6 +348,10 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/figma-dark-mode-colors">Figma dark mode colors</InlineTagLink>
                     {' · '}
+                    <InlineTagLink href="/blog/chrome-dark-mode-colors">Chrome dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/telegram-dark-mode-colors">Telegram dark mode colors</InlineTagLink>
+                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>

@@ -47,6 +47,8 @@ const CARD_PALETTES = {
   'vscode-dark-mode-colors': ['#1e1e1e', '#252526', '#333333', '#007acc', '#d4d4d4'],
   'github-dark-mode-colors': ['#0d1117', '#161b22', '#30363d', '#2f81f7', '#e6edf3'],
   'figma-dark-mode-colors': ['#2c2c2c', '#1e1e1e', '#383838', '#0d99ff', '#9747ff'],
+  'chrome-dark-mode-colors': ['#202124', '#292a2d', '#3c4043', '#8ab4f8', '#e8eaed'],
+  'telegram-dark-mode-colors': ['#0e1621', '#17212b', '#182533', '#2aabee', '#2b5278'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -319,10 +321,10 @@ const staticPosts = [
   },
   {
     _id: '30',
-    title: '#C4B5FD Color: Lavender Purple Hex Code — Name, RGB & Palettes',
+    title: '#C4B5FD Color Name — Soft Lavender (Copy Hex + RGB)',
     slug: { current: 'c4b5fd-color' },
     excerpt:
-      '#C4B5FD is a soft lavender purple color. Get the color name, RGB values, shades, and palette pairings for this purple hex code.',
+      '#C4B5FD is soft lavender purple (Tailwind purple-300). RGB(196,181,253). Copy hex, RGB, similar shades & palette pairings.',
     publishedAt: '2026-06-01',
   },
   {
@@ -420,6 +422,22 @@ const staticPosts = [
     excerpt:
       'Figma dark mode hex codes: toolbar #2C2C2C, panels #1E1E1E, blue #0D99FF, component purple #9747FF. Copy every Figma UI color.',
     publishedAt: '2026-07-23',
+  },
+  {
+    _id: '49',
+    title: 'Chrome Dark Mode Colors: Every Hex Code (#202124 & Blue)',
+    slug: { current: 'chrome-dark-mode-colors' },
+    excerpt:
+      'Chrome dark mode hex codes: background #202124, toolbar #292A2D, text #E8EAED, blue #8AB4F8. Copy every Chrome dark theme color.',
+    publishedAt: '2026-07-30',
+  },
+  {
+    _id: '50',
+    title: 'Telegram Dark Mode Colors: Every Hex Code (#0E1621 & Blue)',
+    slug: { current: 'telegram-dark-mode-colors' },
+    excerpt:
+      'Telegram dark mode hex codes: background #0E1621, bubbles #182533, accent #2AABEE. Copy every Telegram dark theme color.',
+    publishedAt: '2026-07-30',
   },
 ];
 

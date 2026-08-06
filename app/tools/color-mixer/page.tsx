@@ -4,15 +4,17 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/tools/color-mixer',
-  title: 'Color Mixing Simulator — What Color Do They Make?',
+  title: 'Color Mixer — What Color Do Red + Blue Make? (Free)',
   description:
-    'Mix any two colors and see the result instantly. Our color mixing simulator uses real paint color theory (RYB) to show you exactly what color red and blue make, yellow and blue make, and more.',
+    'Free color mixer: blend any two colors with RYB paint theory. Red + blue = purple, yellow + blue = green. See hex results instantly. No signup.',
   keywords: [
-    'color mixing',
-    'RYB',
-    'paint colors',
-    'hex mixer',
-    'what color makes',
+    'color mixer',
+    'color mixing simulator',
+    'what color do red and blue make',
+    'what color does yellow and blue make',
+    'RYB color mixer',
+    'mix two colors hex',
+    'paint color mixer',
     'Theme & Color',
   ],
   openGraph: {
@@ -141,7 +143,7 @@ export default function ColorMixerPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">Color Mixing Simulator</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">Color Mixer — What Color Do They Make?</h1>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             Use this color mixing simulator to mix colors instantly and see what colors make when blended like real
             paint. The tool uses the RYB color model so common mixes like blue and yellow produce green instead of

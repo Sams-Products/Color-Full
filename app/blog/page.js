@@ -49,6 +49,8 @@ const CARD_PALETTES = {
   'figma-dark-mode-colors': ['#2c2c2c', '#1e1e1e', '#383838', '#0d99ff', '#9747ff'],
   'chrome-dark-mode-colors': ['#202124', '#292a2d', '#3c4043', '#8ab4f8', '#e8eaed'],
   'telegram-dark-mode-colors': ['#0e1621', '#17212b', '#182533', '#2aabee', '#2b5278'],
+  'ios-dark-mode-colors': ['#000000', '#1c1c1e', '#2c2c2e', '#0a84ff', '#ffffff'],
+  'reddit-dark-mode-colors': ['#0b1416', '#1a1a1b', '#272729', '#ff4500', '#d7dadc'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -180,10 +182,10 @@ const staticPosts = [
   },
   {
     _id: '14',
-    title: 'Navy Blue Hex Code: #000080 — Shades, Palettes & Copy-Paste Codes',
+    title: 'Navy Blue Hex Code #000080 — Canva + 10 Shades',
     slug: { current: 'navy-blue-hex-code' },
     excerpt:
-      'Navy blue hex code is #000080. Copy hex codes for 10 navy shades, see palette pairings with gold, white and coral, and explore UI examples for web design.',
+      'Navy blue hex code #000080 (RGB 0,0,128) plus 10 navy shades, gold & white pairings, Canva steps & complete palette schemes.',
     publishedAt: '2026-05-10',
   },
   {
@@ -438,6 +440,22 @@ const staticPosts = [
     excerpt:
       'Telegram dark mode hex codes: background #0E1621, bubbles #182533, accent #2AABEE. Copy every Telegram dark theme color.',
     publishedAt: '2026-07-30',
+  },
+  {
+    _id: '51',
+    title: 'iOS Dark Mode Colors: Every Hex Code (#000000 & System Blue)',
+    slug: { current: 'ios-dark-mode-colors' },
+    excerpt:
+      'iOS dark mode hex codes: background #000000, secondary #1C1C1E, tertiary #2C2C2E, system blue #0A84FF. Copy every iOS system color.',
+    publishedAt: '2026-08-06',
+  },
+  {
+    _id: '52',
+    title: 'Reddit Dark Mode Colors: Every Hex Code (#0B1416 & Orange)',
+    slug: { current: 'reddit-dark-mode-colors' },
+    excerpt:
+      'Reddit dark mode hex codes: background #0B1416, cards #1A1A1B, orange #FF4500, text #D7DADC. Copy every Reddit UI color.',
+    publishedAt: '2026-08-06',
   },
 ];
 

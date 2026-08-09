@@ -91,13 +91,6 @@ export default function AboutPage() {
             </p>
           </section>
         </article>
-
-        {/* Ad Space Placeholder */}
-        <div className="mt-12 bg-white dark:bg-gray-800 rounded-lg p-8 border-2 border-dashed border-gray-300 dark:border-gray-700 text-center">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Ad Space (728x90)
-          </p>
-        </div>
       </div>
     </div>
   );

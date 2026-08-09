@@ -164,15 +164,6 @@ export default function BlogClient({ posts, cardPalettes = {} }) {
               </div>
             </motion.div>
           )}
-
-          {/* Ad Space Placeholder */}
-          {posts.length > 0 && (
-            <div className="mt-12 bg-white dark:bg-gray-900 rounded-xl p-8 border-2 border-dashed border-gray-300 dark:border-gray-700 text-center">
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
-                Ad Space (728x90)
-              </p>
-            </div>
-          )}
         </div>
       </section>
     </div>

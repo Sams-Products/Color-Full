@@ -146,18 +146,11 @@ export default function TermsPage() {
               If you have any questions about these Terms & Conditions, please contact us:
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              Email: contact@colortool.com<br />
+              Email: <a href="mailto:sams02092000@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">sams02092000@gmail.com</a><br />
               Visit our <a href="/contact" className="text-purple-600 dark:text-purple-400 hover:underline">Contact Us</a> page
             </p>
           </section>
         </article>
-
-        {/* Ad Space Placeholder */}
-        <div className="mt-12 bg-white dark:bg-gray-800 rounded-lg p-8 border-2 border-dashed border-gray-300 dark:border-gray-700 text-center">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Ad Space (728x90)
-          </p>
-        </div>
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ export default function PrivacyPage() {
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Information You Provide</h3>
                 <p className="mb-2">We may collect information that you voluntarily provide to us, including:</p>
                 <ul className="list-disc list-inside space-y-1 ml-4">
-                  <li>Contact information (name, email address) when you use our contact form</li>
+                  <li>Contact information (such as your name and email address) when you email us</li>
                   <li>Feedback and messages you send to us</li>
                 </ul>
               </div>
@@ -157,18 +157,11 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy, please contact us:
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              Email: contact@colortool.com<br />
+              Email: <a href="mailto:sams02092000@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">sams02092000@gmail.com</a><br />
               Visit our <a href="/contact" className="text-purple-600 dark:text-purple-400 hover:underline">Contact Us</a> page
             </p>
           </section>
         </article>
-
-        {/* Ad Space Placeholder */}
-        <div className="mt-12 bg-white dark:bg-gray-800 rounded-lg p-8 border-2 border-dashed border-gray-300 dark:border-gray-700 text-center">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Ad Space (728x90)
-          </p>
-        </div>
       </div>
     </div>
   );

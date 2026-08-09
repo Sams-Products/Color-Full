@@ -789,13 +789,6 @@ export default async function BlogPostPage({ params }) {
                     </button>
                   </div>
                 </div>
-
-                {/* Ad Space Placeholder */}
-                <div className="mt-8 bg-black dark:bg-gray-800 rounded-lg p-6 border border-dashed border-gray-300 dark:border-gray-700 text-center">
-                  <p className="text-white dark:text-gray-400 text-sm">
-                    Ad Space (728x90)
-                  </p>
-                </div>
               </div>
 
               {/* Sidebar */}

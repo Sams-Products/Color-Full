@@ -178,14 +178,6 @@ export default function ContrastCheckerPage() {
             <InlineTagLink href="/tools/color-mixer">Color Mixing Simulator</InlineTagLink> to see what colors produce when mixed together.
           </p>
         </div>
-
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-8 border-2 border-dashed border-gray-300 dark:border-gray-700 text-center">
-            <p className="text-gray-500 dark:text-gray-400 text-sm">
-              Ad Space (728x90)
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

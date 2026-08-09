@@ -461,19 +461,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Ad Space Placeholder (moved where Featured Tool was) */}
-      <section className="py-12 bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-8 border-2 border-dashed border-gray-300 dark:border-gray-700">
-              <p className="text-gray-700 dark:text-gray-400 text-sm">
-                Ad Space (728x90)
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Latest Blog Articles Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

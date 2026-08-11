@@ -88,6 +88,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Impact / Envato site verification — keep both content + value for crawler compatibility */}
+        <meta
+          name="impact-site-verification"
+          content="8340de90-3029-4cd1-a1e0-a9db72c8fb15"
+          value="8340de90-3029-4cd1-a1e0-a9db72c8fb15"
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8132341163936705"

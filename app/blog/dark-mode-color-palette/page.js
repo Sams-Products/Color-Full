@@ -356,6 +356,10 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/reddit-dark-mode-colors">Reddit dark mode colors</InlineTagLink>
                     {' · '}
+                    <InlineTagLink href="/blog/twitter-dark-mode-colors">X (Twitter) dark mode colors</InlineTagLink>
+                    {' · '}
+                    <InlineTagLink href="/blog/linkedin-dark-mode-colors">LinkedIn dark mode colors</InlineTagLink>
+                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>

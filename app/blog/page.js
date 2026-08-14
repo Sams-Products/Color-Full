@@ -51,6 +51,8 @@ const CARD_PALETTES = {
   'telegram-dark-mode-colors': ['#0e1621', '#17212b', '#182533', '#2aabee', '#2b5278'],
   'ios-dark-mode-colors': ['#000000', '#1c1c1e', '#2c2c2e', '#0a84ff', '#ffffff'],
   'reddit-dark-mode-colors': ['#0b1416', '#1a1a1b', '#272729', '#ff4500', '#d7dadc'],
+  'twitter-dark-mode-colors': ['#000000', '#16181c', '#2f3336', '#1d9bf0', '#e7e9ea'],
+  'linkedin-dark-mode-colors': ['#000000', '#1b1f23', '#38434f', '#70b5f9', '#ffffff'],
   'yellow-green-hex-code': ['#9acd32', '#7fff00', '#32cd32', '#000080', '#374151'],
   'dark-mode-color-palette': ['#121212', '#1e1e1e', '#3f3f46', '#f5f5f5', '#818cf8'],
   'navy-blue-color-palette': ['#000080', '#ffd700', '#ff6b6b', '#6ee7b7', '#f472b6'],
@@ -456,6 +458,22 @@ const staticPosts = [
     excerpt:
       'Reddit dark mode hex codes: background #0B1416, cards #1A1A1B, orange #FF4500, text #D7DADC. Copy every Reddit UI color.',
     publishedAt: '2026-08-06',
+  },
+  {
+    _id: '53',
+    title: 'X (Twitter) Dark Mode Colors: Every Hex Code (#000000 & Blue)',
+    slug: { current: 'twitter-dark-mode-colors' },
+    excerpt:
+      'X (Twitter) dark mode hex codes: Lights Out #000000, surfaces #16181C, text #E7E9EA, blue #1D9BF0. Copy every X UI color.',
+    publishedAt: '2026-08-15',
+  },
+  {
+    _id: '54',
+    title: 'LinkedIn Dark Mode Colors: Every Hex Code (#000000 & Blue)',
+    slug: { current: 'linkedin-dark-mode-colors' },
+    excerpt:
+      'LinkedIn dark mode hex codes: background #000000, surface #1B1F23, text #FFFFFF, blue #70B5F9. Copy every LinkedIn UI color.',
+    publishedAt: '2026-08-15',
   },
 ];
 

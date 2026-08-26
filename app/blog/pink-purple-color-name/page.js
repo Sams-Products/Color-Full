@@ -13,14 +13,15 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-07-23T00:00:00.000Z';
+const LAST_MODIFIED = '2026-08-26T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/pink-purple-color-name',
-  title: 'Pink Purple Color Name — Mauve #E0B0FF + Magenta',
+  title: 'What Color is Between Pink and Purple? 10 Names + Hex Codes',
   description:
-    'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. Copy every pink-purple hex name instantly.',
+    'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia, orchid & more. 10 pinkish-purple names with 1-click copy hex codes, palettes & Canva tips.',
   keywords: [
     'color between pink and purple',
     'what color is between pink and purple',
@@ -83,6 +84,16 @@ const PINK_PURPLE_PALETTES = [
     body: 'Orchid #DA70D6 navigation, amethyst #9966CC accents, cream #FFF8F0 product wells, and gold #FFD700 foil-style rules for cosmetics and jewelry.',
     swatches: ['#DA70D6', '#9966CC', '#FFF8F0', '#FFD700'],
   },
+  {
+    title: 'Dusty rose + mauve wellness',
+    body: 'Soft dusty rose #DCAE96 backgrounds with mauve #E0B0FF cards and lavender #E6E6FA accents—calm enough for meditation apps and skincare checkout flows.',
+    swatches: ['#DCAE96', '#E0B0FF', '#E6E6FA', '#4B4556'],
+  },
+  {
+    title: 'Neon fuchsia digital brand',
+    body: 'Fuchsia #FF77FF as the hero accent on dark charcoal #1C1C2E, with muted plum #DDA0DD for secondary labels and white #FFFFFF for reading surfaces.',
+    swatches: ['#FF77FF', '#DDA0DD', '#1C1C2E', '#FFFFFF'],
+  },
 ];
 
 const FAQ = [
@@ -110,6 +121,16 @@ const FAQ = [
     question: 'What is a pinkish purple color name?',
     answer:
       'Pinkish purple names include mauve (#E0B0FF), orchid (#DA70D6), plum (#DDA0DD), thistle (#D8BFD8), and light violet (#EE82EE). For bold pink-purple, use magenta (#FF00FF) or rose (#FF007F). Document hex in your style guide so teams do not swap names interchangeably.',
+  },
+  {
+    question: 'What is the hex code for pink purple?',
+    answer:
+      'The most common pink-purple hex codes are: mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF, orchid #DA70D6, and plum #DDA0DD. Paste any of these into CSS, Canva, or Figma to apply the color. For the closest named color to any custom hex, use a color name finder.',
+  },
+  {
+    question: 'What pink-purple colors work best for UI design?',
+    answer:
+      'For UI design, mauve (#E0B0FF) and orchid (#DA70D6) work well as soft accent colors on white or light backgrounds for wellness and beauty apps. Magenta (#FF00FF) and fuchsia are better reserved as bold CTAs on dark backgrounds. Always verify contrast with a WCAG checker before shipping.',
   },
 ];
 
@@ -150,8 +171,17 @@ export default function PinkPurpleColorNamePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Pink Purple Color Name: #E0B0FF Mauve, Magenta &amp; Fuchsia
+              What Color is Between Pink and Purple? 10 Names, Hex Codes &amp; Palettes
             </h1>
+            <AeoDirectAnswer
+              question="What color is between pink and purple?"
+              answer="The color between pink and purple is most commonly called mauve (#E0B0FF), magenta (#FF00FF), or fuchsia (#FF77FF). Lighter shades read as mauve or plum; vibrant mid-hues read as magenta or orchid. All are one-click copyable below."
+              codes={[
+                { label: 'Mauve', value: '#E0B0FF' },
+                { label: 'Magenta', value: '#FF00FF' },
+                { label: 'Fuchsia', value: '#FF77FF' },
+              ]}
+            />
             <PaletteQuickAnswer
               theme="purple"
               ariaLabel="Pink-purple colour names quick copy"
@@ -182,7 +212,19 @@ export default function PinkPurpleColorNamePage() {
           />
 
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-0 mb-4">Is Magenta Pink or Purple?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-0 mb-4">Pink Purple in UI Design</h2>
+            <p className="mb-4">
+              Pink-purple colors work differently depending on saturation. <strong className="text-gray-900 dark:text-white">Mauve (#E0B0FF)</strong> and <strong className="text-gray-900 dark:text-white">orchid (#DA70D6)</strong> are calm enough for wellness, beauty, and skincare apps as section backgrounds and card fills—they pair naturally with cream and charcoal without overwhelming photography. Keep body text in dark gray (#374151) or near-black on these light swatches, and verify contrast before shipping small type.
+            </p>
+            <p className="mb-4">
+              <strong className="text-gray-900 dark:text-white">Magenta (#FF00FF)</strong> and <strong className="text-gray-900 dark:text-white">fuchsia (#FF77FF)</strong> are high-energy accent colors suited to CTAs, notification badges, and hero gradients on dark backgrounds. They can feel overwhelming at full-screen saturation, so reserve them for 10% of the layout—the primary button, a gradient band, or an icon fill—while building body content on neutral surfaces. Use our{' '}
+              <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink> to confirm white labels on magenta pass WCAG AA.
+            </p>
+            <p className="mb-6">
+              For dark mode, shift saturated pink-purples slightly toward orchid or dusty rose—full magenta on near-black can feel neon and tiring in low-light contexts. Generate a complete dark-mode-safe ramp from any pink-purple hex in our{' '}
+              <InlineTagLink href="/tools/palette-generator">free palette generator</InlineTagLink>.
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Is Magenta Pink or Purple?</h2>
             <p className="mb-4">
               <strong className="text-gray-900 dark:text-white">Magenta (#FF00FF)</strong> is the classic answer to “is magenta pink or purple?”—it is both and neither. In RGB, magenta is an equal mix of full red and full blue with no green, which places it on the color wheel between red (where pink originates as a tint) and blue-violet (where purple lives). That is why magenta reads as a hyper-saturated pink-purple rather than a pastel pink or a deep royal purple.
             </p>

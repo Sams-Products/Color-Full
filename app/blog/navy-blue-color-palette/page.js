@@ -11,8 +11,9 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-15T00:00:00.000Z';
+const LAST_MODIFIED = '2026-08-26T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/navy-blue-color-palette',
@@ -48,7 +49,12 @@ const articleSchema = getBlogArticleSchema(
 );
 
 
-const QUICK_ROWS = [{ label: 'Hex', value: '#000080' }, { label: 'RGB', value: 'rgb(0, 0, 128)' }];
+const QUICK_ROWS = [
+  { label: 'Hex', value: '#000080' },
+  { label: 'RGB', value: 'rgb(0, 0, 128)' },
+  { label: 'HSL', value: 'hsl(240, 100%, 25%)' },
+  { label: 'CMYK', value: 'C:100 M:100 Y:0 K:50' },
+];
 
 const NAVY_COMBINATIONS = [
   {
@@ -342,6 +348,15 @@ export default function NavyBlueColorPalettePage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               Navy Blue Color Palette: Hex Codes, Combos &amp; Color Schemes
             </h1>
+            <AeoDirectAnswer
+              question="What is the navy blue hex code and palette?"
+              answer="Navy blue hex code is #000080 — RGB(0, 0, 128), HSL(240, 100%, 25%). A complete navy blue color palette pairs it with gold (#FFD700) for luxury, white (#FFFFFF) for clean layouts, coral (#FF6B6B) for modern brands, or mint (#6EE7B7) for health and fintech UI."
+              codes={[
+                { label: 'Hex', value: '#000080' },
+                { label: 'RGB', value: '0, 0, 128' },
+                { label: 'HSL', value: '240, 100%, 25%' },
+              ]}
+            />
             <p className="text-blue-100/95 text-lg max-w-3xl mb-6">
               A complete <strong className="text-white font-semibold">navy blue color palette</strong> from #000080—navy + gold, white, coral, and six more{' '}
               <strong className="text-white font-semibold">navy blue combinations</strong> with copy-ready hex codes for websites, brands, and UI.

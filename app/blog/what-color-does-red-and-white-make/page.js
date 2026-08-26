@@ -27,7 +27,9 @@ export const metadata = buildPageMetadata({
     publishedTime: '2026-05-21T00:00:00.000Z',
     modifiedTime: '2026-05-21T00:00:00.000Z',
   },
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 });
+
 const articleSchema = getBlogArticleSchema(
   'What Color Does Red and White Make? Pink — Hex Codes & Shades',
   'Red and white make pink when mixed. See exact hex codes for every red-white ratio, explore pink shades, and try our free color mixer tool.',
@@ -35,7 +37,6 @@ const articleSchema = getBlogArticleSchema(
   getBlogArticleDatePublished('what-color-does-red-and-white-make'),
   BLOG_ARTICLE_DATE_MODIFIED
 );
-
 
 const MIX_ROWS = [
   { ratio: '90% red + 10% white', label: 'Deep Red-Pink', hex: '#E61919' },
@@ -92,7 +93,7 @@ export default function WhatColorDoesRedAndWhiteMakePage() {
       mixTableTitle="Red and White Mix Ratios — Hex Code Table"
       mixRows={MIX_ROWS}
       shadeSectionTitle="What Shade of Pink Does Red and White Make?"
-      shadeSectionBody="Tinting red with white walks you through rose, light pink, blush, and near-white pinks. Designers searching what color does red and white make usually need a specific step for backgrounds, alerts, or brand romance—not a single answer. Keep deep red (#FF0000 or #E61919) for primary actions; use #FF8080 and lighter for surfaces and empty states. The red white color line is predictable in RGB mixes, which makes token naming easy once you pick anchor hex values."
+      shadeSectionBody="Tinting red with white walks you through rose, light pink, blush, and near-white pinks. Keep deep red (#FF0000 or #E61919) for primary actions; use #FF8080 and lighter for surfaces and empty states."
       combinationsTitle="Red and White Color Combinations"
       combinationsIntro="Four palettes that balance red, white, and pink tints."
       combinations={[

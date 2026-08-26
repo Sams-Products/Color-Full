@@ -27,7 +27,9 @@ export const metadata = buildPageMetadata({
     publishedTime: '2026-05-21T00:00:00.000Z',
     modifiedTime: '2026-05-21T00:00:00.000Z',
   },
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 });
+
 const articleSchema = getBlogArticleSchema(
   'What Color Does Red and Yellow Make? Orange — Hex Codes & Mixing Guide',
   'Red and yellow make orange when mixed. See the exact hex codes for every red-yellow mix ratio, explore orange shades, and try our free color mixer tool.',
@@ -35,7 +37,6 @@ const articleSchema = getBlogArticleSchema(
   getBlogArticleDatePublished('what-color-does-red-and-yellow-make'),
   BLOG_ARTICLE_DATE_MODIFIED
 );
-
 
 const MIX_ROWS = [
   { ratio: '90% red + 10% yellow', label: 'Deep Red-Orange', hex: '#FF1A00' },
@@ -92,7 +93,7 @@ export default function WhatColorDoesRedAndYellowMakePage() {
       mixTableTitle="Red and Yellow Mix Ratios — Hex Code Table"
       mixRows={MIX_ROWS}
       shadeSectionTitle="What Shade of Orange Does Red and Yellow Make?"
-      shadeSectionBody="The red yellow color you see depends entirely on how much of each primary you use. Heavy red keeps mixes in the burnt-orange and red-orange family—great for autumn campaigns and bold alerts. More yellow pulls the mix toward golden orange, amber, and near-gold (#FFD700), which reads cheerful on packaging and app highlights. If you searched what does red and yellow make or red and yellow make what color, the short answer is always the orange family—but the exact hex shifts with every ratio. Use the table to name steps for your design system, then fine-tune in our color mixer."
+      shadeSectionBody="The red yellow color you see depends entirely on how much of each primary you use. Heavy red keeps mixes in the burnt-orange and red-orange family—great for autumn campaigns and bold alerts. More yellow pulls the mix toward golden orange, amber, and near-gold (#FFD700), which reads cheerful on packaging and app highlights."
       combinationsTitle="Red and Yellow Color Combinations"
       combinationsIntro="Four palette ideas that keep red, yellow, and orange working together without visual noise."
       combinations={[
@@ -132,7 +133,7 @@ export default function WhatColorDoesRedAndYellowMakePage() {
           <p>
             Explore related mixes:{' '}
             <InlineTagLink href="/blog/what-color-does-blue-and-yellow-make">what color does blue and yellow make</InlineTagLink>,{' '}
-            <InlineTagLink href="/blog/what-color-does-red-and-white-make">what color does red and white make</InlineTagLink>, or try our{' '}
+            or try our{' '}
             <InlineTagLink href="/tools/color-mixer">color mixing tool</InlineTagLink> to preview any ratio live.
           </p>
         </>

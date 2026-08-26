@@ -35,7 +35,9 @@ export const metadata = buildPageMetadata({
     publishedTime: LAST_MODIFIED,
     modifiedTime: LAST_MODIFIED,
   },
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 });
+
 const articleSchema = getBlogArticleSchema(
   'What Color Does Pink and Purple Make? Magenta & Hex Codes',
   'Pink and purple mixed make magenta or mauve. See hex codes for every pink-purple mix ratio, color swatches, and palette combinations.',
@@ -43,7 +45,6 @@ const articleSchema = getBlogArticleSchema(
   getBlogArticleDatePublished('what-color-does-pink-and-purple-make'),
   BLOG_ARTICLE_DATE_MODIFIED
 );
-
 
 const MIX_ROWS = [
   { ratio: '90% pink + 10% purple', label: 'Light rose magenta', hex: '#FF8FC8' },
@@ -105,8 +106,6 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
         </div>
       </div>
 
-
-
       <section className="bg-gradient-to-br from-pink-500 via-fuchsia-600 to-purple-800 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -146,9 +145,7 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
               If you searched <strong className="text-gray-900 dark:text-white">what color does pink and purple make</strong>, the
               answer lives in the ratio. Pink is a light, warm red; purple adds cool blue-violet depth. Blending them skips true
-              red and lands in the magenta–mauve family—romantic, high-energy hues for beauty campaigns and festival creative when
-              you anchor them with neutrals. Each row below uses hot pink (#FF69B4) and purple (#800080) as endpoints; copy any hex
-              into Figma, CSS, or your brand kit.
+              red and lands in the magenta–mauve family. Each row below uses hot pink (#FF69B4) and purple (#800080) as endpoints.
             </p>
             <MixRatioTable rows={MIX_ROWS} />
           </section>
@@ -162,17 +159,14 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
               <strong className="text-gray-900 dark:text-white">mauve</strong> (<strong className="text-gray-900 dark:text-white">#E0B0FF</strong>) or{' '}
               <strong className="text-gray-900 dark:text-white">orchid</strong> (<strong className="text-gray-900 dark:text-white">#DA70D6</strong>).
               Balanced vibrant mixes are called <strong className="text-gray-900 dark:text-white">magenta</strong> (
-              <strong className="text-gray-900 dark:text-white">#FF00FF</strong>) or{' '}
-              <strong className="text-gray-900 dark:text-white">fuchsia</strong> (also <strong className="text-gray-900 dark:text-white">#FF00FF</strong> in
-              CSS). Deep purple-heavy blends read as <strong className="text-gray-900 dark:text-white">berry</strong> (
+              <strong className="text-gray-900 dark:text-white">#FF00FF</strong>). Deep purple-heavy blends read as{' '}
+              <strong className="text-gray-900 dark:text-white">berry</strong> (
               <strong className="text-gray-900 dark:text-white">#A640B0</strong>) or <strong className="text-gray-900 dark:text-white">plum</strong> (
               <strong className="text-gray-900 dark:text-white">#DDA0DD</strong>).
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               For a full dictionary of pink-purple color names with swatches, see our{' '}
-              <InlineTagLink href="/blog/pink-purple-color-name">pink-purple color names guide</InlineTagLink>. When stakeholders
-              say “pinkish purple” without a hex, point them to the 50/50 row (#BF34CA) first, then adjust lighter or darker using
-              the ratio table.
+              <InlineTagLink href="/blog/pink-purple-color-name">pink-purple color names guide</InlineTagLink>.
             </p>
           </section>
 
@@ -198,29 +192,6 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
             ]}
           />
 
-          <section className="mt-10 mb-10 prose prose-lg max-w-none dark:prose-invert">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-0 mb-4">Is Magenta Pink or Purple?</h2>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              <strong className="text-gray-900 dark:text-white">Magenta (#FF00FF)</strong> is technically both and neither. In RGB it
-              is full red plus full blue with no green—exactly between red (where pink originates as a tint) and blue-violet (where
-              purple lives). That is why magenta reads as a hyper-saturated pink-purple rather than a pastel pink or a deep royal
-              purple.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              For UI, compare three anchors: hot pink <strong className="text-gray-900 dark:text-white">#FF69B4</strong> (clearly
-              pink-leaning), mid-mix magenta-purple <strong className="text-gray-900 dark:text-white">#BF34CA</strong> (balanced
-              pink-purple), and purple <strong className="text-gray-900 dark:text-white">#800080</strong> (clearly violet-leaning).
-              Use hot pink and soft magenta rows for backgrounds and cards; reserve #BF34CA and #FF00FF for CTAs; use #800080 and berry
-              #A640B0 for navigation and headers.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              In subtractive paint mixing, pink and purple pigments behave differently than on-screen RGB—opacity and undertone shift
-              results. Treat the hex table as a digital starting point, then proof physical swatches when packaging must match your
-              web hero. Simulate ratios interactively in our{' '}
-              <InlineTagLink href="/tools/color-mixer/pink-and-purple">pink and purple color mixer</InlineTagLink>.
-            </p>
-          </section>
-
           <section className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-5">FAQ</h2>
             <div className="space-y-6">
@@ -233,30 +204,7 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
             </div>
           </section>
 
-          <section className="my-12 not-prose">
-            <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 md:p-7">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Try it with our free tools</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-5">
-                Mix pink and purple in the browser, then explore full palette combinations for your project.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Link
-                  href="/tools/color-mixer"
-                  className="block rounded-lg border border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:border-fuchsia-400 hover:bg-white hover:text-fuchsia-800 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:border-fuchsia-400 dark:hover:bg-zinc-700 dark:hover:text-white transition-colors text-center"
-                >
-                  Color Mixer
-                </Link>
-                <Link
-                  href="/blog/pink-and-purple-color"
-                  className="block rounded-lg border border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:border-purple-400 hover:bg-white hover:text-purple-800 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:border-purple-400 dark:hover:bg-zinc-700 dark:hover:text-white transition-colors text-center"
-                >
-                  Pink and Purple Color Guide
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mt-10">
             Validate text on your new palette with our{' '}
             <InlineTagLink href="/tools/contrast-checker">WCAG contrast checker</InlineTagLink>. Related:{' '}
             <InlineTagLink href="/blog/pink-purple-color-name">color between pink and purple names</InlineTagLink>,{' '}

@@ -1,5 +1,6 @@
 import InlineTagLink from '../../components/InlineTagLink';
 import PaletteGeneratorTool from './PaletteGeneratorTool';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
@@ -53,6 +54,15 @@ export default function PaletteGeneratorPage() {
         </div>
 
         <PaletteGeneratorTool />
+
+        <div className="max-w-4xl mx-auto my-10">
+          <EnvatoAffiliateBanner
+            variant="general"
+            title="Turn this palette into mockups, web templates & graphics"
+            description="Speed up your projects with 1M+ fonts, presentation templates, UI kits, and stock assets with unlimited downloads on Envato Elements."
+            ctaText="Explore Creative Assets on Envato"
+          />
+        </div>
 
         <div className="max-w-4xl mx-auto mt-16 space-y-8 text-gray-600 dark:text-gray-400">
           <section>

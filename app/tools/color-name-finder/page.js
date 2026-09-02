@@ -3,6 +3,7 @@ import ColorNameFinderTool from './ColorNameFinderTool';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import { buildFaqSchema, buildWebApplicationSchema } from '../../../lib/aeoSchema';
 import AeoDirectAnswer from '../../blog/components/AeoDirectAnswer';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 
 export const metadata = buildPageMetadata({
   path: '/tools/color-name-finder',
@@ -104,6 +105,15 @@ export default function ColorNameFinderPage() {
         </header>
 
         <ColorNameFinderTool />
+
+        <div className="max-w-4xl mx-auto my-10">
+          <EnvatoAffiliateBanner
+            variant="graphics"
+            title="Need templates, mockups, or logos for this color?"
+            description="Turn your selected color into a real design. Explore 100,000+ customizable graphic templates, social media layouts, fonts, and mockups on Envato Elements."
+            ctaText="Browse Graphic Templates on Envato"
+          />
+        </div>
 
         <div className="max-w-4xl mx-auto mt-16 space-y-8 text-gray-600 dark:text-gray-400">
           <section>

@@ -13,6 +13,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 
 const LAST_MODIFIED = '2026-06-15T00:00:00.000Z';
 
@@ -379,6 +380,13 @@ export default function DiscordDarkModeColorsPage() {
                       </div>
                     </div>
                   </section>
+
+                  <EnvatoAffiliateBanner
+                    variant="uiKits"
+                    title="Building a dark theme UI or app?"
+                    description="Save hours of design work. Download 10,000+ dark mode Figma kits, mobile app design systems, and web components on Envato Elements."
+                    ctaText="Explore Figma & UI Kits on Envato"
+                  />
                 </div>
               </div>
 

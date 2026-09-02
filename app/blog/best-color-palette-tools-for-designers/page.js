@@ -8,6 +8,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import MagnificAffiliateBanner from '../../components/MagnificAffiliateBanner';
 
 export const metadata = buildPageMetadata({
   path: '/blog/best-color-palette-tools-for-designers',
@@ -148,6 +149,12 @@ export default function BestColorPaletteToolsForDesignersPage() {
               <InlineTagLink href="/blog/60-30-10-color-rule">60-30-10 color rule</InlineTagLink> for proportion guidance, a contrast checker, and a clear style guide so that palettes are not only consistent but also accessible and documented for teams and vendors.
             </p>
           </section>
+
+          <MagnificAffiliateBanner
+            title="Need AI image upscaling and visual generation for your designs?"
+            description="Complement your color palette with world-class AI visuals. Upscale images to 4K/8K, enhance textures, and generate design assets with Magnific AI. Use this invite for 20% off Premium plans."
+            ctaText="Claim 20% Off Magnific AI"
+          />
 
           <section className="mb-10">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">FAQ</h2>

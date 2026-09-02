@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import InlineTagLink from '../../components/InlineTagLink';
 import ToolBreadcrumbs from '../../components/ToolBreadcrumbs';
+import MagnificAffiliateBanner from '../../components/MagnificAffiliateBanner';
 import ColorPalettePreviewHub from './ColorPalettePreviewHub';
 import { PALETTE_PREVIEW_BREADCRUMB_BASE } from '../../../lib/breadcrumbSchema';
 import {
@@ -103,6 +104,14 @@ export default function ColorPalettePreviewPage() {
         <Suspense fallback={<HubFallback />}>
           <ColorPalettePreviewHub />
         </Suspense>
+
+        <div className="max-w-4xl mx-auto my-10">
+          <MagnificAffiliateBanner
+            title="Need crisp, high-resolution visuals for your mockups?"
+            description="Upscale design assets, sharpen photos, and generate stunning 4K/8K graphics for your website and app previews. Get an exclusive 20% discount on Magnific AI."
+            ctaText="Get 20% Off Magnific AI"
+          />
+        </div>
 
         <div className="max-w-4xl mx-auto mt-16 space-y-8 text-gray-600 dark:text-gray-400">
           <section>

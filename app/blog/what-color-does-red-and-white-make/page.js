@@ -27,7 +27,6 @@ export const metadata = buildPageMetadata({
     publishedTime: '2026-05-21T00:00:00.000Z',
     modifiedTime: '2026-05-21T00:00:00.000Z',
   },
-  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 });
 
 const articleSchema = getBlogArticleSchema(

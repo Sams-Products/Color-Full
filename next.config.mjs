@@ -68,11 +68,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/blog/what-color-does-pink-and-purple-make',
-        destination: '/tools/color-mixer/pink-and-purple',
-        permanent: true,
-      },
-      {
         source: '/blog/sunset-vibes',
         destination: '/blog/sunset-color-palette',
         permanent: true,

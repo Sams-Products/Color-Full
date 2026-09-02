@@ -35,7 +35,6 @@ export const metadata = buildPageMetadata({
     publishedTime: LAST_MODIFIED,
     modifiedTime: LAST_MODIFIED,
   },
-  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 });
 
 const articleSchema = getBlogArticleSchema(

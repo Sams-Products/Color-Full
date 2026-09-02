@@ -53,7 +53,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = getBlogPostPathsForSitemap();
-  console.log('[sitemap] Blog post URLs:', blogPosts.length, blogPosts);
   const toolHighPriority = new Set([
     '/tools/color-name-finder',
     '/tools/tint-shade-generator',

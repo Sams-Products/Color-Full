@@ -3,17 +3,18 @@ import { buildPageMetadata } from '../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/',
-  title: 'Advanced Color Tools for Modern Designers',
+  title: 'Free Color Tools: Palette Generator, Contrast Checker & Hex Codes',
   description:
-    'Professional color tools for designers and developers. Generate accessible palettes, check WCAG contrast, mix colors with RYB paint logic, and explore color guides.',
+    'Free online color tools — generate palettes, check WCAG contrast, mix colors, find color names, and browse hex code guides. No signup needed.',
   keywords: [
     'color tools',
+    'free color tools',
     'palette generator',
     'contrast checker',
     'color mixing',
     'WCAG',
-    'design system',
     'hex codes',
+    'color name finder',
   ],
 });
 

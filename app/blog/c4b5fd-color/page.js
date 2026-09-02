@@ -33,7 +33,6 @@ export const metadata = buildPageMetadata({
     'lavender hex code',
     'Theme & Color',
   ],
-  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
   openGraphType: 'article',
   openGraph: {
     publishedTime: '2026-06-01T00:00:00.000Z',

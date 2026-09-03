@@ -20,11 +20,11 @@ export default function MagnificAffiliateBanner({
         {/* Left column: Value Proposition & Discount Hook */}
         <div className="lg:col-span-7">
           <div className="flex items-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950/80 text-amber-900 dark:text-amber-200 border border-amber-300/60 dark:border-amber-700/60">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950/80 text-amber-950 dark:text-amber-200 border border-amber-300 dark:border-amber-700/60">
               <span aria-hidden="true">✨</span>
-              <span>20% Off Invite Included</span>
+              <span className="text-amber-950 dark:text-amber-200 font-bold">20% Off Invite Included</span>
             </span>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-indigo-700 dark:text-indigo-400">
+            <span className="text-[11px] uppercase font-extrabold tracking-widest text-indigo-700 dark:text-indigo-400">
               Magnific AI
             </span>
           </div>
@@ -38,22 +38,22 @@ export default function MagnificAffiliateBanner({
           </p>
 
           {/* Feature list */}
-          <div className="grid grid-cols-2 gap-2 mb-6 text-xs text-gray-700 dark:text-gray-300">
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>4K &amp; 8K AI Upscaling</span>
+          <div className="grid grid-cols-2 gap-2.5 mb-6 text-xs text-gray-900 dark:text-gray-200">
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">4K &amp; 8K AI Upscaling</span>
             </div>
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>Removes Blur &amp; Pixelation</span>
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">Removes Blur &amp; Pixelation</span>
             </div>
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>Texture &amp; Detail Synthesis</span>
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">Texture &amp; Detail Synthesis</span>
             </div>
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>20% Off Annual Plans</span>
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">20% Off Annual Plans</span>
             </div>
           </div>
 

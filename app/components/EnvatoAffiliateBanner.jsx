@@ -72,11 +72,11 @@ export default function EnvatoAffiliateBanner({
         {/* Left column: Value Proposition & Copy */}
         <div className="lg:col-span-7">
           <div className="flex items-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-900/60 text-purple-900 dark:text-purple-200 border border-purple-200 dark:border-purple-700/50">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-900/60 text-purple-950 dark:text-purple-200 border border-purple-300 dark:border-purple-700/50">
               <span aria-hidden="true">🎨</span>
-              <span>{config.tag}</span>
+              <span className="text-purple-950 dark:text-purple-200 font-bold">{config.tag}</span>
             </span>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-gray-400 dark:text-gray-500">
+            <span className="text-[11px] uppercase font-extrabold tracking-widest text-gray-600 dark:text-gray-400">
               Partner
             </span>
           </div>
@@ -90,22 +90,22 @@ export default function EnvatoAffiliateBanner({
           </p>
 
           {/* Value feature chips */}
-          <div className="grid grid-cols-2 gap-2 mb-6 text-xs text-gray-700 dark:text-gray-300">
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>Commercial License Included</span>
+          <div className="grid grid-cols-2 gap-2.5 mb-6 text-xs text-gray-900 dark:text-gray-200">
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">Commercial License Included</span>
             </div>
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>Unlimited Downloads</span>
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">Unlimited Downloads</span>
             </div>
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>Figma &amp; Canva Compatible</span>
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">Figma &amp; Canva Compatible</span>
             </div>
-            <div className="flex items-center gap-2 font-medium">
-              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
-              <span>10,000+ Premium Fonts</span>
+            <div className="flex items-center gap-2 font-semibold">
+              <span className="w-4 h-4 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-[10px] font-extrabold">✓</span>
+              <span className="text-gray-900 dark:text-gray-100 font-semibold">10,000+ Premium Fonts</span>
             </div>
           </div>
 

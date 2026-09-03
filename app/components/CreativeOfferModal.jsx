@@ -71,12 +71,12 @@ export default function CreativeOfferModal() {
 
             {/* Header row with Badge & Close Button */}
             <div className="flex items-center justify-between gap-3 mb-3">
-              <div className="flex items-center gap-1.5">
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-950/80 dark:to-pink-950/80 text-purple-900 dark:text-purple-200 border border-purple-200/60 dark:border-purple-800/40">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-100 dark:bg-purple-900/60 text-purple-950 dark:text-purple-200 border border-purple-300 dark:border-purple-700/60">
                   <span aria-hidden="true">🎁</span>
-                  <span>Creator Toolkit</span>
+                  <span className="text-purple-950 dark:text-purple-200">Creator Toolkit</span>
                 </span>
-                <span className="text-[10px] uppercase font-bold tracking-widest text-gray-400 dark:text-gray-500">
+                <span className="text-[11px] uppercase font-extrabold tracking-wider text-gray-600 dark:text-gray-400">
                   Partner
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function CreativeOfferModal() {
               <button
                 type="button"
                 onClick={handleDismiss}
-                className="w-7 h-7 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="w-8 h-8 flex items-center justify-center rounded-full text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 aria-label="Close offer popup"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,30 +94,30 @@ export default function CreativeOfferModal() {
             </div>
 
             {/* Dual Tabs Switcher */}
-            <div className="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-gray-100/90 dark:bg-gray-800/80 mb-4 text-xs font-semibold">
+            <div className="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 text-xs">
               <button
                 type="button"
                 onClick={() => setActiveTab('envato')}
                 className={`py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
                   activeTab === 'envato'
-                    ? 'bg-white dark:bg-gray-700 text-purple-900 dark:text-white shadow-sm font-bold'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                    ? 'bg-white dark:bg-gray-700 text-purple-950 dark:text-white shadow-sm font-extrabold border border-purple-200/80 dark:border-transparent'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white font-semibold'
                 }`}
               >
                 <span>🎨</span>
-                <span>Design Assets</span>
+                <span className="text-gray-900 dark:text-white font-bold">Design Assets</span>
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('magnific')}
                 className={`py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
                   activeTab === 'magnific'
-                    ? 'bg-white dark:bg-gray-700 text-indigo-900 dark:text-white shadow-sm font-bold'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                    ? 'bg-white dark:bg-gray-700 text-indigo-950 dark:text-white shadow-sm font-extrabold border border-indigo-200/80 dark:border-transparent'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white font-semibold'
                 }`}
               >
                 <span>✨</span>
-                <span>AI Upscaler (20% Off)</span>
+                <span className="text-gray-900 dark:text-white font-bold">AI Upscaler (20% Off)</span>
               </button>
             </div>
 
@@ -130,27 +130,27 @@ export default function CreativeOfferModal() {
                 >
                   Bring your palette to life with 100K+ templates
                 </h4>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-3.5">
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3.5">
                   Stop building from scratch. Get unlimited access to UI kits, Figma design systems, social templates, and fonts on Envato Elements.
                 </p>
 
                 {/* Feature Chips */}
-                <div className="grid grid-cols-2 gap-1.5 mb-4">
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-purple-50/70 dark:bg-purple-950/40 px-2 py-1 rounded-md">
-                    <span className="text-purple-600 dark:text-purple-400 font-bold">✓</span>
-                    <span>10,000+ Figma Kits</span>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-purple-700 dark:text-purple-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">10,000+ Figma Kits</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-purple-50/70 dark:bg-purple-950/40 px-2 py-1 rounded-md">
-                    <span className="text-purple-600 dark:text-purple-400 font-bold">✓</span>
-                    <span>Canva &amp; Social Packs</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-purple-700 dark:text-purple-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">Canva &amp; Social Packs</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-purple-50/70 dark:bg-purple-950/40 px-2 py-1 rounded-md">
-                    <span className="text-purple-600 dark:text-purple-400 font-bold">✓</span>
-                    <span>Commercial License</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-purple-700 dark:text-purple-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">Commercial License</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-purple-50/70 dark:bg-purple-950/40 px-2 py-1 rounded-md">
-                    <span className="text-purple-600 dark:text-purple-400 font-bold">✓</span>
-                    <span>Unlimited Downloads</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-purple-700 dark:text-purple-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">Unlimited Downloads</span>
                   </div>
                 </div>
 
@@ -160,10 +160,10 @@ export default function CreativeOfferModal() {
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   onClick={handleDismiss}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 hover:from-purple-500 hover:to-pink-500 shadow-md hover:shadow-purple-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-extrabold text-sm text-white bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700 hover:from-purple-500 hover:to-pink-500 shadow-md hover:shadow-purple-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  <span>Explore 100,000+ Templates on Envato</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="text-white">Explore 100,000+ Templates on Envato</span>
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </a>
@@ -173,9 +173,9 @@ export default function CreativeOfferModal() {
             {/* Tab 2: Magnific AI */}
             {activeTab === 'magnific' && (
               <div>
-                <div className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-700 dark:text-amber-300 bg-amber-100/90 dark:bg-amber-950/60 px-2 py-0.5 rounded-full mb-1.5">
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-950 dark:text-amber-200 bg-amber-100 dark:bg-amber-950/70 border border-amber-300 dark:border-amber-700 px-2.5 py-1 rounded-full mb-2">
                   <span>⚡</span>
-                  <span>Exclusive 20% Discount Invite</span>
+                  <span className="text-amber-950 dark:text-amber-200 font-bold">Exclusive 20% Discount Invite</span>
                 </div>
                 <h4
                   id="offer-modal-title"
@@ -183,27 +183,27 @@ export default function CreativeOfferModal() {
                 >
                   Upscale &amp; enhance images with Magnific AI
                 </h4>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-3.5">
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3.5">
                   Transform pixelated graphics and screenshots into crystal-clear 4K/8K visuals. Used by 700K+ top designers worldwide.
                 </p>
 
                 {/* Feature Chips */}
-                <div className="grid grid-cols-2 gap-1.5 mb-4">
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-indigo-50/70 dark:bg-indigo-950/40 px-2 py-1 rounded-md">
-                    <span className="text-indigo-600 dark:text-indigo-400 font-bold">✓</span>
-                    <span>4K &amp; 8K Upscaling</span>
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-indigo-700 dark:text-indigo-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">4K &amp; 8K Upscaling</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-indigo-50/70 dark:bg-indigo-950/40 px-2 py-1 rounded-md">
-                    <span className="text-indigo-600 dark:text-indigo-400 font-bold">✓</span>
-                    <span>Fix Blur &amp; Pixelation</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-indigo-700 dark:text-indigo-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">Fix Blur &amp; Pixelation</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-indigo-50/70 dark:bg-indigo-950/40 px-2 py-1 rounded-md">
-                    <span className="text-indigo-600 dark:text-indigo-400 font-bold">✓</span>
-                    <span>AI Texture Synthesis</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-indigo-700 dark:text-indigo-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">AI Texture Synthesis</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[11px] font-medium text-gray-700 dark:text-gray-300 bg-indigo-50/70 dark:bg-indigo-950/40 px-2 py-1 rounded-md">
-                    <span className="text-amber-600 dark:text-amber-400 font-bold">✓</span>
-                    <span>20% Off Annual Plans</span>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-900 dark:text-gray-200 bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/40 px-2.5 py-1.5 rounded-lg">
+                    <span className="text-amber-700 dark:text-amber-400 font-extrabold">✓</span>
+                    <span className="text-gray-900 dark:text-gray-100 font-semibold">20% Off Annual Plans</span>
                   </div>
                 </div>
 
@@ -213,10 +213,10 @@ export default function CreativeOfferModal() {
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   onClick={handleDismiss}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-md hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-extrabold text-sm text-white bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 shadow-md hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  <span>Claim 20% Off Magnific AI</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="text-white">Claim 20% Off Magnific AI</span>
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </a>
@@ -224,11 +224,11 @@ export default function CreativeOfferModal() {
             )}
 
             {/* Bottom Dismiss Option */}
-            <div className="mt-3 text-center">
+            <div className="mt-3.5 text-center">
               <button
                 type="button"
                 onClick={handleDismiss}
-                className="text-[11px] font-medium text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors underline"
+                className="text-xs font-semibold text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white transition-colors underline"
               >
                 Maybe later
               </button>

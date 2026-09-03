@@ -181,17 +181,9 @@ html:not(.dark) a[class*="bg-gradient"] {
   color: inherit !important;
 }
 
-/* Force white text on dark badge backgrounds */
-html:not(.dark) .bg-gray-900 span,
-html:not(.dark) [class*="bg-gray-900"] span,
-html:not(.dark) .bg-gray-900 .text-white,
-html:not(.dark) [class*="bg-gray-900"] .text-white {
-  color: #ffffff !important;
-}
-
-/* Override any paragraph/span rules for badge text */
-html:not(.dark) .bg-gray-900 span.text-white,
-html:not(.dark) .bg-gray-900 .text-white {
+/* Force white text on standalone dark badge backgrounds (not dark mode classes) */
+html:not(.dark) .bg-gray-900:not([class*="dark:bg-"]) .text-white,
+html:not(.dark) .bg-gray-900:not([class*="dark:bg-"]) span.text-white {
   color: #ffffff !important;
 }
 

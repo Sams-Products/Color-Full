@@ -100,10 +100,12 @@ export default function Footer() {
                   href="https://1.envato.market/vD99ke"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm inline-flex items-center gap-1.5"
+                  className="group flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm py-0.5"
                 >
-                  <span>Creative Assets &amp; Fonts</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 font-medium">Envato</span>
+                  <span className="truncate">Envato Elements</span>
+                  <span className="text-[11px] font-semibold text-purple-600 dark:text-purple-400 group-hover:translate-x-0.5 transition-transform">
+                    Assets ↗
+                  </span>
                 </a>
               </li>
               <li>
@@ -111,10 +113,12 @@ export default function Footer() {
                   href="https://referral.magnific.com/mzXrnA4"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm inline-flex items-center gap-1.5"
+                  className="group flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm py-0.5"
                 >
-                  <span>Magnific AI Upscaler</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300 font-semibold">20% Off</span>
+                  <span className="truncate">Magnific AI</span>
+                  <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 group-hover:translate-x-0.5 transition-transform">
+                    20% Off ↗
+                  </span>
                 </a>
               </li>
             </ul>

@@ -3,6 +3,7 @@
 import { ThemeProvider } from '../contexts/ThemeContext';
 import Header from './Header';
 import Footer from './Footer';
+import CreativeOfferModal from './CreativeOfferModal';
 
 export default function ClientWrapper({ children }) {
   return (
@@ -12,6 +13,7 @@ export default function ClientWrapper({ children }) {
         {children}
       </main>
       <Footer />
+      <CreativeOfferModal />
     </ThemeProvider>
   );
 }

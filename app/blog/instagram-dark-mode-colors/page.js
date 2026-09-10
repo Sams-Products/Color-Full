@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { PaletteQuickAnswer, PaletteUiUsageSection } from '../components/PaletteReferenceBlocks';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
@@ -370,6 +371,13 @@ export default function InstagramDarkModeColorsPage() {
                       </div>
                     </div>
                   </section>
+
+                  <EnvatoAffiliateBanner
+                    variant="uiKits"
+                    title="Building a social app or dark UI?"
+                    description="Save weeks of design work. Download 10,000+ social media Figma kits, mobile app design systems, and dark theme components on Envato Elements."
+                    ctaText="Explore Mobile & UI Kits on Envato"
+                  />
                 </div>
               </div>
 

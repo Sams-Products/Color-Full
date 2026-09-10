@@ -2,6 +2,7 @@ import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import ColorSwatch from '../[slug]/ColorSwatch';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { PaletteQuickAnswer, PaletteShadesTable } from '../components/PaletteReferenceBlocks';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
@@ -404,6 +405,13 @@ export default function SunsetColorPalettePage() {
                   </dl>
 
                   <BlogMixerPaletteCTA />
+
+                  <EnvatoAffiliateBanner
+                    variant="graphics"
+                    title="Design with warm sunset tones"
+                    description="Download ready-to-use sunset gradient packs, social media templates, vector illustrations, and Canva-ready mockups on Envato Elements."
+                    ctaText="Explore Sunset & Gradient Assets on Envato"
+                  />
 
                   <p className="mt-8 mb-6 text-gray-700 dark:text-gray-300">
                     <strong className="text-gray-900 dark:text-white">Related:</strong>{' '}

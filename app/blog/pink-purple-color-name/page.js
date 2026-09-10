@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
+import BlogToolsCTA from '../components/BlogToolsCTA';
 import {
   PaletteQuickAnswer,
   PaletteShadesTable,
@@ -286,6 +287,8 @@ export default function PinkPurpleColorNamePage() {
               </Link>
             </div>
           </section>
+
+          <BlogToolsCTA variant="graphics" />
 
           <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
             <strong className="text-gray-800 dark:text-gray-200">Related:</strong>{' '}

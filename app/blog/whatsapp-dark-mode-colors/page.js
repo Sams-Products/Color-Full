@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { PaletteQuickAnswer, PaletteUiUsageSection } from '../components/PaletteReferenceBlocks';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
@@ -224,6 +225,13 @@ export default function WhatsAppDarkModeColorsPage() {
                       </div>
                     ))}
                   </dl>
+
+                  <EnvatoAffiliateBanner
+                    variant="uiKits"
+                    title="Building a chat app or messaging interface?"
+                    description="Speed up development with Figma chat UI kits, mobile app design systems, and responsive components on Envato Elements."
+                    ctaText="Browse Mobile & Chat UI Kits on Envato"
+                  />
                 </div>
               </div>
 

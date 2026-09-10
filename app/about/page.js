@@ -34,35 +34,31 @@ export default function AboutPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">What We Offer</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-              <li><strong>Color Palette Generator:</strong> Create harmonious color palettes based on color theory principles</li>
-              <li><strong>Accessibility Contrast Checker:</strong> Ensure your color combinations meet WCAG guidelines for accessibility</li>
-              <li><strong>Color Blog:</strong> Stay updated with the latest color trends, design tips, and expert insights</li>
-              <li><strong>Free Tools:</strong> All our tools are completely free to use, with no registration required</li>
+              <li><strong>Color Palette Generator:</strong> Create harmonious color palettes based on classical color theory principles (monochromatic, analogous, complementary, triadic, and tetradic).</li>
+              <li><strong>Accessibility Contrast Checker:</strong> Verify WCAG 2.1 AA and AAA compliance using real-time relative luminance formulas to guarantee accessible web experiences.</li>
+              <li><strong>Color Name Finder &amp; Converter:</strong> Convert between Hex, RGB, HSL, and CMYK formats while matching exact CSS color keywords and standardized color names.</li>
+              <li><strong>Color Mixing Simulator:</strong> Predict authentic pigment-based RYB paint blending for physical and digital design projects.</li>
+              <li><strong>Tint &amp; Shade Generator:</strong> Instantly generate 10 tints and 10 shades with one-click export to Tailwind CSS config and CSS Custom Properties.</li>
+              <li><strong>In-Depth Design Research &amp; Guides:</strong> Expert articles documenting brand color systems, UI dark mode implementations, and modern aesthetic palettes.</li>
             </ul>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Our Values</h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Editorial Standards &amp; Accuracy</h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              All content, guides, and tools published on Theme &amp; Color adhere to strict accuracy and technical standards:
+            </p>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Accessibility First</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">WCAG 2.1 Compliance Math</h3>
                 <p>
-                  We believe that good design is inclusive design. Our contrast checker helps ensure your color choices 
-                  are accessible to everyone, including users with visual impairments.
+                  Our contrast evaluation algorithms strictly implement the official W3C Web Content Accessibility Guidelines (WCAG 2.1). Ratios are calculated using standardized relative luminance formulas (\(L = 0.2126R + 0.7152G + 0.0722B\)) after sRGB gamma expansion, ensuring 100% reliable pass/fail ratings for AA and AAA compliance.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Free and Open</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Empirical Design Research</h3>
                 <p>
-                  All our tools are free to use. We believe that powerful design tools should be accessible to everyone, 
-                  regardless of budget or experience level.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">User-Focused</h3>
-                <p>
-                  We continuously improve our tools based on user feedback. Your experience matters to us, and we're 
-                  committed to making Theme & Color the best color tool platform available.
+                  Our color system breakdowns (e.g., Discord Dark Mode, Instagram Dark Mode, VS Code color themes) are empirically extracted directly from verified application style sheets, design tokens, and official design system specifications.
                 </p>
               </div>
             </div>
@@ -71,23 +67,19 @@ export default function AboutPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Who We Are</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Theme & Color is built by a team of designers and developers who are passionate about color and design. 
-              We understand the challenges of color selection and have created these tools to solve real problems 
-              we've faced in our own design work.
+              Theme &amp; Color is founded and maintained by an independent group of frontend engineers, UI/UX designers, and accessibility advocates. Having experienced the daily friction of hunting down accessible color combinations and cross-format color codes across different software suites, we built Theme &amp; Color as a unified, fast, and completely free web utility for the global creative community.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              Whether you're a professional designer working on a brand identity, a developer ensuring your app 
-              meets accessibility standards, or a hobbyist exploring color theory, Theme & Color is here to help you 
-              create beautiful, accessible color schemes.
+              Whether you are an engineer building design tokens in Tailwind, a digital artist calibrating color swatches, or a brand strategist designing accessible identity systems, our tools are built to make your creative workflow seamless.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Get in Touch</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Have questions, suggestions, or feedback? We'd love to hear from you! Visit our{' '}
+              Have questions, technical suggestions, or feedback about our algorithms? We welcome community input! Reach out directly via our{' '}
               <a href="/contact" className="text-purple-600 dark:text-purple-400 hover:underline">Contact Us</a> page 
-              to get in touch.
+              or email our engineering team at <a href="mailto:sams02092000@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">sams02092000@gmail.com</a>.
             </p>
           </section>
         </article>

@@ -68,6 +68,31 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/what-color-is-between-pink-and-purple',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-color-is-between-pink-purple-color-name',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-color-does-pink-end-purple-make-magenta-hex-codes',
+        destination: '/blog/what-color-does-pink-and-purple-make',
+        permanent: true,
+      },
+      {
+        source: '/blog/sage-green-color-code',
+        destination: '/blog/sage-green-hex-code',
+        permanent: true,
+      },
+      {
+        source: '/blog/sage-green-health',
+        destination: '/blog/sage-green-hex-code',
+        permanent: true,
+      },
+      {
         source: '/blog/sunset-vibes',
         destination: '/blog/sunset-color-palette',
         permanent: true,

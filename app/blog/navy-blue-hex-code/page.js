@@ -22,17 +22,18 @@ const LAST_MODIFIED = '2026-08-15T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/navy-blue-hex-code',
-  title: 'Navy Blue Hex #000080 — Copy Code + 10 Shades',
+  title: 'Navy Blue Hex Code #000080 — 10 Shades, Palettes & Canva Codes',
   description:
-    'Navy blue hex code #000080 (RGB 0,0,128). Copy the code, then grab 10 navy shades, gold & white pairings, and Canva-ready palettes.',
+    'Navy blue hex code #000080 (RGB 0, 0, 128) plus 10 dark & light navy shades, gold pairings, palettes & Canva hex codes. Copy free.',
   keywords: [
+    'navy blue hex code',
     'navy blue hex',
     'navy hex code',
     'navy blue color code',
     'navy blue colour code',
     '#000080',
     'navy shades',
-    'palette',
+    'navy palette',
     'Theme & Color',
   ],
   openGraphType: 'article',
@@ -44,8 +45,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Navy Blue Hex #000080 — Copy Code + 10 Shades',
-  'Navy blue hex code #000080 (RGB 0,0,128). Copy the code, then grab 10 navy shades, gold & white pairings, and Canva-ready palettes.',
+  'Navy Blue Hex Code #000080 — 10 Shades, Palettes & Canva Codes',
+  'Navy blue hex code #000080 (RGB 0, 0, 128) plus 10 dark & light navy shades, gold pairings, palettes & Canva hex codes. Copy free.',
   'navy-blue-hex-code',
   getBlogArticleDatePublished('navy-blue-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

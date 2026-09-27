@@ -20,12 +20,13 @@ const LAST_MODIFIED = '2026-08-26T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/pink-purple-color-name',
-  title: 'What Color is Between Pink and Purple? 10 Names + Hex Codes',
+  title: 'Pink and Purple Color Names & Hex Codes (Mauve, Magenta, Fuchsia)',
   description:
-    'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia, orchid & more. 10 pinkish-purple names with 1-click copy hex codes, palettes & Canva tips.',
+    'What color is between pink and purple? Discover 10 pinkish-purple color names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with 1-click copy hex codes & Canva palettes.',
   keywords: [
-    'color between pink and purple',
+    'pink purple color name',
     'what color is between pink and purple',
+    'color between pink and purple',
     'what is pink purple called',
     'pinkish purple color name',
     'is magenta pink or purple',
@@ -41,8 +42,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Pink Purple Color Name — Mauve #E0B0FF + Magenta',
-  'What color is between pink and purple? Mauve #E0B0FF, magenta #FF00FF, fuchsia #FF77FF. Copy every pink-purple hex name instantly.',
+  'Pink and Purple Color Names & Hex Codes — Mauve, Magenta & Fuchsia',
+  'What color is between pink and purple? Discover 10 pinkish-purple color names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with copy-ready hex codes.',
   'pink-purple-color-name',
   getBlogArticleDatePublished('pink-purple-color-name'),
   BLOG_ARTICLE_DATE_MODIFIED

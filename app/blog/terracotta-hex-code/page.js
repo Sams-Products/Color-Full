@@ -21,10 +21,10 @@ const LAST_MODIFIED = '2026-07-16T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/terracotta-hex-code',
-  title: 'Terracotta Hex Code #E2725B — 10 Shades + Canva',
+  title: 'Terracotta Hex Code #E2725B — 10 Shades, Palettes & Canva Codes',
   description:
-    'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva steps. Copy free.',
-  keywords: ['terracotta hex code', 'terracotta color code', 'terracotta hex', '#E2725B', 'terracotta shades', 'palette', 'UI color', 'Theme & Color'],
+    'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva color codes. Copy free.',
+  keywords: ['terracotta hex code', 'terracotta color code', 'terracotta hex', '#E2725B', 'terracotta shades', 'terracotta palette', 'UI color', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
     publishedTime: '2026-05-01T00:00:00.000Z',
@@ -32,8 +32,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Terracotta Hex Code #E2725B — 10 Shades + Canva',
-  'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva steps. Copy free.',
+  'Terracotta Hex Code #E2725B — 10 Shades, Palettes & Canva Codes',
+  'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva color codes. Copy free.',
   'terracotta-hex-code',
   getBlogArticleDatePublished('terracotta-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

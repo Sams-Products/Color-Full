@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { PaletteQuickAnswer, PaletteUiUsageSection } from '../components/PaletteReferenceBlocks';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
@@ -12,17 +13,18 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-07-16T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-06T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/youtube-dark-mode-colors',
-  title: 'YouTube Dark Mode Hex Code #0F0F0F — All Colors (Copy)',
+  title: 'YouTube Dark Mode Hex Codes: #0F0F0F, #212121 & UI Palette (Copy)',
   description:
-    'YouTube dark mode hex codes: background #0F0F0F, elevated #212121, text #FFFFFF, red #FF0000. Copy every YouTube dark theme color instantly.',
+    'YouTube dark mode hex codes: background #0F0F0F, surface #212121, text #FFFFFF, red #FF0000. Copy all YouTube dark theme UI colors instantly for CSS & Figma.',
   keywords: [
     'youtube dark mode colors',
     'youtube dark mode hex code',
     'youtube background color',
+    'youtube dark theme hex',
     'youtube color palette',
     'youtube UI colors',
     '#0F0F0F',
@@ -39,8 +41,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'YouTube Dark Mode Hex Code #0F0F0F — All Colors (Copy)',
-  'YouTube dark mode hex codes: background #0F0F0F, elevated #212121, text #FFFFFF, red #FF0000. Copy every YouTube dark theme color instantly.',
+  'YouTube Dark Mode Hex Codes: #0F0F0F, #212121 & UI Palette (Copy)',
+  'YouTube dark mode hex codes: background #0F0F0F, surface #212121, text #FFFFFF, red #FF0000. Copy all YouTube dark theme UI colors instantly for CSS & Figma.',
   'youtube-dark-mode-colors',
   getBlogArticleDatePublished('youtube-dark-mode-colors'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -224,6 +226,13 @@ export default function YouTubeDarkModeColorsPage() {
                       </div>
                     ))}
                   </dl>
+
+                  <EnvatoAffiliateBanner
+                    variant="uiKits"
+                    title="Building a video app, dashboard, or dark UI?"
+                    description="Speed up production with 10,000+ dark mode Figma UI kits, media player components, and web templates on Envato Elements."
+                    ctaText="Explore Dark Mode & UI Kits on Envato"
+                  />
                 </div>
               </div>
 

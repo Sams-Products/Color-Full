@@ -18,10 +18,11 @@ const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sunset-color-palette',
-  title: 'Sunset Color Palette #F97316 #EC4899 #8B5CF6 — Copy Hex Codes',
+  title: 'Sunset Color Palette Hex Codes (#F97316, #EC4899, #8B5CF6) + Canva',
   description:
-    'Sunset color palette hex codes: #F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple. Copy sunset hex codes & RGB for Canva, CSS & Figma.',
+    'Sunset color palette hex codes: #F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple, #F59E0B amber. Copy sunset hex & RGB codes for Canva, CSS & Figma.',
   keywords: [
+    'sunset color palette',
     'sunset color palettes hex codes',
     'sunset colors rgb',
     'sunset rgb code',
@@ -37,8 +38,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Sunset Color Palette #F97316 #EC4899 #8B5CF6 — Copy Hex Codes',
-  'Sunset color palette hex codes: #F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple. Copy sunset hex codes & RGB for Canva, CSS & Figma.',
+  'Sunset Color Palette Hex Codes (#F97316, #EC4899, #8B5CF6) + Canva',
+  'Sunset color palette hex codes: #F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple, #F59E0B amber. Copy sunset hex & RGB codes for Canva, CSS & Figma.',
   'sunset-color-palette',
   getBlogArticleDatePublished('sunset-color-palette'),
   BLOG_ARTICLE_DATE_MODIFIED

@@ -3,6 +3,7 @@ import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import ColorSwatch from '../[slug]/ColorSwatch';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import {
   PaletteQuickAnswer,
   PaletteShadesTable,
@@ -18,13 +19,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sage-green-hex-code',
-  title: 'Sage Green Hex Code #B2AC88 — 10 Shades + Canva',
+  title: 'Sage Green Hex Code: #B2AC88 — 10 Light & Dark Shades + Canva Codes',
   description:
-    'Sage green hex code #B2AC88 (RGB 178,172,136) plus 10 sage shades, dark & light sage codes, palette pairings & step-by-step Canva instructions. Copy free.',
+    'Sage green hex code #B2AC88 (RGB 178, 172, 136). Copy 10 dark & light sage shades, warm cream & terracotta pairings, plus step-by-step Canva codes.',
   keywords: [
     'sage green hex code',
     'sage green hex code canva',
@@ -53,8 +54,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Sage Green Hex Code #B2AC88 — 10 Shades + Canva',
-  'Sage green hex code #B2AC88 (RGB 178,172,136) plus 10 sage shades, dark & light sage codes, palette pairings & step-by-step Canva instructions. Copy free.',
+  'Sage Green Hex Code: #B2AC88 — 10 Light & Dark Shades + Canva Codes',
+  'Sage green hex code #B2AC88 (RGB 178, 172, 136). Copy 10 dark & light sage shades, warm cream & terracotta pairings, plus step-by-step Canva codes.',
   'sage-green-hex-code',
   getBlogArticleDatePublished('sage-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -448,6 +449,13 @@ export default function SageGreenHexCodePage() {
                   title="Sage Green Palette Pairings"
                   intro="These four mixes cover organic retail, spa and fitness apps, and editorial lifestyle sites—tune saturation in photography, then lock hex in your theme."
                   pairings={SAGE_PAIRINGS}
+                />
+
+                <EnvatoAffiliateBanner
+                  variant="graphics"
+                  title="Designing with sage green for branding or Canva?"
+                  description="Save time with 10,000+ sage green wedding suites, organic brand kits, social media templates, and Canva-ready graphics on Envato Elements."
+                  ctaText="Browse Sage Green Brand Kits & Templates"
                 />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">

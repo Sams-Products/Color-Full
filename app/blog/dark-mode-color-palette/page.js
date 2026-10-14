@@ -2,6 +2,7 @@ import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
 import {
@@ -294,6 +295,13 @@ export default function DarkModeColorPalettePage() {
                     <DarkPaletteCard key={palette.title} palette={palette} />
                   ))}
                 </ul>
+
+                <EnvatoAffiliateBanner
+                  variant="uiKits"
+                  title="Need pre-built dark mode UI kits or Figma components?"
+                  description="Accelerate your workflow with 10,000+ dark theme dashboards, design systems, and mobile app UI kits on Envato Elements."
+                  ctaText="Explore Dark Mode UI Kits on Envato"
+                />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">
                   <p className="mb-6">

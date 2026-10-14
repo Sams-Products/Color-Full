@@ -2,6 +2,7 @@ import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import {
   PaletteQuickAnswer,
   PaletteShadesTable,
@@ -17,14 +18,25 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-07-16T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/terracotta-hex-code',
-  title: 'Terracotta Hex Code #E2725B — 10 Shades, Palettes & Canva Codes',
+  title: 'Terracotta Hex Code: #E2725B — 10 Earthy Shades, Palettes & Canva (Copy)',
   description:
-    'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva color codes. Copy free.',
-  keywords: ['terracotta hex code', 'terracotta color code', 'terracotta hex', '#E2725B', 'terracotta shades', 'terracotta palette', 'UI color', 'Theme & Color'],
+    'Terracotta hex code #E2725B (RGB 226, 114, 91). Copy 10 warm terracotta shades, sage green pairings, earthy palettes & Canva color codes instantly.',
+  keywords: [
+    'terracotta hex code',
+    'terracotta color code',
+    'terracotta hex',
+    '#E2725B',
+    'terracotta shades',
+    'terracotta palette',
+    'terracotta color code canva',
+    'terracotta rgb',
+    'UI color',
+    'Theme & Color',
+  ],
   openGraphType: 'article',
   openGraph: {
     publishedTime: '2026-05-01T00:00:00.000Z',
@@ -32,8 +44,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Terracotta Hex Code #E2725B — 10 Shades, Palettes & Canva Codes',
-  'Terracotta hex code #E2725B (RGB 226,114,91) plus 10 terracotta shades, sage pairings, palette schemes & Canva color codes. Copy free.',
+  'Terracotta Hex Code: #E2725B — 10 Earthy Shades, Palettes & Canva (Copy)',
+  'Terracotta hex code #E2725B (RGB 226, 114, 91). Copy 10 warm terracotta shades, sage green pairings, earthy palettes & Canva color codes instantly.',
   'terracotta-hex-code',
   getBlogArticleDatePublished('terracotta-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -215,6 +227,13 @@ export default function TerracottaHexCodePage() {
                   title="Terracotta Palette Pairings"
                   intro="These combinations balance warmth with calm neutrals or cool structure—ideal when you want craft and credibility without defaulting to corporate blue."
                   pairings={TERRACOTTA_PAIRINGS}
+                />
+
+                <EnvatoAffiliateBanner
+                  variant="graphics"
+                  title="Designing with terracotta, warm clay, or earthy tones?"
+                  description="Explore 10,000+ warm earthy brand kits, Mediterranean stationery, ceramic logos, and Canva templates on Envato Elements."
+                  ctaText="Browse Terracotta Brand Kits & Templates"
                 />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">

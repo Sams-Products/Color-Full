@@ -9,9 +9,9 @@ import {
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-red-and-yellow-make',
-  title: 'What Color Does Red and Yellow Make? Orange — Hex Codes & Mixing Guide',
+  title: 'What Color Does Red and Yellow Make? Orange (#FF8000 & Mix Ratios)',
   description:
-    'Red and yellow make orange when mixed. See the exact hex codes for every red-yellow mix ratio, explore orange shades, and try our free color mixer tool.',
+    'Red and yellow make orange when mixed (#FF8000). See exact hex codes for every red-yellow mix ratio, explore amber & burnt orange swatches.',
   keywords: [
     'what color does red and yellow make',
     'what does red and yellow make',
@@ -25,13 +25,13 @@ export const metadata = buildPageMetadata({
   openGraphType: 'article',
   openGraph: {
     publishedTime: '2026-05-21T00:00:00.000Z',
-    modifiedTime: '2026-05-21T00:00:00.000Z',
+    modifiedTime: '2026-10-14T00:00:00.000Z',
   },
 });
 
 const articleSchema = getBlogArticleSchema(
-  'What Color Does Red and Yellow Make? Orange — Hex Codes & Mixing Guide',
-  'Red and yellow make orange when mixed. See the exact hex codes for every red-yellow mix ratio, explore orange shades, and try our free color mixer tool.',
+  'What Color Does Red and Yellow Make? Orange (#FF8000 & Mix Ratios)',
+  'Red and yellow make orange when mixed (#FF8000). See exact hex codes for every red-yellow mix ratio, explore amber & burnt orange swatches.',
   'what-color-does-red-and-yellow-make',
   getBlogArticleDatePublished('what-color-does-red-and-yellow-make'),
   BLOG_ARTICLE_DATE_MODIFIED

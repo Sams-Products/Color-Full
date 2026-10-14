@@ -2,6 +2,7 @@ import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import {
   PaletteQuickAnswer,
   PaletteShadesTable,
@@ -18,19 +19,21 @@ import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import NavyBlueHexCopyBox from './NavyBlueHexCopyBox';
 
-const LAST_MODIFIED = '2026-08-15T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/navy-blue-hex-code',
-  title: 'Navy Blue Hex Code #000080 — 10 Shades, Palettes & Canva Codes',
+  title: 'Navy Blue Hex Code: #000080 (Dark Navy, RGB, Palettes & Canva Codes)',
   description:
-    'Navy blue hex code #000080 (RGB 0, 0, 128) plus 10 dark & light navy shades, gold pairings, palettes & Canva hex codes. Copy free.',
+    'Navy blue hex code #000080 (RGB 0, 0, 128) plus dark navy (#0A192F), 10 blue shades, gold pairings, palettes & Canva hex codes. Copy free.',
   keywords: [
     'navy blue hex code',
     'navy blue hex',
     'navy hex code',
     'navy blue color code',
     'navy blue colour code',
+    'dark navy blue hex code',
+    'dark navy hex',
     '#000080',
     'navy shades',
     'navy palette',
@@ -38,6 +41,7 @@ export const metadata = buildPageMetadata({
   ],
   openGraphType: 'article',
   openGraph: {
+    publishedTime: '2026-05-21T00:00:00.000Z',
     modifiedTime: LAST_MODIFIED,
   },
   other: {
@@ -45,8 +49,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Navy Blue Hex Code #000080 — 10 Shades, Palettes & Canva Codes',
-  'Navy blue hex code #000080 (RGB 0, 0, 128) plus 10 dark & light navy shades, gold pairings, palettes & Canva hex codes. Copy free.',
+  'Navy Blue Hex Code: #000080 (Dark Navy, RGB, Palettes & Canva Codes)',
+  'Navy blue hex code #000080 (RGB 0, 0, 128) plus dark navy (#0A192F), 10 blue shades, gold pairings, palettes & Canva hex codes. Copy free.',
   'navy-blue-hex-code',
   getBlogArticleDatePublished('navy-blue-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -225,6 +229,13 @@ export default function NavyBlueHexCodePage() {
                   title="Navy Blue Color Palette Pairings"
                   intro="These four combinations cover most brand and product needs without reinventing color theory—treat them as starting points, then tune in your brand system."
                   pairings={NAVY_PAIRINGS}
+                />
+
+                <EnvatoAffiliateBanner
+                  variant="uiKits"
+                  title="Building corporate, SaaS, or luxury blue interfaces?"
+                  description="Accelerate development with 10,000+ navy blue dashboard UI kits, Figma templates, and corporate slide decks on Envato Elements."
+                  ctaText="Explore Navy & Corporate Kits on Envato"
                 />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">

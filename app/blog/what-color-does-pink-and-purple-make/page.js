@@ -13,13 +13,13 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 
-const LAST_MODIFIED = '2026-06-05T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-pink-and-purple-make',
-  title: 'What Color Does Pink and Purple Make? (Magenta, Mauve & Hex Codes)',
+  title: 'What Color Does Pink and Purple Make? (Magenta, Mauve & Mixing Hex Codes)',
   description:
-    'Pink and purple mixed together make magenta, mauve, or fuchsia. See exact hex codes for every mixing ratio (#BF34CA, #FF8FC8), swatches & blending guide.',
+    'Mixing pink and purple creates magenta, mauve, or fuchsia. View exact hex codes for every blend ratio (#BF34CA, #FF8FC8), visual swatches & paint guide.',
   keywords: [
     'what color does pink and purple make',
     'what color does pink and purple make when mixed',
@@ -33,14 +33,14 @@ export const metadata = buildPageMetadata({
   ],
   openGraphType: 'article',
   openGraph: {
-    publishedTime: LAST_MODIFIED,
+    publishedTime: '2026-06-05T00:00:00.000Z',
     modifiedTime: LAST_MODIFIED,
   },
 });
 
 const articleSchema = getBlogArticleSchema(
-  'What Color Does Pink and Purple Make? (Magenta, Mauve & Hex Codes)',
-  'Pink and purple mixed together make magenta, mauve, or fuchsia. See exact hex codes for every mixing ratio (#BF34CA, #FF8FC8), swatches & blending guide.',
+  'What Color Does Pink and Purple Make? (Magenta, Mauve & Mixing Hex Codes)',
+  'Mixing pink and purple creates magenta, mauve, or fuchsia. View exact hex codes for every blend ratio (#BF34CA, #FF8FC8), visual swatches & paint guide.',
   'what-color-does-pink-and-purple-make',
   getBlogArticleDatePublished('what-color-does-pink-and-purple-make'),
   BLOG_ARTICLE_DATE_MODIFIED

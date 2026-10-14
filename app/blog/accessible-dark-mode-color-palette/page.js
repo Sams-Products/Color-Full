@@ -15,14 +15,26 @@ import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 
 export const metadata = buildPageMetadata({
   path: '/blog/accessible-dark-mode-color-palette',
-  title: 'How to Build an Accessible Dark Mode Color Palette (With Hex Examples) | Theme & Color',
+  title: 'Accessible Dark Mode Color Palette: WCAG Hex Codes & UI Rules',
   description:
-    'Build a WCAG-friendly dark mode color palette: surfaces, text, borders, and accents with hex examples. Test contrast and generate harmonies with free tools.',
-  keywords: ['dark mode palette', 'WCAG', 'accessible UI', 'hex examples', 'Theme & Color'],
+    'Build a WCAG-compliant dark mode color palette: surface #171717, text #E4E4E7, borders & accents with hex codes. Test contrast and copy dark themes.',
+  keywords: [
+    'accessible dark mode color palette',
+    'dark mode palette',
+    'WCAG dark mode',
+    'accessible UI',
+    'dark mode hex codes',
+    'Theme & Color',
+  ],
+  openGraphType: 'article',
+  openGraph: {
+    publishedTime: '2026-06-01T00:00:00.000Z',
+    modifiedTime: '2026-10-14T00:00:00.000Z',
+  },
 });
 const articleSchema = getBlogArticleSchema(
-  'How to Build an Accessible Dark Mode Color Palette (With Hex Examples)',
-  'Build a WCAG-friendly dark mode color palette: surfaces, text, borders, and accents with hex examples. Test contrast and generate harmonies with free tools.',
+  'Accessible Dark Mode Color Palette: WCAG Hex Codes & UI Rules',
+  'Build a WCAG-compliant dark mode color palette: surface #171717, text #E4E4E7, borders & accents with hex codes. Test contrast and copy dark themes.',
   'accessible-dark-mode-color-palette',
   getBlogArticleDatePublished('accessible-dark-mode-color-palette'),
   BLOG_ARTICLE_DATE_MODIFIED

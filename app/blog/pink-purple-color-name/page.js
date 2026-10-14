@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import InlineTagLink from '../../components/InlineTagLink';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import {
   PaletteQuickAnswer,
   PaletteShadesTable,
@@ -16,13 +17,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-08-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/pink-purple-color-name',
-  title: 'Pink and Purple Color Names & Hex Codes (Mauve, Magenta, Fuchsia)',
+  title: 'Pink and Purple Color Names: What Is It Called? (Mauve, Magenta & Hex Codes)',
   description:
-    'What color is between pink and purple? Discover 10 pinkish-purple color names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with 1-click copy hex codes & Canva palettes.',
+    'Looking for the color between pink and purple? Discover 10 pink-purple names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with 1-click copy hex codes & Canva palettes.',
   keywords: [
     'pink purple color name',
     'what color is between pink and purple',
@@ -30,6 +31,8 @@ export const metadata = buildPageMetadata({
     'what is pink purple called',
     'pinkish purple color name',
     'is magenta pink or purple',
+    'what is pink and purple mixed together called',
+    'pink purple hex code',
     'mauve hex',
     'magenta hex',
     'fuchsia hex',
@@ -37,13 +40,13 @@ export const metadata = buildPageMetadata({
   ],
   openGraphType: 'article',
   openGraph: {
-    publishedTime: LAST_MODIFIED,
+    publishedTime: '2026-08-26T00:00:00.000Z',
     modifiedTime: LAST_MODIFIED,
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Pink and Purple Color Names & Hex Codes — Mauve, Magenta & Fuchsia',
-  'What color is between pink and purple? Discover 10 pinkish-purple color names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with copy-ready hex codes.',
+  'Pink and Purple Color Names: What Is It Called? (Mauve, Magenta & Hex Codes)',
+  'Looking for the color between pink and purple? Discover 10 pink-purple names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with 1-click copy hex codes & Canva palettes.',
   'pink-purple-color-name',
   getBlogArticleDatePublished('pink-purple-color-name'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -250,6 +253,13 @@ export default function PinkPurpleColorNamePage() {
             title="Pink Purple Color Palette"
             intro="Three ready-made pink-purple palettes with hex codes for editorial, nightlife, and beauty brands."
             pairings={PINK_PURPLE_PALETTES}
+          />
+
+          <EnvatoAffiliateBanner
+            variant="graphics"
+            title="Need pink & purple graphics, logos, or Canva templates?"
+            description="Speed up your creative projects with 100,000+ beauty branding kits, neon event flyers, and pastel social media packs on Envato Elements."
+            ctaText="Explore Pink & Purple Design Assets on Envato"
           />
 
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">

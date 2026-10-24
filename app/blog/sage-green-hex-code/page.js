@@ -19,13 +19,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sage-green-hex-code',
-  title: 'Sage Green Hex Code: #B2AC88 — 10 Light & Dark Shades + Canva Codes',
+  title: 'Sage Green Hex Code #B2AC88 — 10 Shades + Canva (Copy)',
   description:
-    'Sage green hex code #B2AC88 (RGB 178, 172, 136). Copy 10 dark & light sage shades, warm cream & terracotta pairings, plus step-by-step Canva codes.',
+    'Sage green hex code #B2AC88 · RGB(178, 172, 136). Compare 10 light & dark sage shades, warm cream pairings & copy Canva color codes in 1 click.',
   keywords: [
     'sage green hex code',
     'sage green hex code canva',
@@ -54,8 +54,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Sage Green Hex Code: #B2AC88 — 10 Light & Dark Shades + Canva Codes',
-  'Sage green hex code #B2AC88 (RGB 178, 172, 136). Copy 10 dark & light sage shades, warm cream & terracotta pairings, plus step-by-step Canva codes.',
+  'Sage Green Hex Code #B2AC88 — 10 Shades + Canva (Copy)',
+  'Sage green hex code #B2AC88 · RGB(178, 172, 136). Compare 10 light & dark sage shades, warm cream pairings & copy Canva color codes in 1 click.',
   'sage-green-hex-code',
   getBlogArticleDatePublished('sage-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -310,7 +310,7 @@ export default function SageGreenHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Sage Green Hex Code: #B2AC88
+              Sage Green Hex Code #B2AC88 — 10 Shades, Palettes &amp; Canva
             </h1>
             <AeoDirectAnswer
               question="What is the sage green hex code?"

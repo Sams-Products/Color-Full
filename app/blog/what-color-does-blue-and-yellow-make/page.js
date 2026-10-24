@@ -9,9 +9,9 @@ import {
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-blue-and-yellow-make',
-  title: 'What Color Does Blue and Yellow Make? Green — Hex Codes & Mixing Guide',
+  title: 'What Color Does Blue and Yellow Make? 7 Green Mix Swatches',
   description:
-    'Blue and yellow make green when mixed. See exact hex codes for every blue-yellow ratio, explore green shades, and try our free color mixer tool.',
+    'See the exact green shades blue and yellow make across 7 mixing ratios (50/50 Green #008000, Teal, Forest & Lime) with swatches & 1-click hex copy.',
   keywords: [
     'what color does blue and yellow make',
     'what does blue and yellow make',

@@ -3,6 +3,7 @@ import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import ColorSwatch from '../[slug]/ColorSwatch';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
 import {
@@ -20,13 +21,13 @@ import {
   ForestGreenFormatCodesSection,
 } from './ForestGreenHexLead';
 
-const LAST_MODIFIED = '2026-07-09T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/forest-green-hex-code',
-  title: 'Forest Green Hex Code: #228B22 — 10 Shades, Palettes & Canva Codes',
+  title: 'Forest Green Hex Code #228B22 — 10 Shades + Canva (Copy)',
   description:
-    'Forest green hex code #228B22 (RGB 34, 139, 34) plus 10 dark & light forest shades, sage & gold pairings, palettes & step-by-step Canva codes. Copy free.',
+    'Forest green hex code #228B22 · RGB(34, 139, 34). Compare 10 dark & light forest green shades, pine & hunter codes, and copy Canva palettes in 1 click.',
   keywords: [
     'forest green hex code',
     'forest green hex',
@@ -48,8 +49,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Forest Green Hex Code: #228B22 — 10 Shades, Palettes & Canva Codes',
-  'Forest green hex code #228B22 (RGB 34, 139, 34) plus 10 dark & light forest shades, sage & gold pairings, palettes & step-by-step Canva codes. Copy free.',
+  'Forest Green Hex Code #228B22 — 10 Shades + Canva (Copy)',
+  'Forest green hex code #228B22 · RGB(34, 139, 34). Compare 10 dark & light forest green shades, pine & hunter codes, and copy Canva palettes in 1 click.',
   'forest-green-hex-code',
   getBlogArticleDatePublished('forest-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -195,7 +196,7 @@ export default function ForestGreenHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Forest Green Hex Code: #228B22
+              Forest Green Hex Code #228B22 — 10 Shades, Palettes &amp; Canva
             </h1>
             <AeoDirectAnswer
               question="What is the forest green hex code?"
@@ -220,7 +221,7 @@ export default function ForestGreenHexCodePage() {
             <div className="flex items-center gap-4 text-emerald-100 text-sm flex-wrap">
               <time dateTime="2026-04-11">Published April 11, 2026</time>
               <span>•</span>
-              <time dateTime="2026-06-26">Updated June 26, 2026</time>
+              <time dateTime="2026-10-24">Updated October 24, 2026</time>
               <span>•</span>
               <span>10 min read</span>
             </div>
@@ -254,6 +255,13 @@ export default function ForestGreenHexCodePage() {
                 </div>
 
                 <ForestGreenShadesTable />
+
+                <EnvatoAffiliateBanner
+                  variant="graphics"
+                  title="Designing an outdoor, eco, or heritage brand with forest green?"
+                  description="Download 10,000+ forest green brand kits, outdoor logo templates, packaging mockups, and Canva assets on Envato Elements."
+                  ctaText="Browse Forest Green Templates on Envato"
+                />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">
                   <p className="mb-6">

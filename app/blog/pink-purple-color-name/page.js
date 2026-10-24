@@ -17,11 +17,11 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-10-14T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/pink-purple-color-name',
-  title: 'Pink and Purple Color Names: What Is It Called? (Mauve, Magenta & Hex Codes)',
+  title: 'Pink & Purple Color Names: What Is It Called? (10 Swatches)',
   description:
     'Looking for the color between pink and purple? Discover 10 pink-purple names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with 1-click copy hex codes & Canva palettes.',
   keywords: [
@@ -45,7 +45,7 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Pink and Purple Color Names: What Is It Called? (Mauve, Magenta & Hex Codes)',
+  'Pink & Purple Color Names: What Is It Called? (10 Swatches)',
   'Looking for the color between pink and purple? Discover 10 pink-purple names (Mauve #E0B0FF, Magenta #FF00FF, Fuchsia #FF77FF) with 1-click copy hex codes & Canva palettes.',
   'pink-purple-color-name',
   getBlogArticleDatePublished('pink-purple-color-name'),

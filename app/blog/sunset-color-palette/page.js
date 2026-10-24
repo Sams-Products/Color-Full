@@ -14,13 +14,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sunset-color-palette',
-  title: 'Sunset Color Palette Hex Codes (#F97316, #EC4899, #8B5CF6) + Canva',
+  title: 'Sunset Color Palette — 10 Hex Codes, Gradients & Canva',
   description:
-    'Sunset color palette hex codes: #F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple, #F59E0B amber. Copy sunset hex & RGB codes for Canva, CSS & Figma.',
+    'Copy 10 sunset color palette hex codes (#F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple, #F59E0B amber), 4 gradient schemes & Canva codes.',
   keywords: [
     'sunset color palette',
     'sunset color palettes hex codes',
@@ -38,8 +38,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Sunset Color Palette Hex Codes (#F97316, #EC4899, #8B5CF6) + Canva',
-  'Sunset color palette hex codes: #F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple, #F59E0B amber. Copy sunset hex & RGB codes for Canva, CSS & Figma.',
+  'Sunset Color Palette — 10 Hex Codes, Gradients & Canva',
+  'Copy 10 sunset color palette hex codes (#F97316 orange, #EF4444 red, #EC4899 pink, #8B5CF6 purple, #F59E0B amber), 4 gradient schemes & Canva codes.',
   'sunset-color-palette',
   getBlogArticleDatePublished('sunset-color-palette'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -283,7 +283,7 @@ export default function SunsetColorPalettePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Sunset Color Palette: #F97316 #EC4899 #8B5CF6
+              Sunset Color Palette: 10 Hex Codes, Gradients &amp; Canva Swatches
             </h1>
             <AeoDirectAnswer
               question="What is the sunset color hex code?"

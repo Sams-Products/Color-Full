@@ -16,13 +16,13 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 
-const LAST_MODIFIED = '2026-05-30T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/yellow-green-hex-code',
-  title: 'Yellow Green Hex Code: #9ACD32 — Shades, RGB & Palette Pairings',
+  title: 'Yellow Green Hex Code, RGB & 10 Chartreuse/Lime Shades',
   description:
-    'Yellow green hex code is #9ACD32. Copy hex codes for yellow-green shades, see palette pairings and find out what colors go with yellow-green.',
+    'Copy the official yellow-green hex code, RGB & HSL values, plus 10 chartreuse, lime, pear & olive-green shades and high-contrast UI palette pairings.',
   keywords: [
     'yellow green hex code',
     'yellow-green hex',
@@ -41,8 +41,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Yellow Green Hex Code: #9ACD32 — Shades, RGB & Palette Pairings',
-  'Yellow green hex code is #9ACD32. Copy hex codes for yellow-green shades, see palette pairings and find out what colors go with yellow-green.',
+  'Yellow Green Hex Code, RGB & 10 Chartreuse/Lime Shades',
+  'Copy the official yellow-green hex code, RGB & HSL values, plus 10 chartreuse, lime, pear & olive-green shades and high-contrast UI palette pairings.',
   'yellow-green-hex-code',
   getBlogArticleDatePublished('yellow-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

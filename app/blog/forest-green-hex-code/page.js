@@ -21,13 +21,13 @@ import {
   ForestGreenFormatCodesSection,
 } from './ForestGreenHexLead';
 
-const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/forest-green-hex-code',
-  title: 'Forest Green Hex Code #228B22 — 10 Shades + Canva (Copy)',
+  title: 'Forest Green Hex Code, RGB & 10 Dark/Light Shades (Copy)',
   description:
-    'Forest green hex code #228B22 · RGB(34, 139, 34). Compare 10 dark & light forest green shades, pine & hunter codes, and copy Canva palettes in 1 click.',
+    'Copy the official forest green hex code, RGB & HTML color values, plus 10 dark pine, hunter & emerald shades, UI palettes, and 1-click Canva swatches.',
   keywords: [
     'forest green hex code',
     'forest green hex',
@@ -49,8 +49,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Forest Green Hex Code #228B22 — 10 Shades + Canva (Copy)',
-  'Forest green hex code #228B22 · RGB(34, 139, 34). Compare 10 dark & light forest green shades, pine & hunter codes, and copy Canva palettes in 1 click.',
+  'Forest Green Hex Code, RGB & 10 Dark/Light Shades (Copy)',
+  'Copy the official forest green hex code, RGB & HTML color values, plus 10 dark pine, hunter & emerald shades, UI palettes, and 1-click Canva swatches.',
   'forest-green-hex-code',
   getBlogArticleDatePublished('forest-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -196,7 +196,7 @@ export default function ForestGreenHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Forest Green Hex Code #228B22 — 10 Shades, Palettes &amp; Canva
+              Forest Green Hex Code, RGB &amp; 10 Dark/Light Shades (+ Canva)
             </h1>
             <AeoDirectAnswer
               question="What is the forest green hex code?"

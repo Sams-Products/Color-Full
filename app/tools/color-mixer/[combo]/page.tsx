@@ -8,16 +8,10 @@ import ColorMixerSeoBlocks from './ColorMixerSeoBlocks';
 
 const COMBINATIONS = [
   'red-and-blue',
-  'blue-and-yellow',
-  'yellow-and-blue',
-  'red-and-yellow',
-  'yellow-and-red',
   'blue-and-green',
   'red-and-green',
   'purple-and-yellow',
   'orange-and-blue',
-  'pink-and-purple',
-  'red-and-white',
   'blue-and-white',
   'black-and-white',
   'red-and-black',
@@ -30,25 +24,19 @@ const COMBINATIONS = [
 ];
 
 const RELATED: Record<string, string[]> = {
-  'red-and-blue': ['purple-and-yellow', 'red-and-yellow', 'blue-and-purple', 'pink-and-purple'],
-  'blue-and-yellow': ['yellow-and-blue', 'yellow-and-green', 'blue-and-green', 'green-and-yellow'],
-  'yellow-and-blue': ['blue-and-yellow', 'yellow-and-green', 'blue-and-green', 'green-and-yellow'],
-  'red-and-yellow': ['yellow-and-red', 'orange-and-red', 'red-and-blue', 'orange-and-blue'],
-  'yellow-and-red': ['red-and-yellow', 'orange-and-red', 'red-and-blue', 'red-and-white'],
-  'blue-and-green': ['blue-and-yellow', 'yellow-and-blue', 'yellow-and-green', 'pink-and-blue'],
-  'red-and-green': ['red-and-blue', 'red-and-yellow', 'green-and-yellow', 'blue-and-green'],
-  'purple-and-yellow': ['red-and-blue', 'blue-and-purple', 'orange-and-blue', 'pink-and-purple'],
-  'orange-and-blue': ['red-and-yellow', 'blue-and-yellow', 'purple-and-yellow', 'brown-and-orange'],
-  'pink-and-purple': ['red-and-white', 'blue-and-purple', 'pink-and-blue', 'red-and-blue'],
-  'red-and-white': ['blue-and-white', 'pink-and-purple', 'red-and-yellow', 'red-and-blue'],
-  'blue-and-white': ['red-and-white', 'blue-and-yellow', 'pink-and-blue', 'black-and-white'],
-  'black-and-white': ['red-and-black', 'blue-and-white', 'red-and-white', 'brown-and-orange'],
+  'red-and-blue': ['purple-and-yellow', 'blue-and-purple', 'orange-and-blue', 'red-and-green'],
+  'blue-and-green': ['yellow-and-green', 'green-and-yellow', 'pink-and-blue', 'blue-and-white'],
+  'red-and-green': ['red-and-blue', 'green-and-yellow', 'blue-and-green', 'red-and-black'],
+  'purple-and-yellow': ['red-and-blue', 'blue-and-purple', 'orange-and-blue', 'yellow-and-green'],
+  'orange-and-blue': ['purple-and-yellow', 'brown-and-orange', 'red-and-blue', 'orange-and-red'],
+  'blue-and-white': ['pink-and-blue', 'black-and-white', 'blue-and-green', 'blue-and-purple'],
+  'black-and-white': ['red-and-black', 'blue-and-white', 'brown-and-orange', 'red-and-blue'],
   'red-and-black': ['black-and-white', 'red-and-green', 'orange-and-red', 'red-and-blue'],
-  'yellow-and-green': ['blue-and-yellow', 'green-and-yellow', 'blue-and-green', 'orange-and-red'],
-  'orange-and-red': ['red-and-yellow', 'orange-and-blue', 'brown-and-orange', 'red-and-black'],
-  'blue-and-purple': ['red-and-blue', 'purple-and-yellow', 'pink-and-purple', 'pink-and-blue'],
-  'green-and-yellow': ['yellow-and-green', 'blue-and-yellow', 'blue-and-green', 'brown-and-orange'],
-  'pink-and-blue': ['blue-and-white', 'pink-and-purple', 'red-and-blue', 'blue-and-green'],
+  'yellow-and-green': ['green-and-yellow', 'blue-and-green', 'orange-and-red', 'purple-and-yellow'],
+  'orange-and-red': ['orange-and-blue', 'brown-and-orange', 'red-and-black', 'red-and-green'],
+  'blue-and-purple': ['red-and-blue', 'purple-and-yellow', 'pink-and-blue', 'blue-and-white'],
+  'green-and-yellow': ['yellow-and-green', 'blue-and-green', 'brown-and-orange', 'red-and-green'],
+  'pink-and-blue': ['blue-and-white', 'red-and-blue', 'blue-and-green', 'blue-and-purple'],
   'brown-and-orange': ['orange-and-red', 'orange-and-blue', 'red-and-black', 'black-and-white'],
 };
 
@@ -95,6 +83,11 @@ export async function generateMetadata({ params }: { params: Promise<{ combo: st
   const c1 = parsed.color1.charAt(0).toUpperCase() + parsed.color1.slice(1);
   const c2 = parsed.color2.charAt(0).toUpperCase() + parsed.color2.slice(1);
   const comboPath = `/tools/color-mixer/${combo}`;
+  const noindexRobots = {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  };
   const seo = getComboSeo(combo);
   if (seo) {
     return buildPageMetadata({
@@ -102,6 +95,7 @@ export async function generateMetadata({ params }: { params: Promise<{ combo: st
       title: seo.metaTitle,
       description: seo.metaDescription,
       keywords: ['color mixing', combo.replace(/-/g, ' '), 'RYB', 'hex codes', 'Theme & Color'],
+      robots: noindexRobots,
       ...OG_MIXER,
       openGraph: {
         ...OG_MIXER.openGraph,
@@ -122,6 +116,7 @@ export async function generateMetadata({ params }: { params: Promise<{ combo: st
       'hex',
       'Theme & Color',
     ],
+    robots: noindexRobots,
     ...OG_MIXER,
     openGraph: {
       ...OG_MIXER.openGraph,

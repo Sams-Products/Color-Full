@@ -45,6 +45,37 @@ const nextConfig = {
         destination: '/tools/color-mixer/black-and-white',
         permanent: true,
       },
+      // Consolidate cannibalizing color-mixer combo routes → authoritative blog mix guides
+      {
+        source: '/tools/color-mixer/blue-and-yellow',
+        destination: '/blog/what-color-does-blue-and-yellow-make',
+        permanent: true,
+      },
+      {
+        source: '/tools/color-mixer/yellow-and-blue',
+        destination: '/blog/what-color-does-blue-and-yellow-make',
+        permanent: true,
+      },
+      {
+        source: '/tools/color-mixer/red-and-yellow',
+        destination: '/blog/what-color-does-red-and-yellow-make',
+        permanent: true,
+      },
+      {
+        source: '/tools/color-mixer/yellow-and-red',
+        destination: '/blog/what-color-does-red-and-yellow-make',
+        permanent: true,
+      },
+      {
+        source: '/tools/color-mixer/red-and-white',
+        destination: '/blog/what-color-does-red-and-white-make',
+        permanent: true,
+      },
+      {
+        source: '/tools/color-mixer/pink-and-purple',
+        destination: '/blog/what-color-does-pink-and-purple-make',
+        permanent: true,
+      },
       // Consolidate forest green cluster → single canonical hex page
       {
         source: '/blog/forest-green',

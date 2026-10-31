@@ -14,17 +14,12 @@ import {
 
 const SEO = PALETTE_PREVIEW_LANDING_SEO;
 
-export async function generateMetadata({ searchParams }) {
-  const params = await searchParams;
-
-  return buildPalettePreviewPageMetadata({
-    path: SEO.path,
-    title: SEO.title,
-    description: SEO.description,
-    keywords: SEO.keywords,
-    searchParams: params,
-  });
-}
+export const metadata = buildPalettePreviewPageMetadata({
+  path: SEO.path,
+  title: SEO.title,
+  description: SEO.description,
+  keywords: SEO.keywords,
+});
 
 const webPageSchema = buildPalettePreviewWebPageSchema({
   path: SEO.path,

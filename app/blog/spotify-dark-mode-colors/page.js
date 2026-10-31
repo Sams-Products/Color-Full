@@ -12,13 +12,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/spotify-dark-mode-colors',
-  title: 'Spotify Dark Mode Hex Code #121212 — All Colors (Copy)',
+  title: 'Spotify Dark Mode Colors — Official UI Hex Codes & Green Palette',
   description:
-    'Spotify dark mode hex codes: background #121212, cards #181818, elevated #282828, green #1DB954, text #FFFFFF. Copy every Spotify UI color instantly.',
+    'Copy all 12 official Spotify dark mode hex codes: main canvas, elevated cards, hover surfaces, muted text & Spotify green accent tokens for CSS/Figma.',
   keywords: [
     'spotify dark mode colors',
     'spotify dark mode hex code',

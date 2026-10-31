@@ -3,6 +3,7 @@ import InlineTagLink from '../../components/InlineTagLink';
 import ColorPaletteClient from '../[slug]/ColorPaletteClient';
 import ColorSwatch from '../[slug]/ColorSwatch';
 import BlogToolsCTA from '../components/BlogToolsCTA';
+import EnvatoAffiliateBanner from '../../components/EnvatoAffiliateBanner';
 import { PalettePairingsSection } from '../components/PaletteReferenceBlocks';
 import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 import BlogArticleSchema from '../components/BlogArticleSchema';
@@ -16,13 +17,13 @@ import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import CopyableHex from '../forest-green-hex-code/CopyableHex';
 import { BurgundyQuickAnswer, BurgundyShadesTable } from './BurgundyHexLead';
 
-const LAST_MODIFIED = '2026-07-16T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/burgundy-hex-code',
-  title: 'Burgundy Hex Code #800020 — 10 Shades + Palettes',
+  title: 'Burgundy Hex Code, RGB & 10 Wine/Maroon Shades (+ Canva)',
   description:
-    'Burgundy hex code #800020 (RGB 128,0,32) plus 10 wine-to-oxblood shades, gold & cream pairings, luxury palette schemes. Copy free.',
+    'Copy the official burgundy hex code, RGB & HSL values, plus 10 deep wine, maroon & oxblood shades, gold & navy palette pairings, and 1-click swatches.',
   keywords: ['burgundy hex code', 'burgundy color code', 'burgundy hex', '#800020', 'burgundy shades', 'wine red', 'RGB', 'HSL', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
@@ -31,8 +32,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Burgundy Hex Code #800020 — 10 Shades + Palettes',
-  'Burgundy hex code #800020 (RGB 128,0,32) plus 10 wine-to-oxblood shades, gold & cream pairings, luxury palette schemes. Copy free.',
+  'Burgundy Hex Code, RGB & 10 Wine/Maroon Shades (+ Canva)',
+  'Copy the official burgundy hex code, RGB & HSL values, plus 10 deep wine, maroon & oxblood shades, gold & navy palette pairings, and 1-click swatches.',
   'burgundy-hex-code',
   getBlogArticleDatePublished('burgundy-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -142,7 +143,7 @@ export default function BurgundyHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Burgundy Hex Code: #800020
+              Burgundy Hex Code, RGB &amp; 10 Wine/Maroon Shades (+ Canva)
             </h1>
             <AeoDirectAnswer
               question="What is the burgundy hex code?"
@@ -186,6 +187,13 @@ export default function BurgundyHexCodePage() {
                   title="Burgundy Palette Pairings"
                   intro="Four burgundy combinations with hex codes—luxury gold, institutional navy, soft cream, and modern blush accents."
                   pairings={BURGUNDY_PAIRINGS}
+                />
+
+                <EnvatoAffiliateBanner
+                  variant="graphics"
+                  title="Designing a luxury, wine, or autumn brand in burgundy?"
+                  description="Download 10,000+ burgundy & gold wedding suites, wine label mockups, luxury brand kits, and Canva templates on Envato Elements."
+                  ctaText="Browse Burgundy & Luxury Templates on Envato"
                 />
 
                 <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">

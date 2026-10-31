@@ -14,9 +14,9 @@ const LAST_MODIFIED = '2026-06-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/accessibility-color-contrast-checker',
-  title: 'Accessibility Color Contrast Checker — Free WCAG & ADA Tool',
+  title: 'ADA & Section 508 Color Contrast Guide — WCAG AA/AAA Rules',
   description:
-    'Instantly check if your colors meet WCAG AA, AAA and ADA accessibility standards. Free tool — no signup. Used by designers and developers worldwide.',
+    'Complete guide to ADA, Section 508, and WCAG 2.1 AA/AAA color contrast ratios (4.5:1 vs 3:1), real pass/fail hex examples, and audit checklists.',
   keywords: [
     'accessibility color contrast checker',
     'accessibility colour contrast checker',
@@ -43,8 +43,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Accessibility Color Contrast Checker — Free WCAG & ADA Tool',
-  'Instantly check if your colors meet WCAG AA, AAA and ADA accessibility standards. Free tool — no signup. Used by designers and developers worldwide.',
+  'ADA & Section 508 Color Contrast Guide — WCAG AA/AAA Rules',
+  'Complete guide to ADA, Section 508, and WCAG 2.1 AA/AAA color contrast ratios (4.5:1 vs 3:1), real pass/fail hex examples, and audit checklists.',
   'accessibility-color-contrast-checker',
   getBlogArticleDatePublished('accessibility-color-contrast-checker'),
   BLOG_ARTICLE_DATE_MODIFIED

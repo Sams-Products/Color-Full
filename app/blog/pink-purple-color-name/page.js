@@ -265,7 +265,7 @@ export default function PinkPurpleColorNamePage() {
           <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">
             <p className="mb-6">
               Searches like <strong className="text-gray-900 dark:text-white">color between pink and purple</strong>, <strong className="text-gray-900 dark:text-white">what is pink purple called</strong>, and <strong className="text-gray-900 dark:text-white">pinkish purple color name</strong> all point to the same design problem: stakeholders use poetic color words while engineers need hex. The table above maps everyday names—mauve, magenta, fuchsia, orchid, plum—to copy-ready values so handoffs stop drifting. For mixing ratios when blending pink and purple deliberately, see our{' '}
-              <InlineTagLink href="/tools/color-mixer/pink-and-purple">pink and purple mixing guide</InlineTagLink>.
+              <InlineTagLink href="/blog/what-color-does-pink-and-purple-make">pink and purple mixing guide</InlineTagLink>.
             </p>
             <p className="mb-6">
               When documenting tokens, separate “brand pink-purple” from “semantic error red” and “link blue”—magenta accents confuse users if every interactive hue competes. A practical system uses one pink-purple accent (often orchid or mauve for calm brands, magenta for energetic ones), one neutral text color, and one warm secondary accent such as gold or coral only where hierarchy demands it.
@@ -303,7 +303,9 @@ export default function PinkPurpleColorNamePage() {
 
           <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
             <strong className="text-gray-800 dark:text-gray-200">Related:</strong>{' '}
-            <InlineTagLink href="/tools/color-mixer/pink-and-purple">Pink and Purple Color Mixing</InlineTagLink>
+            <InlineTagLink href="/blog/what-color-does-pink-and-purple-make">What Color Does Pink and Purple Make?</InlineTagLink>
+            {' · '}
+            <InlineTagLink href="/blog/mauve-color">Mauve Color Hex Code</InlineTagLink>
             {' · '}
             <InlineTagLink href="/blog/lavender-hex-code">Lavender Hex Code</InlineTagLink>
             {' · '}

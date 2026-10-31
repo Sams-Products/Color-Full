@@ -9,9 +9,9 @@ import {
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-red-and-white-make',
-  title: 'What Color Does Red and White Make? Pink — Hex Codes & Shades',
+  title: 'What Color Does Red and White Make? 7 Mix Ratios & Swatches',
   description:
-    'Red and white make pink when mixed. See exact hex codes for every red-white ratio, explore pink shades, and try our free color mixer tool.',
+    'See the exact shades red and white make across 7 mixing ratios (90/10 to 10/90)—compare scarlet, rose, soft pink & blush swatches and copy hex codes.',
   keywords: [
     'what color does red and white make',
     'what does red and white make',
@@ -25,13 +25,13 @@ export const metadata = buildPageMetadata({
   openGraphType: 'article',
   openGraph: {
     publishedTime: '2026-05-21T00:00:00.000Z',
-    modifiedTime: '2026-05-21T00:00:00.000Z',
+    modifiedTime: '2026-11-01T00:00:00.000Z',
   },
 });
 
 const articleSchema = getBlogArticleSchema(
-  'What Color Does Red and White Make? Pink — Hex Codes & Shades',
-  'Red and white make pink when mixed. See exact hex codes for every red-white ratio, explore pink shades, and try our free color mixer tool.',
+  'What Color Does Red and White Make? 7 Mix Ratios & Swatches',
+  'See the exact shades red and white make across 7 mixing ratios (90/10 to 10/90)—compare scarlet, rose, soft pink & blush swatches and copy hex codes.',
   'what-color-does-red-and-white-make',
   getBlogArticleDatePublished('what-color-does-red-and-white-make'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -136,7 +136,7 @@ export default function WhatColorDoesRedAndWhiteMakePage() {
         </>
       }
       faq={FAQ}
-      mixerHref="/tools/color-mixer/red-and-white"
+      mixerHref="/tools/color-mixer"
       mixerLabel="Red & White Color Mixer"
       faqSchema={faqSchema}
       articleSchema={articleSchema}

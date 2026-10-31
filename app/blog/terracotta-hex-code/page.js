@@ -18,13 +18,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/terracotta-hex-code',
-  title: 'Terracotta Hex Code #E2725B — 10 Shades + Canva (Copy)',
+  title: 'Terracotta Hex Code, RGB & 10 Warm Clay Shades (+ Canva)',
   description:
-    'Terracotta hex code #E2725B · RGB(226, 114, 91). Explore 10 warm clay & rust shades, sage green pairings, and copy-ready Canva color codes.',
+    'Copy the official terracotta hex code, RGB & HSL values, plus 10 warm clay, burnt sienna & rust shades, sage green pairings, and Canva color codes.',
   keywords: [
     'terracotta hex code',
     'terracotta color code',
@@ -44,8 +44,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Terracotta Hex Code #E2725B — 10 Shades + Canva (Copy)',
-  'Terracotta hex code #E2725B · RGB(226, 114, 91). Explore 10 warm clay & rust shades, sage green pairings, and copy-ready Canva color codes.',
+  'Terracotta Hex Code, RGB & 10 Warm Clay Shades (+ Canva)',
+  'Copy the official terracotta hex code, RGB & HSL values, plus 10 warm clay, burnt sienna & rust shades, sage green pairings, and Canva color codes.',
   'terracotta-hex-code',
   getBlogArticleDatePublished('terracotta-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -176,7 +176,7 @@ export default function TerracottaHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Terracotta Hex Code #E2725B — 10 Earthy Shades, Palettes &amp; Canva
+              Terracotta Hex Code, RGB &amp; 10 Warm Clay Shades (+ Canva)
             </h1>
             <AeoDirectAnswer
               question="What is the terracotta hex code?"

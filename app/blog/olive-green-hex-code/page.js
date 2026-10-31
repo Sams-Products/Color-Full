@@ -20,13 +20,13 @@ import {
   OliveGreenShadesTable,
 } from './OliveGreenHexLead';
 
-const LAST_MODIFIED = '2026-06-11T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/olive-green-hex-code',
-  title: 'Olive Green Hex Code: #808000 — Copy + RGB, Shades & Pairings',
+  title: 'Olive Green Hex Code, RGB & 10 Dark/Light Shades (+ Canva)',
   description:
-    'Olive green hex code is #808000. Copy instantly. RGB(128,128,0), 10 olive green shades, palette pairings with terracotta and navy. One click copy.',
+    'Copy the official olive green hex code, RGB & HSL values, plus 10 dark army, moss & sage-olive shades, terracotta pairings, and 1-click swatches.',
   keywords: ['olive green hex code', 'olive green hex', '#808000', 'olive shades', 'olive palette', 'RGB', 'HSL', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
@@ -38,8 +38,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Olive Green Hex Code: #808000 — Copy + RGB, Shades & Pairings',
-  'Olive green hex code is #808000. Copy instantly. RGB(128,128,0), 10 olive green shades, palette pairings with terracotta and navy. One click copy.',
+  'Olive Green Hex Code, RGB & 10 Dark/Light Shades (+ Canva)',
+  'Copy the official olive green hex code, RGB & HSL values, plus 10 dark army, moss & sage-olive shades, terracotta pairings, and 1-click swatches.',
   'olive-green-hex-code',
   getBlogArticleDatePublished('olive-green-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED

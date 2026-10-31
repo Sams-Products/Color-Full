@@ -12,13 +12,13 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/notion-dark-mode-colors',
-  title: 'Notion Dark Mode Hex Code #191919 — All Colors (Copy)',
+  title: 'Notion Dark Mode Colors — Official UI, Sidebar & Callout Hexes',
   description:
-    'Notion dark mode hex codes: background #191919, sidebar #202020, hover #2F2F2F, text #E6E6E6, blue #2383E2. Copy every Notion dark theme color instantly.',
+    'Copy all 13 official Notion dark mode hex codes: editor canvas, sidebar rail, hover states, dividers, text hierarchy & callout tag colors for Figma/CSS.',
   keywords: [
     'notion dark mode colors',
     'notion dark mode hex code',

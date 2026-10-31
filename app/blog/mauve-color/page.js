@@ -16,17 +16,17 @@ import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import CopyableHex from '../forest-green-hex-code/CopyableHex';
 import { MauveQuickAnswer, MauveFormatCodesSection, MauveShadesTable } from './MauveColorLead';
 
-const LAST_MODIFIED = '2026-06-26T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/mauve-color',
-  title: 'Mauve Hex Code #E0B0FF — Copy Color Code',
+  title: 'Mauve Color Hex Code, RGB & 10 Dusty Pink-Purple Shades',
   description:
-    'Mauve hex code #E0B0FF · RGB(224,176,255). Copy mauve color code instantly. Is mauve pink or purple? Shades, pairings & palette ideas.',
+    'Copy the official mauve hex code, RGB & HSL values, discover whether mauve is pink or purple, and compare 10 dusty mauve, plum & orchid swatches.',
   keywords: ['mauve color', 'mauve hex code', 'mauve colour', 'is mauve pink or purple', '#E0B0FF', 'mauve rgb', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
-    publishedTime: LAST_MODIFIED,
+    publishedTime: '2026-06-26T00:00:00.000Z',
     modifiedTime: LAST_MODIFIED,
   },
   other: {
@@ -34,8 +34,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Mauve Hex Code #E0B0FF — Copy Color Code',
-  'Mauve hex code #E0B0FF · RGB(224,176,255). Copy mauve color code instantly. Is mauve pink or purple? Shades, pairings & palette ideas.',
+  'Mauve Color Hex Code, RGB & 10 Dusty Pink-Purple Shades',
+  'Copy the official mauve hex code, RGB & HSL values, discover whether mauve is pink or purple, and compare 10 dusty mauve, plum & orchid swatches.',
   'mauve-color',
   getBlogArticleDatePublished('mauve-color'),
   BLOG_ARTICLE_DATE_MODIFIED

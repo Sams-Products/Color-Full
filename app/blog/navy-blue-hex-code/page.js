@@ -19,13 +19,13 @@ import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import NavyBlueHexCopyBox from './NavyBlueHexCopyBox';
 
-const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/navy-blue-hex-code',
-  title: 'Navy Blue Hex Code #000080 — 10 Shades + Canva (Copy)',
+  title: 'Navy Blue Hex Code, RGB & 10 Dark/Light Shades (+ Canva)',
   description:
-    'Navy blue hex code #000080 · RGB(0, 0, 128). Compare 10 dark & light navy shades, gold pairings, and copy Canva color codes in 1 click.',
+    'Copy the official navy blue hex code, RGB & HSL values, plus 10 dark midnight, royal & steel blue shades, gold palette pairings, and 1-click swatches.',
   keywords: [
     'navy blue hex code',
     'navy blue hex',
@@ -49,8 +49,8 @@ export const metadata = buildPageMetadata({
   },
 });
 const articleSchema = getBlogArticleSchema(
-  'Navy Blue Hex Code #000080 — 10 Shades + Canva (Copy)',
-  'Navy blue hex code #000080 · RGB(0, 0, 128). Compare 10 dark & light navy shades, gold pairings, and copy Canva color codes in 1 click.',
+  'Navy Blue Hex Code, RGB & 10 Dark/Light Shades (+ Canva)',
+  'Copy the official navy blue hex code, RGB & HSL values, plus 10 dark midnight, royal & steel blue shades, gold palette pairings, and 1-click swatches.',
   'navy-blue-hex-code',
   getBlogArticleDatePublished('navy-blue-hex-code'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -173,7 +173,7 @@ export default function NavyBlueHexCodePage() {
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Navy Blue Hex Code #000080 — 10 Dark &amp; Light Shades + Canva
+              Navy Blue Hex Code, RGB &amp; 10 Dark/Light Shades (+ Canva)
             </h1>
             <AeoDirectAnswer
               question="What is the navy blue hex code?"

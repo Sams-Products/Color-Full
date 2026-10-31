@@ -14,13 +14,13 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 
-const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-pink-and-purple-make',
-  title: 'What Color Does Pink and Purple Make? 7 Mix Swatches & Hex',
+  title: 'What Color Does Pink and Purple Make? 7 Mix Ratios & Swatches',
   description:
-    'See the exact color pink and purple make across 7 mixing ratios (50/50 Magenta #BF34CA, Soft Mauve, Berry & Violet) with visual swatches & 1-click hex copy.',
+    'See the exact shades pink and purple make across 7 mixing ratios (90/10 to 10/90)—compare visual swatches for paint & digital UI and copy hex codes.',
   keywords: [
     'what color does pink and purple make',
     'what color does pink and purple make when mixed',
@@ -40,8 +40,8 @@ export const metadata = buildPageMetadata({
 });
 
 const articleSchema = getBlogArticleSchema(
-  'What Color Does Pink and Purple Make? 7 Mix Swatches & Hex',
-  'See the exact color pink and purple make across 7 mixing ratios (50/50 Magenta #BF34CA, Soft Mauve, Berry & Violet) with visual swatches & 1-click hex copy.',
+  'What Color Does Pink and Purple Make? 7 Mix Ratios & Swatches',
+  'See the exact shades pink and purple make across 7 mixing ratios (90/10 to 10/90)—compare visual swatches for paint & digital UI and copy hex codes.',
   'what-color-does-pink-and-purple-make',
   getBlogArticleDatePublished('what-color-does-pink-and-purple-make'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -211,6 +211,7 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
             Validate text on your new palette with our{' '}
             <InlineTagLink href="/tools/contrast-checker">WCAG contrast checker</InlineTagLink>. Related:{' '}
             <InlineTagLink href="/blog/pink-purple-color-name">color between pink and purple names</InlineTagLink>,{' '}
+            <InlineTagLink href="/blog/mauve-color">mauve color hex code &amp; shades</InlineTagLink>,{' '}
             <InlineTagLink href="/blog/lavender-hex-code">lavender hex code</InlineTagLink>.
           </p>
         </div>

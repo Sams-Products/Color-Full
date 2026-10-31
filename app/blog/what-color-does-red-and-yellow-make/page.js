@@ -9,9 +9,9 @@ import {
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-red-and-yellow-make',
-  title: 'What Color Does Red and Yellow Make? Orange (#FF8000 & Mix Ratios)',
+  title: 'What Color Does Red and Yellow Make? 7 Mix Ratios & Swatches',
   description:
-    'Red and yellow make orange when mixed (#FF8000). See exact hex codes for every red-yellow mix ratio, explore amber & burnt orange swatches.',
+    'See the exact shades red and yellow make across 7 mixing ratios (90/10 to 10/90)—compare burnt orange, amber & golden swatches and copy hex codes.',
   keywords: [
     'what color does red and yellow make',
     'what does red and yellow make',
@@ -25,13 +25,13 @@ export const metadata = buildPageMetadata({
   openGraphType: 'article',
   openGraph: {
     publishedTime: '2026-05-21T00:00:00.000Z',
-    modifiedTime: '2026-10-14T00:00:00.000Z',
+    modifiedTime: '2026-11-01T00:00:00.000Z',
   },
 });
 
 const articleSchema = getBlogArticleSchema(
-  'What Color Does Red and Yellow Make? Orange (#FF8000 & Mix Ratios)',
-  'Red and yellow make orange when mixed (#FF8000). See exact hex codes for every red-yellow mix ratio, explore amber & burnt orange swatches.',
+  'What Color Does Red and Yellow Make? 7 Mix Ratios & Swatches',
+  'See the exact shades red and yellow make across 7 mixing ratios (90/10 to 10/90)—compare burnt orange, amber & golden swatches and copy hex codes.',
   'what-color-does-red-and-yellow-make',
   getBlogArticleDatePublished('what-color-does-red-and-yellow-make'),
   BLOG_ARTICLE_DATE_MODIFIED
@@ -138,7 +138,7 @@ export default function WhatColorDoesRedAndYellowMakePage() {
         </>
       }
       faq={FAQ}
-      mixerHref="/tools/color-mixer/red-and-yellow"
+      mixerHref="/tools/color-mixer"
       mixerLabel="Red & Yellow Color Mixer"
       faqSchema={faqSchema}
       articleSchema={articleSchema}

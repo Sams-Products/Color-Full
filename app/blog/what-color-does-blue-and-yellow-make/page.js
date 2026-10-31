@@ -9,9 +9,9 @@ import {
 
 export const metadata = buildPageMetadata({
   path: '/blog/what-color-does-blue-and-yellow-make',
-  title: 'What Color Does Blue and Yellow Make? 7 Green Mix Swatches',
+  title: 'What Color Does Blue and Yellow Make? 7 Mix Ratios & Swatches',
   description:
-    'See the exact green shades blue and yellow make across 7 mixing ratios (50/50 Green #008000, Teal, Forest & Lime) with swatches & 1-click hex copy.',
+    'See the exact shades blue and yellow make across 7 mixing ratios (90/10 to 10/90)—compare teal, forest, spring & lime swatches and copy hex codes.',
   keywords: [
     'what color does blue and yellow make',
     'what does blue and yellow make',
@@ -137,7 +137,7 @@ export default function WhatColorDoesBlueAndYellowMakePage() {
         </>
       }
       faq={FAQ}
-      mixerHref="/tools/color-mixer/blue-and-yellow"
+      mixerHref="/tools/color-mixer"
       mixerLabel="Blue & Yellow Color Mixer"
       faqSchema={faqSchema}
       articleSchema={articleSchema}

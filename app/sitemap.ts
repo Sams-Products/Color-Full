@@ -3,28 +3,6 @@ import { getBlogPostPathsForSitemap } from '../lib/blogSitemapSlugs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://themeandcolor.com';
-  const combinations = [
-    'red-and-blue',
-    'blue-and-yellow',
-    'yellow-and-blue',
-    'red-and-yellow',
-    'yellow-and-red',
-    'blue-and-green',
-    'red-and-green',
-    'purple-and-yellow',
-    'orange-and-blue',
-    'pink-and-purple',
-    'red-and-white',
-    'blue-and-white',
-    'black-and-white',
-    'red-and-black',
-    'yellow-and-green',
-    'orange-and-red',
-    'blue-and-purple',
-    'green-and-yellow',
-    'pink-and-blue',
-    'brown-and-orange',
-  ];
 
   const staticPages = [
     '',
@@ -76,12 +54,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const comboUrls = combinations.map((combo) => ({
-    url: `${baseUrl}/tools/color-mixer/${combo}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
-  return [...staticUrls, ...blogUrls, ...comboUrls];
+  return [...staticUrls, ...blogUrls];
 }

@@ -128,6 +128,16 @@ const nextConfig = {
         destination: '/blog/sunset-color-palette',
         permanent: true,
       },
+      {
+        source: '/blog/ocean-breeze',
+        destination: '/blog/ocean-breeze-hex-code',
+        permanent: true,
+      },
+      {
+        source: '/blog/pink-and-blue-color',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
     ];
   },
 };

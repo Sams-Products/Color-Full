@@ -95,19 +95,11 @@ const staticPosts = [
     publishedAt: '2025-02-08',
   },
   {
-    _id: '3',
-    title: 'Ocean Breeze Color Palette: Hex Codes, Shades & Pairings',
-    slug: { current: 'ocean-breeze' },
-    excerpt:
-      'Ocean breeze hex anchors (#0EA5E9–#10B981), eight blue-teal shades, UI pairings, and links to our palette generator and contrast checker.',
-    publishedAt: '2025-02-09',
-  },
-  {
     _id: '12',
-    title: 'Forest Green Hex Code #228B22 — 10 Shades + Canva',
+    title: 'Forest Green Hex Code, RGB & 10 Dark/Light Shades (+ Canva)',
     slug: { current: 'forest-green-hex-code' },
     excerpt:
-      'Forest green hex code #228B22 (RGB 34,139,34) plus 10 shades, dark UI greens, palette pairings & Canva steps. Copy free.',
+      'Copy the official forest green hex code, RGB & HTML color values, plus 10 dark pine, hunter & emerald shades, UI palettes, and 1-click Canva swatches.',
     publishedAt: '2026-04-11',
   },
   {
@@ -300,12 +292,12 @@ const staticPosts = [
     publishedAt: '2026-05-21',
   },
   {
-    _id: '27',
-    title: 'Pink and Blue Color: What They Make, Palettes & Hex Codes',
-    slug: { current: 'pink-and-blue-color' },
+    _id: '27b',
+    title: 'What Color Does Pink and Purple Make? 7 Mix Ratios & Swatches',
+    slug: { current: 'what-color-does-pink-and-purple-make' },
     excerpt:
-      'Pink and blue mixed make lavender or light purple. See hex codes, palette combinations and design tips for using pink and blue together.',
-    publishedAt: '2026-06-01',
+      'See the exact shades pink and purple make across 7 mixing ratios (90/10 to 10/90)—compare visual swatches for paint & digital UI and copy hex codes.',
+    publishedAt: '2026-06-05',
   },
   {
     _id: '28',

@@ -295,7 +295,7 @@ export default function OceanBreezeHexCodePage() {
                       <InlineTagLink href="/blog/sage-green-hex-code">Sage Green Hex Code</InlineTagLink> — muted gray-green for wellness and lifestyle brands
                     </li>
                     <li>
-                      <InlineTagLink href="/blog/ocean-breeze">Ocean Breeze palette story</InlineTagLink> — psychology, branding, and extended use cases
+                      <InlineTagLink href="/blog/sunset-color-palette">Sunset Color Palette</InlineTagLink> — warm coral-to-violet contrast for creative brands
                     </li>
                   </ul>
 

@@ -380,7 +380,7 @@ export default function ForestGreenHexCodePage() {
                   <p className="mb-4">
                     Teams looking up <strong className="text-gray-900 dark:text-white">Ocean Breeze color</strong> or{' '}
                     <strong className="text-gray-900 dark:text-white">Ocean Breeze colour</strong> usually want the full blue-to-mint ramp in one line. Here are the five hex codes; the deep dive (roles, CSS variables, accessibility) lives in the{' '}
-                    <InlineTagLink href="/blog/ocean-breeze">Ocean Breeze palette guide</InlineTagLink>.
+                    <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze palette guide</InlineTagLink>.
                   </p>
                   <p className="mb-4 text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg not-prose flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm">
                     <CopyableHex hex="#0EA5E9" />
@@ -511,7 +511,7 @@ export default function ForestGreenHexCodePage() {
                       <InlineTagLink href="/blog/forest-green-hex-code">Forest green hex code, shades &amp; pairings</InlineTagLink>
                     </li>
                     <li>
-                      <InlineTagLink href="/blog/ocean-breeze">Ocean Breeze: full palette and accessibility notes</InlineTagLink>
+                      <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze: full palette and accessibility notes</InlineTagLink>
                     </li>
                     <li>
                       <InlineTagLink href="/tools/palette-generator">Generate harmonies from any forest green hex</InlineTagLink>

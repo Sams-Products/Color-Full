@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/palettes/luxury-automotive-color-palettes',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Luxury Automotive Color Palettes for Exterior and Interior Design',
   description:
     'Luxury automotive color palettes for exterior paint, interior materials, and digital configurators. Premium car colors and automotive brand colors with hex codes.',

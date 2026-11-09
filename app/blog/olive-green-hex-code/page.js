@@ -19,6 +19,7 @@ import {
   OliveGreenFormatCodesSection,
   OliveGreenShadesTable,
 } from './OliveGreenHexLead';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -183,11 +184,12 @@ export default function OliveGreenHexCodePage() {
               aria-label="Olive green color sample, hex 808000"
             />
             <div className="flex items-center gap-4 text-lime-100/90 text-sm flex-wrap">
+              <AuthorByline />
               <time dateTime="2026-05-21">Published May 21, 2026</time>
               <span>•</span>
               <time dateTime="2026-06-11">Updated June 11, 2026</time>
               <span>•</span>
-              <span>10 min read</span>
+              <span>6 min read</span>
             </div>
             <div className="flex gap-3 mt-6 flex-wrap">
               {HERO_SWATCHES.map((c) => (

@@ -7,6 +7,7 @@ import {
   PalettePairingsSection,
   PaletteUiUsageSection,
 } from './PaletteReferenceBlocks';
+import AuthorByline from './AuthorByline';
 
 function BlogMixerCTA({ mixerHref, mixerLabel }) {
   return (
@@ -116,6 +117,7 @@ export default function ColorMixGuidePost({
               Back to Blog
             </Link>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">{h1}</h1>
+            <AuthorByline variant="block" className="text-white/90" />
           </div>
         </div>
       </section>

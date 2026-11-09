@@ -9,6 +9,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-06-01T00:00:00.000Z';
 
@@ -196,10 +197,11 @@ export default function AccessibilityColorContrastCheckerPage() {
               Instantly check if your colors meet WCAG AA, AAA, and ADA standards. Section 508 context, step-by-step ADA
               checks, and a free tool for text, buttons, and UI—no signup.
             </p>
-            <div className="flex items-center gap-4 text-indigo-100 text-sm mt-4">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-indigo-100 text-sm mt-4">
+              <AuthorByline />
               <time dateTime="2026-06-01">June 1, 2026</time>
               <span>•</span>
-              <span>14 min read</span>
+              <span>15 min read</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,15 @@
 import { buildPageMetadata } from '../../lib/buildPageMetadata';
+import { SITE_AUTHOR } from '../../lib/siteConfig';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE_AUTHOR.name,
+  jobTitle: SITE_AUTHOR.jobTitle,
+  url: `https://themeandcolor.com${SITE_AUTHOR.aboutPath}`,
+  sameAs: [SITE_AUTHOR.linkedin],
+  worksFor: { '@type': 'Organization', name: 'Theme & Color', url: 'https://themeandcolor.com' },
+};
 
 export const metadata = buildPageMetadata({
   path: '/about',
@@ -11,6 +22,7 @@ export const metadata = buildPageMetadata({
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <article className="prose prose-lg dark:prose-invert max-w-none">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -25,7 +37,7 @@ export default function AboutPage() {
               effortless and enjoyable.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              We understand that choosing the right colors can make or break a design project. That's why we've created 
+              We understand that choosing the right colors can make or break a design project. That&apos;s why we&apos;ve created 
               a comprehensive suite of color tools that help you make informed decisions, ensure accessibility compliance, 
               and create harmonious color schemes that resonate with your audience.
             </p>
@@ -52,7 +64,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">WCAG 2.1 Compliance Math</h3>
                 <p>
-                  Our contrast evaluation algorithms strictly implement the official W3C Web Content Accessibility Guidelines (WCAG 2.1). Ratios are calculated using standardized relative luminance formulas (\(L = 0.2126R + 0.7152G + 0.0722B\)) after sRGB gamma expansion, ensuring 100% reliable pass/fail ratings for AA and AAA compliance.
+                  Our contrast evaluation algorithms strictly implement the official W3C Web Content Accessibility Guidelines (WCAG 2.1). Ratios are calculated using standardized relative luminance formulas (<code className="text-base">L = 0.2126R + 0.7152G + 0.0722B</code>) after sRGB gamma expansion, ensuring 100% reliable pass/fail ratings for AA and AAA compliance.
                 </p>
               </div>
               <div>
@@ -65,9 +77,19 @@ export default function AboutPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Who We Are</h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Who Builds Theme &amp; Color</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Theme &amp; Color is founded and maintained by an independent group of frontend engineers, UI/UX designers, and accessibility advocates. Having experienced the daily friction of hunting down accessible color combinations and cross-format color codes across different software suites, we built Theme &amp; Color as a unified, fast, and completely free web utility for the global creative community.
+              Theme &amp; Color is built and maintained by <strong>{SITE_AUTHOR.name}</strong>, a software engineer. He started it after
+              running into the same daily friction many designers and developers know: hunting down accessible color combinations and
+              converting color codes between tools. Theme &amp; Color is his answer: one fast, free set of color utilities and
+              reference guides in a single place.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              You can find him on{' '}
+              <a href={SITE_AUTHOR.linkedin} target="_blank" rel="me noopener noreferrer" className="text-purple-600 dark:text-purple-400 hover:underline">
+                LinkedIn
+              </a>
+              .
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               Whether you are an engineer building design tokens in Tailwind, a digital artist calibrating color swatches, or a brand strategist designing accessible identity systems, our tools are built to make your creative workflow seamless.
@@ -79,7 +101,7 @@ export default function AboutPage() {
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Have questions, technical suggestions, or feedback about our algorithms? We welcome community input! Reach out directly via our{' '}
               <a href="/contact" className="text-purple-600 dark:text-purple-400 hover:underline">Contact Us</a> page 
-              or email our engineering team at <a href="mailto:sams02092000@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">sams02092000@gmail.com</a>.
+              or email <a href="mailto:sams02092000@gmail.com" className="text-purple-600 dark:text-purple-400 hover:underline">sams02092000@gmail.com</a>.
             </p>
           </section>
         </article>

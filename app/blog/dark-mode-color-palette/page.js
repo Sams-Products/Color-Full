@@ -11,6 +11,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-06-15T00:00:00.000Z';
 
@@ -228,10 +229,11 @@ export default function DarkModeColorPalettePage() {
               Build a production-ready <strong className="text-white font-semibold">dark mode color palette</strong> with copy-paste{' '}
               <strong className="text-white font-semibold">dark mode hex</strong> values for backgrounds, surfaces, text, and accents—plus WCAG contrast guidance.
             </p>
-            <div className="flex items-center gap-4 text-slate-400 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-slate-400 text-sm">
+              <AuthorByline />
               <time dateTime="2026-05-30">May 30, 2026</time>
               <span>•</span>
-              <span>11 min read</span>
+              <span>6 min read</span>
             </div>
           </div>
         </div>
@@ -338,41 +340,19 @@ export default function DarkModeColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/discord-dark-mode-colors">Discord dark mode colors</InlineTagLink>
                     {' · '}
-                    <InlineTagLink href="/blog/spotify-dark-mode-colors">Spotify dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/notion-dark-mode-colors">Notion dark mode colors</InlineTagLink>
+                    <InlineTagLink href="/blog/app-dark-mode-colors">12 app dark themes compared (Slack, iOS, GitHub, VS Code and more)</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/instagram-dark-mode-colors">Instagram dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/slack-dark-mode-colors">Slack dark mode colors</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/whatsapp-dark-mode-colors">WhatsApp dark mode colors</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/youtube-dark-mode-colors">YouTube dark mode colors</InlineTagLink>
                     {' · '}
-                    <InlineTagLink href="/blog/vscode-dark-mode-colors">VS Code dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/github-dark-mode-colors">GitHub dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/figma-dark-mode-colors">Figma dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/chrome-dark-mode-colors">Chrome dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/telegram-dark-mode-colors">Telegram dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/ios-dark-mode-colors">iOS dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/reddit-dark-mode-colors">Reddit dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/twitter-dark-mode-colors">X (Twitter) dark mode colors</InlineTagLink>
-                    {' · '}
-                    <InlineTagLink href="/blog/linkedin-dark-mode-colors">LinkedIn dark mode colors</InlineTagLink>
-                    {' · '}
                     <InlineTagLink href="/blog/accessible-dark-mode-color-palette">Accessible Dark Mode Color Palette</InlineTagLink>
                     {' · '}
                     <InlineTagLink href="/blog/accessibility-color-contrast-checker">Accessibility Contrast Checker Guide</InlineTagLink>
                     {' · '}
-                    <InlineTagLink href="/blog/navy-blue-color-palette">Navy Blue Color Palette</InlineTagLink>
+                    <InlineTagLink href="/blog/navy-blue-hex-code">Navy Blue Hex Code &amp; Palettes</InlineTagLink>
                   </p>
 
                   <BlogToolsCTA />

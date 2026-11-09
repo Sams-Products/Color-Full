@@ -1,4 +1,6 @@
-'use client';
+// No 'use client': these render nothing interactive, so as server components they leave
+// no trace in the page when SHOW_AFFILIATE_PROMOS is off.
+import { SHOW_AFFILIATE_PROMOS } from '../../lib/siteConfig';
 
 export const MAGNIFIC_REFERRAL_URL = 'https://referral.magnific.com/mzXrnA4';
 
@@ -8,6 +10,7 @@ export default function MagnificAffiliateBanner({
   ctaText = 'Claim 20% Off Magnific AI',
   className = '',
 }) {
+  if (!SHOW_AFFILIATE_PROMOS) return null;
   return (
     <aside
       className={`my-10 not-prose relative overflow-hidden rounded-2xl border border-indigo-300/70 dark:border-indigo-500/30 bg-gradient-to-br from-indigo-50/80 via-white to-blue-50/60 dark:from-indigo-950/30 dark:via-gray-900 dark:to-blue-950/20 p-6 sm:p-8 md:p-9 shadow-lg shadow-indigo-950/5 transition-all hover:shadow-xl hover:shadow-indigo-900/10 ${className}`}

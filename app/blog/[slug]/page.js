@@ -104,7 +104,7 @@ const staticPosts = {
     slug: { current: '10-color-trends-for-2025' },
     excerpt:
       'Discover the top 10 color trends shaping web and UI design in 2026—from neons and pastels to ocean blues and sunset warmth—with copy-ready hex codes.',
-    publishedAt: '2026-01-15',
+    publishedAt: '2026-01-20',
     metaTitle: '10 Color Trends for 2026: Modern Palettes for Web & UI Design | Theme & Color',
     metaDescription:
       'Explore the top 10 color trends for 2026 in web and UI design. Copy hex codes per trend, learn how to apply palettes in products, and test contrast with free tools.',
@@ -434,6 +434,11 @@ export async function generateMetadata({ params }) {
     openGraph: {
       publishedTime: post.publishedAt,
     },
+    // Nov 2026: the trends post is noindexed while the site is under AdSense review
+    // (the URL says 2025 but the content is about 2026, and it earned no search impressions).
+    ...(slug === '10-color-trends-for-2025'
+      ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
+      : {}),
   })
 }
 

@@ -17,6 +17,7 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -91,6 +92,17 @@ const TERRACOTTA_PAIRINGS = [
     title: 'Terracotta + Warm gray (quiet retail)',
     body: 'Warm gray #9E9E9E (use darker #616161 for body copy) lets product photography stay the hero while terracotta marks sales ribbons and loyalty tiers.',
     swatches: ['#E2725B', '#9E9E9E', '#E0E0E0'],
+  },
+  // Merged from the former /blog/terracotta-color-palette guide (Nov 2026)
+  {
+    title: 'Terracotta + Cream + Rust',
+    body: 'Hospitality and ceramics: cream walls, rust #B7410E pressed states, terracotta primary buttons on linen #FAF0E6.',
+    swatches: ['#E2725B', '#FAF0E6', '#B7410E', '#FBCEB1'],
+  },
+  {
+    title: 'Terracotta + Dusty rose + Ivory',
+    body: 'Soft lifestyle editorial: dusty rose tags (#DCAE96), ivory reading wells (#FFFFF0), terracotta mastheads.',
+    swatches: ['#E2725B', '#DCAE96', '#FFFFF0', '#8A3324'],
   },
 ];
 
@@ -195,10 +207,11 @@ export default function TerracottaHexCodePage() {
               role="img"
               aria-label="Terracotta color swatch hex E2725B"
             />
-            <div className="flex items-center gap-4 text-orange-100/85 text-sm">
-              <time dateTime="2026-06-26">Updated June 26, 2026</time>
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-orange-100/85 text-sm">
+              <AuthorByline />
+              <time dateTime="2026-11-09">Updated November 9, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>7 min read</span>
             </div>
           </div>
         </div>
@@ -370,8 +383,7 @@ export default function TerracottaHexCodePage() {
                   </dl>
 
                   <p className="mt-8 mb-6">
-                    Explore adjacent guides: our{' '}
-                    <InlineTagLink href="/blog/terracotta-color-palette">terracotta color palette</InlineTagLink>, a{' '}
+                    Explore adjacent guides: a{' '}
                     <InlineTagLink href="/blog/dusty-rose-hex-code">dusty rose and terracotta palette</InlineTagLink> pairing,{' '}
                     <InlineTagLink href="/blog/sage-green-hex-code">Sage green hex codes</InlineTagLink>,{' '}
                     <InlineTagLink href="/blog/navy-blue-hex-code">Navy blue hex codes</InlineTagLink>, and the{' '}

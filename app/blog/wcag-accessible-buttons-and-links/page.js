@@ -12,6 +12,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/wcag-accessible-buttons-and-links',
@@ -113,10 +114,11 @@ export default function WcagAccessibleButtonsAndLinksPage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               WCAG Contrast for Buttons and Links: Hex Examples for Web UI
             </h1>
-            <div className="flex items-center gap-4 text-blue-100 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-blue-100 text-sm">
+              <AuthorByline />
               <time dateTime="2026-04-02">April 2, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>7 min read</span>
             </div>
           </div>
         </div>

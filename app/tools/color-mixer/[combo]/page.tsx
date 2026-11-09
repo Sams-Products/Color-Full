@@ -18,24 +18,22 @@ const COMBINATIONS = [
   'yellow-and-green',
   'orange-and-red',
   'blue-and-purple',
-  'green-and-yellow',
   'pink-and-blue',
   'brown-and-orange',
 ];
 
 const RELATED: Record<string, string[]> = {
   'red-and-blue': ['purple-and-yellow', 'blue-and-purple', 'orange-and-blue', 'red-and-green'],
-  'blue-and-green': ['yellow-and-green', 'green-and-yellow', 'pink-and-blue', 'blue-and-white'],
-  'red-and-green': ['red-and-blue', 'green-and-yellow', 'blue-and-green', 'red-and-black'],
+  'blue-and-green': ['yellow-and-green', 'pink-and-blue', 'blue-and-white'],
+  'red-and-green': ['red-and-blue', 'yellow-and-green', 'blue-and-green', 'red-and-black'],
   'purple-and-yellow': ['red-and-blue', 'blue-and-purple', 'orange-and-blue', 'yellow-and-green'],
   'orange-and-blue': ['purple-and-yellow', 'brown-and-orange', 'red-and-blue', 'orange-and-red'],
   'blue-and-white': ['pink-and-blue', 'black-and-white', 'blue-and-green', 'blue-and-purple'],
   'black-and-white': ['red-and-black', 'blue-and-white', 'brown-and-orange', 'red-and-blue'],
   'red-and-black': ['black-and-white', 'red-and-green', 'orange-and-red', 'red-and-blue'],
-  'yellow-and-green': ['green-and-yellow', 'blue-and-green', 'orange-and-red', 'purple-and-yellow'],
+  'yellow-and-green': ['blue-and-green', 'orange-and-red', 'purple-and-yellow'],
   'orange-and-red': ['orange-and-blue', 'brown-and-orange', 'red-and-black', 'red-and-green'],
   'blue-and-purple': ['red-and-blue', 'purple-and-yellow', 'pink-and-blue', 'blue-and-white'],
-  'green-and-yellow': ['yellow-and-green', 'blue-and-green', 'brown-and-orange', 'red-and-green'],
   'pink-and-blue': ['blue-and-white', 'red-and-blue', 'blue-and-green', 'blue-and-purple'],
   'brown-and-orange': ['orange-and-red', 'orange-and-blue', 'red-and-black', 'black-and-white'],
 };

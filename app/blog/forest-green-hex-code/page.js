@@ -20,6 +20,7 @@ import {
   ForestGreenRgbSection,
   ForestGreenFormatCodesSection,
 } from './ForestGreenHexLead';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -219,6 +220,7 @@ export default function ForestGreenHexCodePage() {
               aria-label="Forest green color sample, hex 228B22"
             />
             <div className="flex items-center gap-4 text-emerald-100 text-sm flex-wrap">
+              <AuthorByline />
               <time dateTime="2026-04-11">Published April 11, 2026</time>
               <span>•</span>
               <time dateTime="2026-10-24">Updated October 24, 2026</time>

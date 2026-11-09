@@ -16,6 +16,7 @@ import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import CopyableHex from '../forest-green-hex-code/CopyableHex';
 import { BurgundyQuickAnswer, BurgundyShadesTable } from './BurgundyHexLead';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -74,6 +75,17 @@ const BURGUNDY_PAIRINGS = [
     title: 'Burgundy + Blush + Charcoal',
     body: 'Modern feminine brands: blush highlights (#E8B4B8), charcoal body text (#374151), burgundy for logos and primary buttons on white.',
     swatches: ['#800020', '#E8B4B8', '#374151'],
+  },
+  // Merged from the former /blog/burgundy-color-palette guide (Nov 2026)
+  {
+    title: 'Burgundy + Terracotta + Ivory + Brown',
+    body: 'Warm editorial and food brands: terracotta CTAs (#E2725B), ivory reading surfaces (#FFFFF0), brown typography (#78350F), burgundy hero bands.',
+    swatches: ['#800020', '#E2725B', '#FFFFF0', '#78350F'],
+  },
+  {
+    title: 'Burgundy + Black + Gold + Warm Gray',
+    body: 'High-fashion evening and gala aesthetics: near-black (#1A1A1A) backgrounds, burgundy panels (#800020), gold foil (#D4AF37), warm gray (#9CA3AF) for secondary text.',
+    swatches: ['#800020', '#1A1A1A', '#D4AF37', '#9CA3AF'],
   },
 ];
 
@@ -162,9 +174,10 @@ export default function BurgundyHexCodePage() {
               aria-label="Burgundy color sample, hex 800020"
             />
             <div className="flex items-center gap-4 text-rose-100/90 text-sm flex-wrap">
-              <time dateTime="2026-05-21">May 21, 2026</time>
+              <AuthorByline />
+              Published May 21, 2026 · <time dateTime="2026-11-09">Updated November 9, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>5 min read</span>
             </div>
             <div className="flex gap-3 mt-6 flex-wrap">
               {HERO_SWATCHES.map((c) => (
@@ -185,7 +198,7 @@ export default function BurgundyHexCodePage() {
 
                 <PalettePairingsSection
                   title="Burgundy Palette Pairings"
-                  intro="Four burgundy combinations with hex codes—luxury gold, institutional navy, soft cream, and modern blush accents."
+                  intro="Six burgundy combinations with hex codes—luxury gold, institutional navy, soft cream, modern blush, earthy terracotta, and black-and-gold evening palettes."
                   pairings={BURGUNDY_PAIRINGS}
                 />
 

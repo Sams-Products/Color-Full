@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/use-cases/colors-for-fashion-design',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Colors for Fashion Design: Palettes for Apparel and Collections',
   description:
     'How to use color palettes in fashion design. Seasonal collections, fabric and print coordination, and brand-aligned apparel color systems.',

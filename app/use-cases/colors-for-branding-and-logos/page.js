@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/use-cases/colors-for-branding-and-logos',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Colors for Branding and Logos: Building Recognizable Identity',
   description:
     'How to choose and apply colors for branding and logos. Logo color systems, brand guidelines, and palette structure for professional brand designers.',

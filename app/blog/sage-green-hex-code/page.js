@@ -18,6 +18,7 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -333,10 +334,11 @@ export default function SageGreenHexCodePage() {
               role="img"
               aria-label="Sage green color swatch hex B2AC88"
             />
-            <div className="flex items-center gap-4 text-lime-100/85 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-lime-100/85 text-sm">
+              <AuthorByline />
               <time dateTime="2026-06-26">Updated June 26, 2026</time>
               <span>•</span>
-              <span>12 min read</span>
+              <span>13 min read</span>
             </div>
           </div>
         </div>
@@ -611,7 +613,7 @@ export default function SageGreenHexCodePage() {
                     <InlineTagLink href="/blog/yellow-green-hex-code">yellow green hex code</InlineTagLink> for chartreuse accents, or{' '}
                     <InlineTagLink href="/blog/navy-blue-hex-code">navy blue hex reference</InlineTagLink> when you need a cooler structural accent alongside sage
                     panels. For dusty pink-purple pairings, see our{' '}
-                    <InlineTagLink href="/blog/mauve-color">mauve color palette</InlineTagLink>. Validate every final pair with the{' '}
+                    <InlineTagLink href="/blog/pink-purple-color-name">mauve and pink-purple palettes</InlineTagLink>. Validate every final pair with the{' '}
                     <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink> before release.
                   </p>
 

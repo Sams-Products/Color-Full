@@ -4,6 +4,7 @@ import { ThemeProvider } from '../contexts/ThemeContext';
 import Header from './Header';
 import Footer from './Footer';
 import CreativeOfferModal from './CreativeOfferModal';
+import { SHOW_AFFILIATE_PROMOS } from '../../lib/siteConfig';
 
 export default function ClientWrapper({ children }) {
   return (
@@ -13,7 +14,7 @@ export default function ClientWrapper({ children }) {
         {children}
       </main>
       <Footer />
-      <CreativeOfferModal />
+      {SHOW_AFFILIATE_PROMOS && <CreativeOfferModal />}
     </ThemeProvider>
   );
 }

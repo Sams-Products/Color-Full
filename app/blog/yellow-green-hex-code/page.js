@@ -15,6 +15,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -175,10 +176,11 @@ export default function YellowGreenHexCodePage() {
               role="img"
               aria-label="Yellow green color swatch hex 9ACD32"
             />
-            <div className="flex items-center gap-4 text-lime-100/85 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-lime-100/85 text-sm">
+              <AuthorByline />
               <time dateTime="2026-05-30">May 30, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>5 min read</span>
             </div>
           </div>
         </div>

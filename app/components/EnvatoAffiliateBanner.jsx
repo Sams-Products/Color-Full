@@ -1,4 +1,6 @@
-'use client';
+// No 'use client': these render nothing interactive, so as server components they leave
+// no trace in the page when SHOW_AFFILIATE_PROMOS is off.
+import { SHOW_AFFILIATE_PROMOS } from '../../lib/siteConfig';
 
 /**
  * Verified Envato Affiliate Tracking Links
@@ -55,6 +57,7 @@ export default function EnvatoAffiliateBanner({
   ctaText,
   className = '',
 }) {
+  if (!SHOW_AFFILIATE_PROMOS) return null;
   const config = VARIANTS[variant] || VARIANTS.graphics;
   const finalTitle = title || config.title;
   const finalDesc = description || config.description;

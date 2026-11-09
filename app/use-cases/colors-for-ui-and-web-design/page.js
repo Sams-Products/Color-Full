@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/use-cases/colors-for-ui-and-web-design',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Colors for UI and Web Design: Choosing the Right Color Systems',
   description:
     'How color systems work in UI and web design. Brand consistency, usability, accessible UI colors, and design system colors for professional designers.',

@@ -12,6 +12,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/accessible-dark-mode-color-palette',
@@ -124,10 +125,11 @@ export default function AccessibleDarkModeColorPalettePage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               How to Build an Accessible Dark Mode Color Palette (With Hex Examples)
             </h1>
-            <div className="flex items-center gap-4 text-purple-100 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-purple-100 text-sm">
+              <AuthorByline />
               <time dateTime="2026-04-01">April 1, 2026</time>
               <span>•</span>
-              <span>10 min read</span>
+              <span>8 min read</span>
             </div>
           </div>
         </div>

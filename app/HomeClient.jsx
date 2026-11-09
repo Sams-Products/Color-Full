@@ -152,7 +152,7 @@ const latestPosts = [
     slug: 'dark-mode-color-palette',
     category: 'dark-mode',
     categoryLabel: 'Dark Mode UI',
-    readTime: '8 min read',
+    readTime: '6 min read',
     excerpt:
       'Build eye-friendly dark interfaces using Material #121212, elevated surface tokens, off-white typography, and WCAG-verified accent ramps.',
     palette: ['#121212', '#1E1E1E', '#3F3F46', '#F5F5F5', '#818CF8'],
@@ -164,7 +164,7 @@ const latestPosts = [
     slug: 'sage-green-hex-code',
     category: 'hex',
     categoryLabel: 'Hex Reference',
-    readTime: '10 min read',
+    readTime: '13 min read',
     excerpt:
       'Copy the canonical sage green hex code (#B2AC88), RGB(178, 172, 136), 10 light to dark sage shades, and custom Canva brand kit swatches.',
     palette: ['#B2AC88', '#E2725B', '#FFFDD0', '#36454F', '#87A96B'],
@@ -176,7 +176,7 @@ const latestPosts = [
     slug: 'discord-dark-mode-colors',
     category: 'dark-mode',
     categoryLabel: 'App Theme Breakdown',
-    readTime: '7 min read',
+    readTime: '5 min read',
     excerpt:
       'Copy every Discord dark theme token: primary chat canvas (#313338), channel sidebar (#2B2D31), app frame (#1E1F22), and Blurple (#5865F2).',
     palette: ['#313338', '#2B2D31', '#1E1F22', '#DBDEE1', '#5865F2'],
@@ -188,7 +188,7 @@ const latestPosts = [
     slug: 'pink-purple-color-name',
     category: 'hex',
     categoryLabel: 'Color Dictionary',
-    readTime: '9 min read',
+    readTime: '8 min read',
     excerpt:
       'What color sits between pink and purple? Compare visual swatches and exact hex codes for Mauve (#E0B0FF), Magenta, Fuchsia, Orchid, and Berry.',
     palette: ['#FF69B4', '#FF00FF', '#E0B0FF', '#9966CC', '#374151'],
@@ -200,7 +200,7 @@ const latestPosts = [
     slug: 'what-color-does-pink-and-purple-make',
     category: 'mixing',
     categoryLabel: 'Color Mixing',
-    readTime: '7 min read',
+    readTime: '3 min read',
     excerpt:
       'See the exact color pink and purple make across 7 mixing ratios (from 90/10 rose magenta to 50/50 vibrant magenta #BF34CA and 10/90 deep violet).',
     palette: ['#FF8FC8', '#F06BB8', '#BF34CA', '#A640B0', '#7A2585'],
@@ -212,7 +212,7 @@ const latestPosts = [
     slug: 'instagram-dark-mode-colors',
     category: 'dark-mode',
     categoryLabel: 'App Theme Breakdown',
-    readTime: '7 min read',
+    readTime: '4 min read',
     excerpt:
       'Explore Instagram’s OLED-friendly #000000 canvas, #121212 elevated cards, #0095F6 action blue, and the 5-stop Story ring gradient hex codes.',
     palette: ['#000000', '#121212', '#262626', '#0095F6', '#DD2A7B'],
@@ -224,7 +224,7 @@ const latestPosts = [
     slug: 'sunset-color-palette',
     category: 'hex',
     categoryLabel: 'Curated Palette',
-    readTime: '8 min read',
+    readTime: '4 min read',
     excerpt:
       'Six complete sunset color palettes—from tropical golden hour to desert dusk—with copy-ready hex codes, RGB values, and CSS gradients.',
     palette: ['#F97316', '#EF4444', '#EC4899', '#8B5CF6', '#F59E0B'],
@@ -236,7 +236,7 @@ const latestPosts = [
     slug: 'terracotta-hex-code',
     category: 'hex',
     categoryLabel: 'Hex Reference',
-    readTime: '9 min read',
+    readTime: '7 min read',
     excerpt:
       'Sun-baked clay as a digital swatch (#E2725B): 10 shades from linen to burnt umber, plus sage green, cream, and navy blue pairings.',
     palette: ['#E2725B', '#B2AC88', '#FFFDD0', '#000080', '#B7410E'],
@@ -260,7 +260,7 @@ const latestPosts = [
     slug: 'navy-blue-hex-code',
     category: 'hex',
     categoryLabel: 'Hex Reference',
-    readTime: '9 min read',
+    readTime: '10 min read',
     excerpt:
       'Canonical web navy (#000080) and 10 shades from Alice blue to midnight navy—with gold, coral, and crisp white brand pairings.',
     palette: ['#000080', '#4682B4', '#FFD700', '#FFFFFF', '#FF6B6B'],
@@ -272,7 +272,7 @@ const latestPosts = [
     slug: 'whatsapp-dark-mode-colors',
     category: 'dark-mode',
     categoryLabel: 'App Theme Breakdown',
-    readTime: '7 min read',
+    readTime: '2 min read',
     excerpt:
       'Deep teal-slate chat backgrounds (#111B21), incoming/outgoing message bubble tokens (#202C33, #005C4B), and #25D366 accent green.',
     palette: ['#111B21', '#202C33', '#2A3942', '#25D366', '#E9EDEF'],
@@ -284,7 +284,7 @@ const latestPosts = [
     slug: '60-30-10-color-rule',
     category: 'mixing',
     categoryLabel: 'Color Theory',
-    readTime: '8 min read',
+    readTime: '7 min read',
     excerpt:
       'Master the 60% dominant, 30% secondary, 10% accent proportion rule with real website, dashboard, and interior hex examples.',
     palette: ['#F5F5F5', '#1E3A8A', '#FFD700', '#B2AC88', '#0066FF'],
@@ -296,7 +296,7 @@ const latestPosts = [
     slug: 'what-color-does-blue-and-yellow-make',
     category: 'mixing',
     categoryLabel: 'Color Mixing',
-    readTime: '7 min read',
+    readTime: '3 min read',
     excerpt:
       'See how blue and yellow blend across 7 ratios—from deep teal-green and forest to balanced green (#008000), chartreuse, and lime.',
     palette: ['#003300', '#006600', '#008000', '#33AA33', '#99CC00'],
@@ -308,7 +308,7 @@ const latestPosts = [
     slug: 'what-color-does-red-and-yellow-make',
     category: 'mixing',
     categoryLabel: 'Color Mixing',
-    readTime: '7 min read',
+    readTime: '3 min read',
     excerpt:
       'Explore 7 red-to-yellow mixing steps with visual swatches and copy-ready hex codes for red-orange, burnt orange, true orange (#FF8000), and amber.',
     palette: ['#FF1A00', '#FF5500', '#FF8000', '#FFAA00', '#FFD700'],
@@ -320,7 +320,7 @@ const latestPosts = [
     slug: 'accessibility-color-contrast-checker',
     category: 'accessibility',
     categoryLabel: 'Accessibility Guide',
-    readTime: '11 min read',
+    readTime: '15 min read',
     excerpt:
       'Complete breakdown of WCAG 2.1 Level AA (4.5:1) and AAA (7:1) contrast requirements, non-text UI component rules, and pass/fail hex pairs.',
     palette: ['#111827', '#FFFFFF', '#000080', '#4F46E5', '#10B981'],
@@ -332,7 +332,7 @@ const latestPosts = [
     slug: 'burgundy-hex-code',
     category: 'hex',
     categoryLabel: 'Hex Reference',
-    readTime: '9 min read',
+    readTime: '5 min read',
     excerpt:
       'Copy burgundy (#800020), wine (#722F37), and oxblood (#4A0E0E) hex codes with luxury gold, cream, and collegiate navy pairings.',
     palette: ['#800020', '#722F37', '#FFD700', '#000080', '#FFF8F0'],
@@ -340,15 +340,15 @@ const latestPosts = [
   },
   {
     id: 17,
-    title: 'Spotify & Notion Dark Mode Colors: Official UI Token Reference',
-    slug: 'spotify-dark-mode-colors',
+    title: 'Dark Mode Colors of 12 Popular Apps, Compared',
+    slug: 'app-dark-mode-colors',
     category: 'dark-mode',
     categoryLabel: 'App Theme Breakdown',
     readTime: '8 min read',
     excerpt:
-      'Compare Spotify’s #121212 canvas and #1DB954 green accent with elevated card surfaces (#181818, #282828) and subdued metadata text.',
-    palette: ['#121212', '#181818', '#282828', '#1DB954', '#B3B3B3'],
-    publishedAt: '2026-07-02',
+      'Slack, iOS, Spotify, Notion, GitHub, VS Code and six more dark themes side by side — every hex code with its WCAG contrast ratio.',
+    palette: ['#000000', '#0D1117', '#1A1D21', '#121212', '#1E1E1E'],
+    publishedAt: '2026-11-09',
   },
   {
     id: 18,
@@ -356,7 +356,7 @@ const latestPosts = [
     slug: 'wcag-accessible-buttons-and-links',
     category: 'accessibility',
     categoryLabel: 'Accessibility Guide',
-    readTime: '9 min read',
+    readTime: '7 min read',
     excerpt:
       'Design primary CTAs, outline buttons, focus rings, and inline text links that pass 4.5:1 text contrast and 3:1 non-text contrast.',
     palette: ['#FFFFFF', '#1E40AF', '#1D4ED8', '#1E293B', '#0EA5E9'],

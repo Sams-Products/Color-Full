@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/use-cases/colors-for-automotive-design',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Colors for Automotive Design: Exterior, Interior, and Brand Systems',
   description:
     'How color systems work in automotive design. Exterior and interior palettes, trim and materials, and brand-aligned color for the automotive industry.',

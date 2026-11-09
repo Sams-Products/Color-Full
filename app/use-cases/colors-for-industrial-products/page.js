@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/use-cases/colors-for-industrial-products',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Colors for Industrial Products: Palettes for Durable and Product Design',
   description:
     'How to use color systems in industrial and product design. Durables, packaging, machinery, and brand-consistent product color palettes.',

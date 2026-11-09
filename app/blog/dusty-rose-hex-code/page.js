@@ -19,6 +19,7 @@ import {
   DustyRoseFormatCodesSection,
   DustyRoseShadesTable,
 } from './DustyRoseHexLead';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-06-11T00:00:00.000Z';
 
@@ -183,9 +184,10 @@ export default function DustyRoseHexCodePage() {
               aria-label="Dusty rose color sample, hex DCAE96"
             />
             <div className="flex items-center gap-4 text-rose-100 text-sm flex-wrap">
+              <AuthorByline />
               <time dateTime="2026-06-11">June 11, 2026</time>
               <span>•</span>
-              <span>10 min read</span>
+              <span>7 min read</span>
             </div>
             <div className="flex gap-3 mt-6 flex-wrap">
               {HERO_SWATCHES.map((c) => (

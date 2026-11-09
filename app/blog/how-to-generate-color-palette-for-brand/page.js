@@ -8,6 +8,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/how-to-generate-color-palette-for-brand',
@@ -83,6 +84,7 @@ export default function HowToGenerateColorPaletteForBrandPage() {
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               How to Generate a Color Palette for a Brand
             </h1>
+            <AuthorByline variant="block" className="text-gray-500 dark:text-gray-400 -mt-3" />
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               A brand color palette is a defined set of colors used consistently across a company&apos;s touchpoints: logo, website, marketing, and product. Generating a palette involves choosing a primary color that reflects the brand, then deriving secondary and accent colors using color theory. This article covers what a brand palette is, what influences it, how to build one, common mistakes, and tools that help.
             </p>

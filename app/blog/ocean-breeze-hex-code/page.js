@@ -17,6 +17,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/ocean-breeze-hex-code',
@@ -159,10 +160,11 @@ export default function OceanBreezeHexCodePage() {
               role="img"
               aria-label="Ocean Breeze sky blue swatch"
             />
-            <div className="flex items-center gap-4 text-cyan-100 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-cyan-100 text-sm">
+              <AuthorByline />
               <time dateTime="2026-04-17">April 17, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>5 min read</span>
             </div>
             <div className="flex gap-3 mt-6 flex-wrap">
               {OCEAN_BREEZE.map((c) => (

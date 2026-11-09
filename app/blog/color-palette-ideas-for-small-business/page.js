@@ -12,6 +12,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/color-palette-ideas-for-small-business',
@@ -108,12 +109,13 @@ export default function ColorPaletteIdeasForSmallBusinessPage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               Color Palette Ideas for Small Business: A Practical Guide
             </h1>
-            <div className="flex items-center gap-4 text-purple-100 text-sm">
-              <time dateTime="2025-02-08">
-                February 8, 2025
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-purple-100 text-sm">
+              <AuthorByline />
+              <time dateTime="2026-02-08">
+                February 8, 2026
               </time>
               <span>•</span>
-              <span>8 min read</span>
+              <span>6 min read</span>
             </div>
           </div>
         </div>
@@ -257,7 +259,7 @@ export default function ColorPaletteIdeasForSmallBusinessPage() {
                     Pick one or two directions from the ideas above and try them in real layouts with our{' '}
                     <InlineTagLink href="/tools/color-palette-preview">color palette preview tool</InlineTagLink>. Use a{' '}
                     <Link href="/tools/palette-generator">color palette generator</Link> to create a set from your main brand color, then{' '}
-                    <Link href="/tools/contrast-checker">check contrast</Link> for any text and button pairs. Document your hex codes in a simple style note so you and anyone helping with design use the same values. For more on brand and logo color systems, see our guide on <Link href="/use-cases/colors-for-branding-and-logos">colors for branding and logos</Link>.
+                    <Link href="/tools/contrast-checker">check contrast</Link> for any text and button pairs. Document your hex codes in a simple style note so you and anyone helping with design use the same values. For more on brand color systems, see our guide on <Link href="/blog/how-to-generate-color-palette-for-brand">how to generate a color palette for a brand</Link>.
                   </p>
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">

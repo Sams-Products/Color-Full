@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PILLAR_GUIDES } from '../../lib/site-pillar-links';
+import { SHOW_AFFILIATE_PROMOS } from '../../lib/siteConfig';
 
 export default function Footer() {
   return (
@@ -71,56 +72,60 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Use cases & palettes – improves crawl discovery */}
+          {/* Explore – tools and reference guides */}
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/use-cases/colors-for-ui-and-web-design" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
-                  Colors for UI & Web
+                <Link href="/tools/color-palette-preview" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
+                  Palette Preview
                 </Link>
               </li>
               <li>
-                <Link href="/use-cases/colors-for-branding-and-logos" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
-                  Colors for Branding
+                <Link href="/tools/color-mixer" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
+                  Color Mixer
                 </Link>
               </li>
               <li>
-                <Link href="/palettes/black-and-gold" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
-                  Black & Gold Palette
+                <Link href="/blog/app-dark-mode-colors" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
+                  App Dark Mode Colors
                 </Link>
               </li>
               <li>
-                <Link href="/palettes/luxury-automotive-color-palettes" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
-                  Luxury Automotive Palettes
+                <Link href="/blog/wcag-accessible-buttons-and-links" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm">
+                  Accessible Buttons &amp; Links
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://1.envato.market/vD99ke"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="group flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm py-0.5"
-                >
-                  <span className="truncate">Envato Elements</span>
-                  <span className="text-[11px] font-semibold text-purple-600 dark:text-purple-400 group-hover:translate-x-0.5 transition-transform">
-                    Assets ↗
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://referral.magnific.com/mzXrnA4"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="group flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm py-0.5"
-                >
-                  <span className="truncate">Magnific AI</span>
-                  <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 group-hover:translate-x-0.5 transition-transform">
-                    20% Off ↗
-                  </span>
-                </a>
-              </li>
+              {SHOW_AFFILIATE_PROMOS && (
+                <>
+                <li>
+                  <a
+                    href="https://1.envato.market/vD99ke"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="group flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-sm py-0.5"
+                  >
+                    <span className="truncate">Envato Elements</span>
+                    <span className="text-[11px] font-semibold text-purple-600 dark:text-purple-400 group-hover:translate-x-0.5 transition-transform">
+                      Assets ↗
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://referral.magnific.com/mzXrnA4"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="group flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm py-0.5"
+                  >
+                    <span className="truncate">Magnific AI</span>
+                    <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 group-hover:translate-x-0.5 transition-transform">
+                      20% Off ↗
+                    </span>
+                  </a>
+                </li>
+                </>
+              )}
             </ul>
           </div>
 

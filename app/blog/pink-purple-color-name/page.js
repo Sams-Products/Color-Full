@@ -16,6 +16,7 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
 
@@ -71,6 +72,33 @@ const PINK_PURPLE_NAMES = [
   { name: 'Amethyst', hex: '#9966CC' },
   { name: 'Hot Pink', hex: '#FF69B4' },
   { name: 'Rose', hex: '#FF007F' },
+];
+
+/** Merged from the former /blog/mauve-color guide (Nov 2026). */
+const MAUVE_SHADES = [
+  { name: 'Pale mauve', hex: '#F5E6FF' },
+  { name: 'Light mauve', hex: '#E8D4FF' },
+  { name: 'Soft mauve', hex: '#E0C8FF' },
+  { name: 'Mauve', hex: '#E0B0FF' },
+  { name: 'Medium mauve', hex: '#D49FE8' },
+  { name: 'Dusty mauve', hex: '#C48FD9' },
+  { name: 'Deep mauve', hex: '#A875C4' },
+  { name: 'Dark mauve', hex: '#8B5A9E' },
+];
+
+/** Merged from the former /blog/lavender-hex-code and /blog/c4b5fd-color guides (Nov 2026). */
+const LAVENDER_SHADES = [
+  { name: 'White Lavender', hex: '#F8F8FF' },
+  { name: 'Ghost White', hex: '#F5F5FF' },
+  { name: 'Lavender Blush', hex: '#FFF0F5' },
+  { name: 'Pale Lavender', hex: '#DCD0FF' },
+  { name: 'Lavender', hex: '#E6E6FA' },
+  { name: 'Soft violet (#C4B5FD)', hex: '#C4B5FD' },
+  { name: 'Floral Lavender', hex: '#B57EDC' },
+  { name: 'Medium Purple', hex: '#9370DB' },
+  { name: 'Amethyst', hex: '#9966CC' },
+  { name: 'Dark Lavender', hex: '#734F96' },
+  { name: 'Deep Purple', hex: '#4B0082' },
 ];
 
 const PINK_PURPLE_PALETTES = [
@@ -178,6 +206,7 @@ export default function PinkPurpleColorNamePage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               What Color is Between Pink and Purple? 10 Names, Hex Codes &amp; Palettes
             </h1>
+            <AuthorByline variant="block" className="text-white/90" />
             <AeoDirectAnswer
               question="What color is between pink and purple?"
               answer="The color between pink and purple is most commonly called mauve (#E0B0FF), magenta (#FF00FF), or fuchsia (#FF77FF). Lighter shades read as mauve or plum; vibrant mid-hues read as magenta or orchid. All are one-click copyable below."
@@ -242,12 +271,40 @@ export default function PinkPurpleColorNamePage() {
               <strong className="text-gray-900 dark:text-white">Mauve (#E0B0FF)</strong> is a light, dusty pink-purple named after the mallow flower. It sits closer to pink than magenta does: higher lightness, lower saturation, and a slightly warm undertone that feels vintage and editorial. Designers use mauve for section backgrounds, invitation stationery, and beauty packaging when hot pink would feel too juvenile and deep purple would feel too heavy.
             </p>
             <p className="mb-6">
-              Mauve pairs naturally with plum (#DDA0DD), thistle (#D8BFD8), and cream neutrals. In CSS you can paste #E0B0FF directly or derive tints for hover states. For full copy-ready values and pairings, see our{' '}
-              <InlineTagLink href="/blog/mauve-color">mauve hex code</InlineTagLink> guide and{' '}
-              <InlineTagLink href="/blog/lavender-hex-code">lavender hex code</InlineTagLink> reference. If you need to match a screenshot to the nearest name, use our{' '}
+              Mauve pairs naturally with plum (#DDA0DD), thistle (#D8BFD8), and cream neutrals. In CSS you can paste #E0B0FF directly; the shade table below runs from pale mauve for backgrounds down to dark mauve (#8B5A9E) for borders and text-safe accents. If you need to match a screenshot to the nearest name, use our{' '}
               <InlineTagLink href="/tools/color-name-finder">color name finder</InlineTagLink>—especially helpful when clients say “pinkish purple” without a hex.
             </p>
           </div>
+
+          <PaletteShadesTable
+            title="Mauve Shades and Hex Codes"
+            description="Eight mauve steps from pale tints to dark mauve. Use the light end for section backgrounds and the dark end where text needs contrast."
+            shades={MAUVE_SHADES}
+          />
+
+          <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-0 mb-4">Lavender vs Mauve</h2>
+            <p className="mb-4">
+              People often use “lavender” and “mauve” interchangeably, but the hex codes sit on different sides of purple.{' '}
+              <strong className="text-gray-900 dark:text-white">Lavender (#E6E6FA)</strong> has a hue of about 240°—the blue side—and
+              is very pale (94% lightness), so it reads as a cool, almost-white tint. <strong className="text-gray-900 dark:text-white">Mauve (#E0B0FF)</strong>{' '}
+              sits near 276°, closer to pink, and carries far more color. If a brief says “soft purple but not pink”, start from
+              lavender; if it says “dusty pink-purple”, start from mauve.
+            </p>
+            <p className="mb-6">
+              Between the two you will often see <strong className="text-gray-900 dark:text-white">#C4B5FD</strong> (rgb(196, 181, 253)),
+              the 300 step of Tailwind&apos;s violet scale. It is more saturated than lavender but still light enough for badges, focus
+              rings and chart fills on white. As with any light purple, keep body text dark—#374151 or darker—and confirm small labels
+              in the{' '}
+              <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink>.
+            </p>
+          </div>
+
+          <PaletteShadesTable
+            title="Lavender and Soft Violet Shades"
+            description="Cool lavender tints through deep purple, including #C4B5FD. Click any hex to copy it."
+            shades={LAVENDER_SHADES}
+          />
 
           <PalettePairingsSection
             title="Pink Purple Color Palette"
@@ -304,10 +361,6 @@ export default function PinkPurpleColorNamePage() {
           <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
             <strong className="text-gray-800 dark:text-gray-200">Related:</strong>{' '}
             <InlineTagLink href="/blog/what-color-does-pink-and-purple-make">What Color Does Pink and Purple Make?</InlineTagLink>
-            {' · '}
-            <InlineTagLink href="/blog/mauve-color">Mauve Color Hex Code</InlineTagLink>
-            {' · '}
-            <InlineTagLink href="/blog/lavender-hex-code">Lavender Hex Code</InlineTagLink>
             {' · '}
             <InlineTagLink href="/blog/purple-dream">Purple Dream Palette</InlineTagLink>
           </p>

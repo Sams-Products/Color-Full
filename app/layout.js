@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientWrapper from "./components/ClientWrapper";
+import { SITE_AUTHOR } from "../lib/siteConfig";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,7 @@ export const metadata = {
   description: 'Professional color tools for designers and developers. Generate accessible palettes, check WCAG contrast, and document color systems.',
   keywords:
     "theme and color, themeandcolor, color palette, color scheme, color picker, contrast checker, palette generator, design tools, theme generator, WCAG contrast",
-  authors: [{ name: "Theme & Color", url: SITE_URL }],
+  authors: [{ name: SITE_AUTHOR.name, url: `${SITE_URL}${SITE_AUTHOR.aboutPath}` }],
   creator: "Theme & Color",
   publisher: "Theme & Color",
   robots: {
@@ -65,6 +66,13 @@ const jsonLd = {
       name: "Theme & Color",
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
+      founder: {
+        "@type": "Person",
+        name: SITE_AUTHOR.name,
+        jobTitle: SITE_AUTHOR.jobTitle,
+        url: `${SITE_URL}${SITE_AUTHOR.aboutPath}`,
+        sameAs: [SITE_AUTHOR.linkedin],
+      },
       sameAs: [],
     },
     {

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getBlogPostPathsForSitemap } from '../lib/blogSitemapSlugs';
+import { getBlogArticleDateModified } from '../lib/getBlogArticleSchema';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://themeandcolor.com';
@@ -21,13 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/color-palette-preview/landing-page',
     '/tools/color-palette-preview/mobile-app',
     '/blog',
-    '/use-cases/colors-for-ui-and-web-design',
-    '/use-cases/colors-for-branding-and-logos',
-    '/use-cases/colors-for-fashion-design',
-    '/use-cases/colors-for-automotive-design',
-    '/use-cases/colors-for-industrial-products',
-    '/palettes/black-and-gold',
-    '/palettes/luxury-automotive-color-palettes',
   ];
 
   const blogPosts = getBlogPostPathsForSitemap();
@@ -40,19 +34,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/color-palette-preview/mobile-app',
   ]);
 
+  // No lastModified on static pages: claiming "changed today" on every build is not true and gets ignored.
   const staticUrls = staticPages.map((path) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: path === '' ? 1 : toolHighPriority.has(path) ? 0.9 : 0.8,
   }));
 
-  const blogUrls = blogPosts.map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  const blogUrls = blogPosts.map((path) => {
+    const modified = getBlogArticleDateModified(path);
+    return {
+      url: `${baseUrl}${path}`,
+      ...(modified ? { lastModified: new Date(`${modified}T00:00:00.000Z`) } : {}),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    };
+  });
 
   return [...staticUrls, ...blogUrls];
 }

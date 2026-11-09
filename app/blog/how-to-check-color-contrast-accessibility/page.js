@@ -11,6 +11,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/how-to-check-color-contrast-accessibility',
@@ -107,10 +108,11 @@ export default function HowToCheckColorContrastAccessibilityPage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               How to Check Color Contrast for Accessibility (WCAG Guide)
             </h1>
-            <div className="flex items-center gap-4 text-purple-100 text-sm">
-              <time dateTime="2025-03-15">March 15, 2025</time>
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-purple-100 text-sm">
+              <AuthorByline />
+              <time dateTime="2026-03-15">March 15, 2026</time>
               <span>•</span>
-              <span>6 min read</span>
+              <span>4 min read</span>
             </div>
           </div>
         </div>

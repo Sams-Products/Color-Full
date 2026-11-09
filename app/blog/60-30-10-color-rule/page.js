@@ -9,6 +9,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/60-30-10-color-rule',
@@ -202,10 +203,11 @@ export default function SixtyThirtyTenColorRulePage() {
               Example strip: <span className="font-mono">#F5F5F5</span> (dominant) · <span className="font-mono">#1E3A8A</span> (secondary) ·{' '}
               <span className="font-mono">#FFD700</span> (accent).
             </p>
-            <div className="flex items-center gap-4 text-violet-200/90 text-sm mt-8">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-violet-200/90 text-sm mt-8">
+              <AuthorByline />
               <time dateTime="2026-05-13">May 13, 2026</time>
               <span>•</span>
-              <span>10 min read</span>
+              <span>7 min read</span>
             </div>
           </div>
         </div>
@@ -413,7 +415,7 @@ export default function SixtyThirtyTenColorRulePage() {
             <p className="mb-6 text-gray-700 dark:text-gray-300">
               Related reads: <InlineTagLink href="/blog/how-to-generate-color-palette-for-brand">how to generate a color palette for your brand</InlineTagLink>,{' '}
               <InlineTagLink href="/blog/color-palette-ideas-for-small-business">color palette ideas for small business</InlineTagLink>, a{' '}
-              <InlineTagLink href="/blog/navy-blue-color-palette">navy blue color palette example</InlineTagLink>,{' '}
+              <InlineTagLink href="/blog/navy-blue-hex-code">navy blue color palette example</InlineTagLink>,{' '}
               <InlineTagLink href="/blog/navy-blue-hex-code">Navy blue hex reference</InlineTagLink>,{' '}
               <InlineTagLink href="/blog/sage-green-hex-code">Sage green hex codes</InlineTagLink>, and{' '}
               <InlineTagLink href="/blog/how-to-check-color-contrast-accessibility">how to check color contrast</InlineTagLink> for WCAG depth beyond proportion

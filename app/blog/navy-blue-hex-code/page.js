@@ -18,6 +18,7 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import NavyBlueHexCopyBox from './NavyBlueHexCopyBox';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -97,7 +98,97 @@ const NAVY_PAIRINGS = [
     body: '#F5F5F5 fields with navy typography reads restrained and print-safe. Add a single saturated accent only when you need hierarchy beyond weight.',
     swatches: ['#000080', '#F5F5F5', '#E5E5E5'],
   },
+  // Merged from the former /blog/navy-blue-color-palette guide (Nov 2026)
+  {
+    title: 'Navy + Mint + White + Dark Navy',
+    body: 'Health and fintech dashboards: mint success states (#6EE7B7) on white cards, with navy chrome (#000080) and dark navy (#0A0A2E) for sidebars and dark mode shells.',
+    swatches: ['#000080', '#6EE7B7', '#FFFFFF', '#0A0A2E'],
+  },
+  {
+    title: 'Navy + Red + White + Silver',
+    body: 'Patriotic, sports, and alert-heavy UIs: red (#DC2626) for urgency badges, silver (#C0C0C0) for borders and icons, white for body copy on light sections.',
+    swatches: ['#000080', '#DC2626', '#FFFFFF', '#C0C0C0'],
+  },
+  {
+    title: 'Navy + Orange + Cream + Brown',
+    body: 'Warm hospitality and autumn campaigns: orange highlights (#F97316), cream backgrounds (#FFF8E7), and brown (#78350F) for typography on light fields.',
+    swatches: ['#000080', '#F97316', '#FFF8E7', '#78350F'],
+  },
+  {
+    title: 'Navy + Pink + White + Lavender',
+    body: 'Beauty, lifestyle, and creative SaaS: pink accents (#F472B6) on navy heroes, lavender (#E6E6FA) for soft section backgrounds, white for product cards.',
+    swatches: ['#000080', '#F472B6', '#FFFFFF', '#E6E6FA'],
+  },
 ];
+
+/** Merged from the former /blog/navy-blue-color-palette guide (Nov 2026). */
+const NAVY_WEBSITE_SCHEMES = [
+  {
+    title: 'Finance & professional services',
+    body: 'Navy carries trust on headers, footers, and statement bands. Cool gray fills most of the viewport so users read numbers on calm surfaces; gold appears only on primary CTAs and positive indicators.',
+    segments: [
+      { pct: '60%', label: 'Navy', hex: '#000080', role: 'Header, footer, hero band, sidebar chrome' },
+      { pct: '30%', label: 'Cool gray', hex: '#F3F4F6', role: 'Page background, cards, table wells' },
+      { pct: '10%', label: 'Gold', hex: '#FFD700', role: 'Primary CTA, badges, chart highlights' },
+    ],
+  },
+  {
+    title: 'B2B SaaS marketing site',
+    body: 'A saturated navy hero and pricing bar anchor the brand; off-white carries long-form copy and feature grids; coral handles the one action you want per screen—demo requests and trial signups.',
+    segments: [
+      { pct: '60%', label: 'Navy', hex: '#001F3F', role: 'Hero, nav, pricing header, footer' },
+      { pct: '30%', label: 'Off-white', hex: '#FAFAF9', role: 'Body sections, testimonial cards, FAQ' },
+      { pct: '10%', label: 'Coral', hex: '#FF6B6B', role: 'CTA buttons, link emphasis, promo tags' },
+    ],
+  },
+  {
+    title: 'Editorial & content publisher',
+    body: 'Deep navy frames the brand without painting entire articles blue. Cream reduces glare for reading; teal accents mark newsletter signup and category pills without competing with headlines.',
+    segments: [
+      { pct: '60%', label: 'Dark navy', hex: '#0A0A2E', role: 'Masthead, category rails, podcast chrome' },
+      { pct: '30%', label: 'Cream', hex: '#FFF8F0', role: 'Article background, pull quotes, archives' },
+      { pct: '10%', label: 'Teal', hex: '#14B8A6', role: 'Subscribe CTA, tags, inline links' },
+    ],
+  },
+];
+
+function NavyWebsiteSchemeCard({ scheme }) {
+  return (
+    <li className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/60 p-4 shadow-sm">
+      <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{scheme.title}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3">{scheme.body}</p>
+      <div
+        className="flex h-14 w-full max-w-xl overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600 mb-3"
+        role="img"
+        aria-label={`60-30-10 color scheme: ${scheme.title}`}
+      >
+        {scheme.segments.map((s) => (
+          <div
+            key={s.hex}
+            className="flex min-w-0 flex-col items-center justify-center px-1 text-center"
+            style={{
+              width: s.pct,
+              backgroundColor: s.hex,
+              color: s.hex === '#FFD700' || s.hex === '#F3F4F6' || s.hex === '#FAFAF9' || s.hex === '#FFF8F0' ? '#111827' : '#ffffff',
+            }}
+          >
+            <span className="text-[10px] font-bold uppercase sm:text-xs">{s.pct}</span>
+            <span className="hidden font-mono text-[10px] sm:inline">{s.hex}</span>
+          </div>
+        ))}
+      </div>
+      <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+        {scheme.segments.map((s) => (
+          <li key={s.hex}>
+            <span className="font-semibold text-gray-900 dark:text-white">{s.label}</span>{' '}
+            <span className="font-mono text-xs text-gray-500 dark:text-gray-400">{s.hex}</span>
+            <span className="text-gray-600 dark:text-gray-400"> — {s.role}</span>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
 
 const SIDEBAR_PALETTE = [
   { hexCode: '#000080', colorName: 'Navy', rgbCode: 'rgb(0, 0, 128)' },
@@ -193,10 +284,11 @@ export default function NavyBlueHexCodePage() {
               <strong className="text-white font-semibold">navy hex code</strong> is the same: #000080. Scroll for ten related{' '}
               <strong className="text-white font-semibold">navy blue color codes</strong> from light tints to midnight anchors, plus palette pairings for web and brand design.
             </p>
-            <div className="flex items-center gap-4 text-blue-200/90 text-sm">
-              <time dateTime="2026-05-21">May 21, 2026</time>
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-blue-200/90 text-sm">
+              <AuthorByline />
+              Published May 21, 2026 · <time dateTime="2026-11-09">Updated November 9, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>10 min read</span>
             </div>
           </div>
         </div>
@@ -227,9 +319,27 @@ export default function NavyBlueHexCodePage() {
 
                 <PalettePairingsSection
                   title="Navy Blue Color Palette Pairings"
-                  intro="These four combinations cover most brand and product needs without reinventing color theory—treat them as starting points, then tune in your brand system."
+                  intro="These eight combinations cover most brand and product needs without reinventing color theory—treat them as starting points, then tune in your brand system."
                   pairings={NAVY_PAIRINGS}
                 />
+
+                <div className="not-prose rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-900/40 p-5 sm:p-6">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Navy Blue Color Scheme for Websites</h2>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mb-5 leading-relaxed">
+                    A production-ready <strong className="text-gray-800 dark:text-gray-200">navy blue color scheme</strong> assigns roles, not just pretty swatches. The{' '}
+                    <InlineTagLink href="/blog/60-30-10-color-rule">60-30-10 color rule</InlineTagLink> keeps navy as the dominant ~60% (navigation, hero bands, footer), a secondary ~30% for readable surfaces (page background, cards), and a single accent ~10% for CTAs and highlights—so no hue fights for attention. Copy the hex codes below into CSS variables or your design-system tokens, then{' '}
+                    <InlineTagLink href="/tools/color-palette-preview">see navy blue on a real website</InlineTagLink> mockup before handoff.
+                  </p>
+                  <ul className="space-y-4">
+                    {NAVY_WEBSITE_SCHEMES.map((scheme) => (
+                      <NavyWebsiteSchemeCard key={scheme.title} scheme={scheme} />
+                    ))}
+                  </ul>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mt-5 leading-relaxed">
+                    If stakeholders push for more accent colors, split the 10% budget—never grow gold or coral to 30% without demoting navy from its structural role. For a deeper walkthrough of proportions, see our{' '}
+                    <InlineTagLink href="/blog/60-30-10-color-rule">60-30-10 rule guide</InlineTagLink>.
+                  </p>
+                </div>
 
                 <EnvatoAffiliateBanner
                   variant="uiKits"
@@ -360,8 +470,7 @@ export default function NavyBlueHexCodePage() {
                   </dl>
 
                   <p className="mt-8 mb-6">
-                    For more palette stories, see our{' '}
-                    <InlineTagLink href="/blog/navy-blue-color-palette">navy blue color palette</InlineTagLink>, the{' '}
+                    For more palette stories, see the{' '}
                     <InlineTagLink href="/blog/60-30-10-color-rule">60-30-10 color rule</InlineTagLink> for proportion guidance,{' '}
                     <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze hex codes</InlineTagLink>, or{' '}
                     <InlineTagLink href="/blog/forest-green-hex-code">Forest green hex reference</InlineTagLink>. When you are ready to test production pairs, our{' '}

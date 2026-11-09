@@ -127,11 +127,11 @@ export default function MobilePreviewPage() {
             <p className="leading-relaxed">
               This matters because mobile screens punish oversaturated palettes. A color that looks fine in a desktop
               dashboard can feel loud behind a 44px header. Preview here before you export tokens to SwiftUI, Jetpack
-              Compose, or React Native. For broader UI guidance, see our{' '}
-              <InlineTagLink href="/use-cases/colors-for-ui-and-web-design">
-                colors for UI and web design
+              Compose, or React Native. For broader UI guidance, see the{' '}
+              <InlineTagLink href="/blog/app-dark-mode-colors">
+                dark themes of 12 popular apps, compared
               </InlineTagLink>{' '}
-              use case and the{' '}
+              and the{' '}
               <InlineTagLink href="/blog/best-color-palette-tools-for-designers">
                 best color palette tools for designers
               </InlineTagLink>{' '}

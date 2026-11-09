@@ -4,6 +4,8 @@ import { buildPageMetadata } from '../../../lib/buildPageMetadata';
 
 export const metadata = buildPageMetadata({
   path: '/palettes/black-and-gold',
+  // Nov 2026: noindexed and unlinked during AdSense review (thin, generic page). Rewrite before re-indexing.
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
   title: 'Black and Gold Color Palette for Luxury Design',
   description:
     'Black and gold color palette for luxury design. Hex codes for branding, UI, fashion, and premium products. Black gold hex colors and accessibility notes.',

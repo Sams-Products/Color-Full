@@ -13,6 +13,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
 
@@ -122,6 +123,7 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
               What Color Does Pink and Purple Make? 7 Mix Ratios, Swatches &amp; Hex Codes
             </h1>
+            <AuthorByline variant="block" className="text-white/90" />
             <p className="text-lg md:text-xl font-medium text-pink-50/95 leading-relaxed border-l-4 border-amber-300 bg-white/10 pl-5 pr-4 py-4 rounded-r-xl">
               Pink and purple mixed together make magenta or mauve. A 50/50 mix of hot pink (#FF69B4) and purple (#800080)
               produces #BF34CA, a vibrant pink-purple magenta. The more pink you add the lighter and more rosy the result — the
@@ -211,8 +213,7 @@ export default function WhatColorDoesPinkAndPurpleMakePage() {
             Validate text on your new palette with our{' '}
             <InlineTagLink href="/tools/contrast-checker">WCAG contrast checker</InlineTagLink>. Related:{' '}
             <InlineTagLink href="/blog/pink-purple-color-name">color between pink and purple names</InlineTagLink>,{' '}
-            <InlineTagLink href="/blog/mauve-color">mauve color hex code &amp; shades</InlineTagLink>,{' '}
-            <InlineTagLink href="/blog/lavender-hex-code">lavender hex code</InlineTagLink>.
+            <InlineTagLink href="/blog/pink-purple-color-name">mauve and lavender hex codes &amp; shades</InlineTagLink>.
           </p>
         </div>
       </div>

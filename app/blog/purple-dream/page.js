@@ -17,6 +17,7 @@ import {
   BLOG_ARTICLE_DATE_MODIFIED,
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/purple-dream',
@@ -156,10 +157,11 @@ export default function PurpleDreamPage() {
               role="img"
               aria-label="Purple Dream royal violet"
             />
-            <div className="flex items-center gap-4 text-purple-100 text-sm">
-              <time dateTime="2025-02-10">February 10, 2025</time>
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-purple-100 text-sm">
+              <AuthorByline />
+              <time dateTime="2026-02-10">February 10, 2026</time>
               <span>•</span>
-              <span>9 min read</span>
+              <span>7 min read</span>
             </div>
             <div className="flex gap-3 mt-6 flex-wrap">
               {PALETTE.map((c) => (

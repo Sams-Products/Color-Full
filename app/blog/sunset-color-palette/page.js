@@ -13,6 +13,7 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
+import AuthorByline from '../components/AuthorByline';
 
 const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
 
@@ -299,10 +300,11 @@ export default function SunsetColorPalettePage() {
               red #EF4444, pink #EC4899, purple #8B5CF6—and matching{' '}
               <strong className="text-white font-semibold">sunset colors rgb</strong> values for UI, social, and brand systems.
             </p>
-            <div className="flex items-center gap-4 text-amber-100 text-sm">
+            <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-amber-100 text-sm">
+              <AuthorByline />
               <time dateTime="2026-06-26">Updated June 26, 2026</time>
               <span>•</span>
-              <span>10 min read</span>
+              <span>4 min read</span>
             </div>
             <div className="flex gap-3 mt-6 flex-wrap">
               {SIDEBAR_PALETTE.map((c) => (

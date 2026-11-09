@@ -138,6 +138,105 @@ const nextConfig = {
         destination: '/blog/pink-purple-color-name',
         permanent: true,
       },
+      // Nov 2026: 12 short per-app dark mode posts merged into one comparison guide (section anchors per app)
+      {
+        source: '/blog/slack-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#slack',
+        permanent: true,
+      },
+      {
+        source: '/blog/ios-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#ios',
+        permanent: true,
+      },
+      {
+        source: '/blog/telegram-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#telegram',
+        permanent: true,
+      },
+      {
+        source: '/blog/spotify-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#spotify',
+        permanent: true,
+      },
+      {
+        source: '/blog/chrome-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#chrome',
+        permanent: true,
+      },
+      {
+        source: '/blog/notion-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#notion',
+        permanent: true,
+      },
+      {
+        source: '/blog/twitter-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#twitter',
+        permanent: true,
+      },
+      {
+        source: '/blog/github-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#github',
+        permanent: true,
+      },
+      {
+        source: '/blog/reddit-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#reddit',
+        permanent: true,
+      },
+      {
+        source: '/blog/vscode-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#vscode',
+        permanent: true,
+      },
+      {
+        source: '/blog/linkedin-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#linkedin',
+        permanent: true,
+      },
+      {
+        source: '/blog/figma-dark-mode-colors',
+        destination: '/blog/app-dark-mode-colors#figma',
+        permanent: true,
+      },
+      // Nov 2026: hex-code / color-palette twins merged into the hex-code page
+      {
+        source: '/blog/burgundy-color-palette',
+        destination: '/blog/burgundy-hex-code',
+        permanent: true,
+      },
+      {
+        source: '/blog/navy-blue-color-palette',
+        destination: '/blog/navy-blue-hex-code',
+        permanent: true,
+      },
+      {
+        source: '/blog/terracotta-color-palette',
+        destination: '/blog/terracotta-hex-code',
+        permanent: true,
+      },
+      // Nov 2026: small lavender/mauve posts folded into the pink-purple color names guide
+      {
+        source: '/blog/mauve-color',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
+      {
+        source: '/blog/lavender-hex-code',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
+      {
+        source: '/blog/c4b5fd-color',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
+      // Nov 2026: duplicate mixer combo (same colors, reversed order)
+      {
+        source: '/tools/color-mixer/green-and-yellow',
+        destination: '/tools/color-mixer/yellow-and-green',
+        permanent: true,
+      },
     ];
   },
 };

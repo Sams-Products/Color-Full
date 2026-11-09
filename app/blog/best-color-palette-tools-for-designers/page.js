@@ -9,6 +9,7 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import MagnificAffiliateBanner from '../../components/MagnificAffiliateBanner';
+import AuthorByline from '../components/AuthorByline';
 
 export const metadata = buildPageMetadata({
   path: '/blog/best-color-palette-tools-for-designers',
@@ -84,6 +85,7 @@ export default function BestColorPaletteToolsForDesignersPage() {
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
               Best Color Palette Tools for Designers
             </h1>
+            <AuthorByline variant="block" className="text-gray-500 dark:text-gray-400 -mt-3" />
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               Designers need tools that produce consistent, accessible color palettes quickly. The best color palette tools let you start from a base color and generate harmonies (analogous, complementary, triadic, etc.) with exportable hex codes. This article outlines what to look for in a palette tool, how they fit into UI and brand workflows, and how to pair them with contrast checking and design systems.
             </p>

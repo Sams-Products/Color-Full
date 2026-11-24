@@ -1,12 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
   PRESET_COLORS,
   getClosestNamedColor,
   getColorLabel,
   mixHexColorsRyb,
+  mixHexColorsScreen,
 } from '../colorMixing';
 
 const DEFAULT_COLOR_1 = '#FF0000';
@@ -56,13 +57,20 @@ export default function ColorMixer({
 }: ColorMixerProps) {
   const [color1, setColor1] = useState(initialColor1.toUpperCase());
   const [color2, setColor2] = useState(initialColor2.toUpperCase());
+  /** Share of color 2 in the mix, in percent. 50 = equal parts. */
+  const [share2, setShare2] = useState(50);
   const [copied, setCopied] = useState(false);
+  const sliderId = useId();
 
-  const mixed = useMemo(() => mixHexColorsRyb(color1, color2), [color1, color2]);
+  const mixed = useMemo(() => mixHexColorsRyb(color1, color2, share2 / 100), [color1, color2, share2]);
+  const screenBlend = useMemo(() => mixHexColorsScreen(color1, color2, share2 / 100), [color1, color2, share2]);
   const closestName = useMemo(() => getClosestNamedColor(mixed.hex), [mixed.hex]);
   const color1Label = useMemo(() => getColorLabel(color1), [color1]);
   const color2Label = useMemo(() => getColorLabel(color2), [color2]);
-  const sentence = `${color1Label} + ${color2Label} = ${closestName}`;
+  const sentence =
+    share2 === 50
+      ? `${color1Label} + ${color2Label} = ${closestName}`
+      : `${100 - share2}% ${color1Label} + ${share2}% ${color2Label} = ${closestName}`;
 
   const handleCopy = async () => {
     try {
@@ -75,8 +83,9 @@ export default function ColorMixer({
   };
 
   const resetMix = () => {
-    setColor1(DEFAULT_COLOR_1);
-    setColor2(DEFAULT_COLOR_2);
+    setColor1(initialColor1.toUpperCase());
+    setColor2(initialColor2.toUpperCase());
+    setShare2(50);
     setCopied(false);
   };
 
@@ -84,7 +93,7 @@ export default function ColorMixer({
     <div className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1.1fr] gap-4 items-stretch">
         <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800">
-          <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Color 1</h2>
+          <p className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Color 1</p>
           <input
             type="color"
             value={color1}
@@ -103,7 +112,7 @@ export default function ColorMixer({
         </div>
 
         <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800">
-          <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Color 2</h2>
+          <p className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Color 2</p>
           <input
             type="color"
             value={color2}
@@ -122,7 +131,7 @@ export default function ColorMixer({
         </div>
 
         <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800">
-          <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Mixed Result</h2>
+          <p className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Mixed Result</p>
           <div
             className="w-full rounded-lg border border-gray-200 dark:border-gray-700"
             style={{ backgroundColor: mixed.hex, minHeight: '200px' }}
@@ -139,6 +148,16 @@ export default function ColorMixer({
               Closest name: <strong className="text-gray-900 dark:text-white">{closestName}</strong>
             </p>
             <p className="text-gray-700 dark:text-gray-300">{sentence}</p>
+            <p className="flex items-center gap-2 pt-1 text-xs text-gray-500 dark:text-gray-400">
+              <span
+                className="inline-block h-4 w-4 shrink-0 rounded border border-gray-300 dark:border-gray-600"
+                style={{ backgroundColor: screenBlend.hex }}
+                aria-hidden
+              />
+              <span>
+                Same mix as light on a screen: <span className="font-mono">{screenBlend.hex}</span>
+              </span>
+            </p>
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
             <button
@@ -153,9 +172,34 @@ export default function ColorMixer({
               onClick={resetMix}
               className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
             >
-              Try another mix
+              Reset
             </button>
           </div>
+        </div>
+      </div>
+
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800">
+        <label htmlFor={sliderId} className="flex flex-wrap items-center justify-between gap-2 text-sm font-semibold text-gray-900 dark:text-white">
+          <span>Mix ratio</span>
+          <span className="font-mono font-normal text-gray-700 dark:text-gray-300">
+            {100 - share2}% {color1Label} : {share2}% {color2Label}
+          </span>
+        </label>
+        <input
+          id={sliderId}
+          type="range"
+          min={0}
+          max={100}
+          step={5}
+          value={share2}
+          onChange={(e) => setShare2(Number(e.target.value))}
+          className="mt-3 w-full accent-purple-600"
+          aria-valuetext={`${100 - share2}% ${color1Label}, ${share2}% ${color2Label}`}
+        />
+        <div className="mt-1 flex justify-between text-xs text-gray-500 dark:text-gray-400">
+          <span>All {color1Label}</span>
+          <span>Equal parts</span>
+          <span>All {color2Label}</span>
         </div>
       </div>
 

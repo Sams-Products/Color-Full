@@ -4,13 +4,43 @@ import { NextResponse } from 'next/server';
 const CANONICAL_HOST = 'themeandcolor.com';
 
 /**
+ * Pages removed during the AdSense "low-value content" cleanup (Nov 2026).
+ * They had no close equivalent to redirect to, so they answer 410 Gone, which tells Google
+ * to drop them from the index faster than a 404. Pages that do have a close equivalent are
+ * 301-redirected in next.config.mjs instead.
+ * The source files for these routes can be deleted; this list keeps the URLs gone either way.
+ */
+const GONE_PATHS = new Set([
+  '/blog/ocean-breeze',
+  '/blog/ocean-breeze-hex-code',
+  '/blog/10-color-trends-for-2025',
+  '/use-cases/colors-for-automotive-design',
+  '/use-cases/colors-for-fashion-design',
+  '/use-cases/colors-for-industrial-products',
+  '/use-cases/colors-for-ui-and-web-design',
+  '/palettes/black-and-gold',
+  '/palettes/luxury-automotive-color-palettes',
+]);
+
+const GONE_HTML = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page removed | Theme &amp; Color</title><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:80px auto;padding:0 20px;color:#111827"><h1>This page has been removed</h1><p>We retired this article while tidying up the site. You can still browse every current guide on the <a href="/blog">blog</a> or use the free <a href="/tools">color tools</a>.</p></body></html>`;
+
+/**
+ * - Removed pages → 410 Gone
  * Production URL normalization (Vercel: uses `host` + `x-forwarded-proto`):
  * - HTTP → HTTPS (301)
  * - www → apex (301)
  * - `http://www…` → one 301 to `https://` apex (path + query preserved)
- * Skipped in development so localhost works over HTTP.
+ * Host normalization is skipped in development so localhost works over HTTP.
  */
 export function middleware(request) {
+  const path = request.nextUrl.pathname.replace(/\/+$/, '') || '/';
+  if (GONE_PATHS.has(path)) {
+    return new NextResponse(GONE_HTML, {
+      status: 410,
+      headers: { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex' },
+    });
+  }
+
   if (process.env.NODE_ENV === 'development') {
     return NextResponse.next();
   }

@@ -1,4 +1,5 @@
 import { buildPageMetadata } from '../../lib/buildPageMetadata'
+import AuthorBioCard from './components/AuthorBioCard'
 
 export const metadata = buildPageMetadata({
   path: '/blog',
@@ -9,7 +10,12 @@ export const metadata = buildPageMetadata({
 })
 
 export default function BlogLayout({ children }) {
-  return children;
+  return (
+    <>
+      {children}
+      <AuthorBioCard />
+    </>
+  );
 }
 
 

@@ -418,7 +418,7 @@ export default function SixtyThirtyTenColorRulePage() {
               <InlineTagLink href="/blog/navy-blue-hex-code">navy blue color palette example</InlineTagLink>,{' '}
               <InlineTagLink href="/blog/navy-blue-hex-code">Navy blue hex reference</InlineTagLink>,{' '}
               <InlineTagLink href="/blog/sage-green-hex-code">Sage green hex codes</InlineTagLink>, and{' '}
-              <InlineTagLink href="/blog/how-to-check-color-contrast-accessibility">how to check color contrast</InlineTagLink> for WCAG depth beyond proportion
+              <InlineTagLink href="/blog/accessibility-color-contrast-checker">how to check color contrast</InlineTagLink> for WCAG depth beyond proportion
               alone.
             </p>
 

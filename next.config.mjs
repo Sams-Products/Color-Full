@@ -40,11 +40,6 @@ const nextConfig = {
         destination: '/tools/color-mixer',
         permanent: true,
       },
-      {
-        source: '/tools/color-mixer/white-and-black',
-        destination: '/tools/color-mixer/black-and-white',
-        permanent: true,
-      },
       // Consolidate cannibalizing color-mixer combo routes → authoritative blog mix guides
       {
         source: '/tools/color-mixer/blue-and-yellow',
@@ -126,11 +121,6 @@ const nextConfig = {
       {
         source: '/blog/sunset-vibes',
         destination: '/blog/sunset-color-palette',
-        permanent: true,
-      },
-      {
-        source: '/blog/ocean-breeze',
-        destination: '/blog/ocean-breeze-hex-code',
         permanent: true,
       },
       {
@@ -231,10 +221,28 @@ const nextConfig = {
         destination: '/blog/pink-purple-color-name',
         permanent: true,
       },
-      // Nov 2026: duplicate mixer combo (same colors, reversed order)
+      // AdSense cleanup: posts that repeated a stronger guide are folded into it
       {
-        source: '/tools/color-mixer/green-and-yellow',
-        destination: '/tools/color-mixer/yellow-and-green',
+        source: '/blog/how-to-check-color-contrast-accessibility',
+        destination: '/blog/accessibility-color-contrast-checker',
+        permanent: true,
+      },
+      {
+        source: '/blog/purple-dream',
+        destination: '/blog/pink-purple-color-name',
+        permanent: true,
+      },
+      {
+        source: '/use-cases/colors-for-branding-and-logos',
+        destination: '/blog/how-to-generate-color-palette-for-brand',
+        permanent: true,
+      },
+      // AdSense cleanup: the auto-generated ~300-word combo pages are retired. Every remaining
+      // /tools/color-mixer/<combo> URL goes to the mixer tool itself. Must stay after the
+      // combo → blog guide redirects above so those still win.
+      {
+        source: '/tools/color-mixer/:combo',
+        destination: '/tools/color-mixer',
         permanent: true,
       },
     ];

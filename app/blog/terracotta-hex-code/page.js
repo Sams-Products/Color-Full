@@ -18,8 +18,9 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/terracotta-hex-code',
@@ -209,7 +210,7 @@ export default function TerracottaHexCodePage() {
             />
             <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-orange-100/85 text-sm">
               <AuthorByline />
-              <time dateTime="2026-11-09">Updated November 9, 2026</time>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>7 min read</span>
             </div>
@@ -234,6 +235,14 @@ export default function TerracottaHexCodePage() {
                   title="Terracotta Shades — Hex Code Table"
                   description="From airy linen and peach through the core terracotta row into rust, umber, and chocolate. Use light rows for backgrounds, mid rows for brand fills, deep rows for type and pressed states."
                   shades={TERRACOTTA_SHADES}
+                />
+
+                <ShadeAccessibility
+                  title="Terracotta Shades: Text Contrast Checked"
+                  colorName="terracotta"
+                  main={{ name: 'terracotta', hex: '#E2725B' }}
+                  shades={TERRACOTTA_SHADES}
+                  tokenPrefix="terracotta"
                 />
 
                 <PalettePairingsSection

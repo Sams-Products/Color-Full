@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { OLIVE_SHADES } from './shades';
 
 const copyIcon = (
   <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -57,19 +58,6 @@ function CopyRow({ label, value, mono = true }) {
     </div>
   );
 }
-
-const OLIVE_SHADES = [
-  { name: 'Pale yellow-green', hex: '#E8F0C8' },
-  { name: 'Light khaki', hex: '#F0E68C' },
-  { name: 'Yellow green', hex: '#9ACD32' },
-  { name: 'Olive drab', hex: '#6B8E23' },
-  { name: 'Olive (CSS)', hex: '#808000' },
-  { name: 'Dark olive green', hex: '#556B2F' },
-  { name: 'Army green', hex: '#4B5320' },
-  { name: 'Moss green', hex: '#3D4A1F' },
-  { name: 'Deep olive', hex: '#2F2F1A' },
-  { name: 'Near-black olive', hex: '#1A1A12' },
-];
 
 export function OliveGreenQuickAnswer() {
   return (

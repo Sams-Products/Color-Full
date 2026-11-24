@@ -14,8 +14,9 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
 
-const LAST_MODIFIED = '2026-10-24T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sunset-color-palette',
@@ -302,7 +303,7 @@ export default function SunsetColorPalettePage() {
             </p>
             <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-amber-100 text-sm">
               <AuthorByline />
-              <time dateTime="2026-06-26">Updated June 26, 2026</time>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>4 min read</span>
             </div>
@@ -343,6 +344,14 @@ export default function SunsetColorPalettePage() {
                   title="Sunset Color Palette Hex Codes"
                   description="Ten sunset stops from dawn cream to deep violet. Use light rows for backgrounds; saturated rows for buttons, badges, and gradient heroes."
                   shades={SUNSET_SHADES}
+                />
+
+                <ShadeAccessibility
+                  title="Sunset Palette: Text Contrast for Each Color"
+                  colorName="sunset orange"
+                  main={{ name: 'sunset orange', hex: '#F97316' }}
+                  shades={SUNSET_SHADES}
+                  tokenPrefix="sunset"
                 />
 
                 <div className="not-prose space-y-3">
@@ -422,7 +431,7 @@ export default function SunsetColorPalettePage() {
                     {' · '}
                     <InlineTagLink href="/blog/terracotta-hex-code">Terracotta Hex Code</InlineTagLink>
                     {' · '}
-                    <InlineTagLink href="/blog/purple-dream">Purple Dream Palette</InlineTagLink>
+                    <InlineTagLink href="/blog/pink-purple-color-name">Pink &amp; Purple Color Names</InlineTagLink>
                   </p>
                 </div>
               </div>

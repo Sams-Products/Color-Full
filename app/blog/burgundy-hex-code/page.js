@@ -17,8 +17,10 @@ import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import CopyableHex from '../forest-green-hex-code/CopyableHex';
 import { BurgundyQuickAnswer, BurgundyShadesTable } from './BurgundyHexLead';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
+import { BURGUNDY_SHADES } from './shades';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/burgundy-hex-code',
@@ -58,7 +60,7 @@ const HERO_SWATCHES = [
 const BURGUNDY_PAIRINGS = [
   {
     title: 'Burgundy + Gold + Cream',
-    body: 'Luxury wine, jewelry, and gala invitations: burgundy hero (#800020), gold foil accents (#FFD700), cream stationery (#FFF8F0). Keep gold off small type on burgundy unless contrast passes.',
+    body: 'Luxury wine, jewelry, and gala invitations: burgundy hero (#800020), gold foil accents (#FFD700), cream stationery (#FFF8F0). Gold text on burgundy scores 7.72:1, so it is readable even at small sizes.',
     swatches: ['#800020', '#FFD700', '#FFF8F0'],
   },
   {
@@ -175,7 +177,7 @@ export default function BurgundyHexCodePage() {
             />
             <div className="flex items-center gap-4 text-rose-100/90 text-sm flex-wrap">
               <AuthorByline />
-              Published May 21, 2026 · <time dateTime="2026-11-09">Updated November 9, 2026</time>
+              Published May 21, 2026 · <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>5 min read</span>
             </div>
@@ -195,6 +197,14 @@ export default function BurgundyHexCodePage() {
               <div className="lg:col-span-2 space-y-8">
                 <BurgundyQuickAnswer />
                 <BurgundyShadesTable />
+
+                <ShadeAccessibility
+                  title="Which Text Colors Work on Burgundy Shades?"
+                  colorName="burgundy"
+                  main={{ name: 'burgundy', hex: '#800020' }}
+                  shades={BURGUNDY_SHADES}
+                  tokenPrefix="burgundy"
+                />
 
                 <PalettePairingsSection
                   title="Burgundy Palette Pairings"
@@ -223,7 +233,7 @@ export default function BurgundyHexCodePage() {
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Burgundy in UI &amp; web design</h2>
                   <p className="mb-4">
-                    <strong className="text-gray-900 dark:text-white">Luxury ecommerce and bookings.</strong> Burgundy headers with cream product grids (#FFF8F0) keep jewelry, wine, and hotel sites feeling editorial. Gold text (#FFD700) on burgundy rarely passes small-type contrast—use gold for borders and icons, white or cream for labels, and validate with the{' '}
+                    <strong className="text-gray-900 dark:text-white">Luxury ecommerce and bookings.</strong> Burgundy headers with cream product grids (#FFF8F0) keep jewelry, wine, and hotel sites feeling editorial. Gold text (#FFD700) on burgundy scores 7.72:1 and white 10.83:1, so both pass WCAG AA for labels; gold reads as the more decorative of the two, so many brands keep it for borders, icons and headings. Check other pairs with the{' '}
                     <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink>.
                   </p>
                   <p className="mb-4">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CHARCOAL_SHADES } from './shades';
 
 const copyIcon = (
   <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -57,19 +58,6 @@ function CopyRow({ label, value, mono = true }) {
     </div>
   );
 }
-
-const CHARCOAL_SHADES = [
-  { name: 'Ghost white', hex: '#F8F9FA' },
-  { name: 'Light gray', hex: '#E2E8F0' },
-  { name: 'Silver gray', hex: '#CBD5E1' },
-  { name: 'Cool gray', hex: '#94A3B8' },
-  { name: 'Slate', hex: '#64748B' },
-  { name: 'Charcoal', hex: '#36454F' },
-  { name: 'Dark slate', hex: '#2D3748' },
-  { name: 'Gunmetal', hex: '#1F2937' },
-  { name: 'Near black', hex: '#111827' },
-  { name: 'Deep charcoal', hex: '#0A0E12' },
-];
 
 const CHARCOAL_RGB = 'RGB(54,69,79)';
 

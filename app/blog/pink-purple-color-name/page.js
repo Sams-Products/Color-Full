@@ -362,7 +362,7 @@ export default function PinkPurpleColorNamePage() {
             <strong className="text-gray-800 dark:text-gray-200">Related:</strong>{' '}
             <InlineTagLink href="/blog/what-color-does-pink-and-purple-make">What Color Does Pink and Purple Make?</InlineTagLink>
             {' · '}
-            <InlineTagLink href="/blog/purple-dream">Purple Dream Palette</InlineTagLink>
+            <InlineTagLink href="/blog/dusty-rose-hex-code">Dusty Rose Hex Code</InlineTagLink>
           </p>
         </div>
       </div>

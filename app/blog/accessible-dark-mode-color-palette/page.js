@@ -384,7 +384,7 @@ export default function AccessibleDarkModeColorPalettePage() {
                     Pick one of the examples above or start from your brand accent in the{' '}
                     <Link href="/tools/palette-generator">palette generator</Link>, then define canvas and surface neutrals. Document hex codes for light and dark themes. Run every text, link, and button combination through the{' '}
                     <Link href="/tools/contrast-checker">contrast checker</Link> before release. For more on ratios and WCAG labels, see our{' '}
-                    <Link href="/blog/how-to-check-color-contrast-accessibility">WCAG contrast guide</Link>.
+                    <Link href="/blog/accessibility-color-contrast-checker">WCAG contrast guide</Link>.
                   </p>
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">

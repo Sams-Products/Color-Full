@@ -20,8 +20,10 @@ import {
   OliveGreenShadesTable,
 } from './OliveGreenHexLead';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
+import { OLIVE_SHADES } from './shades';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/olive-green-hex-code',
@@ -187,7 +189,7 @@ export default function OliveGreenHexCodePage() {
               <AuthorByline />
               <time dateTime="2026-05-21">Published May 21, 2026</time>
               <span>•</span>
-              <time dateTime="2026-06-11">Updated June 11, 2026</time>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>6 min read</span>
             </div>
@@ -221,6 +223,14 @@ export default function OliveGreenHexCodePage() {
                 </div>
 
                 <OliveGreenShadesTable />
+
+                <ShadeAccessibility
+                  title="Olive Green Shades: WCAG Contrast Table"
+                  colorName="olive green"
+                  main={{ name: 'olive', hex: '#808000' }}
+                  shades={OLIVE_SHADES}
+                  tokenPrefix="olive"
+                />
 
                 <PalettePairingsSection
                   title="Olive Green Palette Pairings"

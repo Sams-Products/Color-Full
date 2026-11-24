@@ -19,8 +19,9 @@ import {
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/sage-green-hex-code',
@@ -336,7 +337,7 @@ export default function SageGreenHexCodePage() {
             />
             <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-lime-100/85 text-sm">
               <AuthorByline />
-              <time dateTime="2026-06-26">Updated June 26, 2026</time>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>13 min read</span>
             </div>
@@ -433,6 +434,14 @@ export default function SageGreenHexCodePage() {
                   title="Sage Green Shades — Hex Code Table"
                   description="From airy honeydew and mint through the canonical sage row to deep hunter. Use lighter stops—including light sage green hex code #BCB88A—for wash backgrounds; use dark sage green color code #8A8462 and hunter for type, icons, and pressed states."
                   shades={SAGE_SHADES}
+                />
+
+                <ShadeAccessibility
+                  title="Sage Green and Text: Contrast Ratios by Shade"
+                  colorName="sage green"
+                  main={{ name: 'sage', hex: '#B2AC88' }}
+                  shades={SAGE_SHADES}
+                  tokenPrefix="sage"
                 />
 
                 <div className="not-prose rounded-2xl border border-lime-200/90 dark:border-lime-900/50 bg-lime-50/80 dark:bg-stone-900/50 p-5 sm:p-6">

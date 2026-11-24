@@ -21,8 +21,10 @@ import {
   ForestGreenFormatCodesSection,
 } from './ForestGreenHexLead';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
+import { FOREST_SHADES } from './shades';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/forest-green-hex-code',
@@ -63,14 +65,6 @@ const FOREST_PALETTE = [
   { hexCode: '#047857', colorName: 'Emerald Dark', rgbCode: 'rgb(4, 120, 87)' },
   { hexCode: '#059669', colorName: 'Emerald', rgbCode: 'rgb(5, 150, 105)' },
   { hexCode: '#10B981', colorName: 'Green', rgbCode: 'rgb(16, 185, 129)' },
-  { hexCode: '#34D399', colorName: 'Mint', rgbCode: 'rgb(52, 211, 153)' },
-];
-
-const OCEAN_BREEZE_QUICK = [
-  { hexCode: '#0EA5E9', colorName: 'Sky Blue', rgbCode: 'rgb(14, 165, 233)' },
-  { hexCode: '#06B6D4', colorName: 'Cyan', rgbCode: 'rgb(6, 182, 212)' },
-  { hexCode: '#14B8A6', colorName: 'Teal', rgbCode: 'rgb(20, 184, 166)' },
-  { hexCode: '#10B981', colorName: 'Emerald', rgbCode: 'rgb(16, 185, 129)' },
   { hexCode: '#34D399', colorName: 'Mint', rgbCode: 'rgb(52, 211, 153)' },
 ];
 
@@ -122,14 +116,6 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'A balanced forest green palette often spans dark evergreen to mint—for example #065F46, #047857, #059669, #10B981, and #34D399. Use the darkest tones for structure, mid tones for actions, and the lightest for backgrounds or success states.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the Ocean Breeze color hex codes?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Ocean Breeze palette uses #0EA5E9, #06B6D4, #14B8A6, #10B981, and #34D399—sky blue through cyan, teal, emerald, and mint. Pair it with neutrals and check WCAG contrast for text.',
       },
     },
     {
@@ -208,7 +194,7 @@ export default function ForestGreenHexCodePage() {
               ]}
             />
             <p className="text-emerald-100 text-lg max-w-3xl mb-6">
-              Quick reference for forest green hex, RGB, HSL, and colour codes—plus named shades, a UI palette, scheme ideas, and Ocean Breeze colors. Look up the CSS color name with our{' '}
+              Quick reference for forest green hex, RGB, HSL, and colour codes—plus named shades, a UI palette, and scheme ideas. Look up the CSS color name with our{' '}
               <InlineTagLink href="/tools/color-name-finder" className="text-emerald-200 hover:text-white underline underline-offset-2">
                 color name finder
               </InlineTagLink>
@@ -223,7 +209,7 @@ export default function ForestGreenHexCodePage() {
               <AuthorByline />
               <time dateTime="2026-04-11">Published April 11, 2026</time>
               <span>•</span>
-              <time dateTime="2026-10-24">Updated October 24, 2026</time>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>10 min read</span>
             </div>
@@ -258,6 +244,14 @@ export default function ForestGreenHexCodePage() {
 
                 <ForestGreenShadesTable />
 
+                <ShadeAccessibility
+                  title="Forest Green Accessibility: Contrast for Every Shade"
+                  colorName="forest green"
+                  main={{ name: 'forest green', hex: '#228B22' }}
+                  shades={FOREST_SHADES}
+                  tokenPrefix="forest"
+                />
+
                 <EnvatoAffiliateBanner
                   variant="graphics"
                   title="Designing an outdoor, eco, or heritage brand with forest green?"
@@ -274,8 +268,7 @@ export default function ForestGreenHexCodePage() {
                     <strong className="text-gray-900 dark:text-white">forest green color code</strong>, or{' '}
                     <strong className="text-gray-900 dark:text-white">forest green colour code</strong>, you want a number you can paste into CSS, Figma, or a style guide. This page gives the most common web values, explains why they differ, and shows a full{' '}
                     <strong className="text-gray-900 dark:text-white">forest green color palette</strong> and{' '}
-                    <strong className="text-gray-900 dark:text-white">forest green color scheme</strong> starting points. We also list{' '}
-                    <strong className="text-gray-900 dark:text-white">Ocean Breeze color</strong> hex codes for the blue–green palette many teams pair with natural greens.
+                    <strong className="text-gray-900 dark:text-white">forest green color scheme</strong> starting points.
                   </p>
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -377,29 +370,6 @@ export default function ForestGreenHexCodePage() {
                   </p>
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-                    Ocean Breeze color and Ocean Breeze colour hex codes
-                  </h2>
-                  <p className="mb-4">
-                    Teams looking up <strong className="text-gray-900 dark:text-white">Ocean Breeze color</strong> or{' '}
-                    <strong className="text-gray-900 dark:text-white">Ocean Breeze colour</strong> usually want the full blue-to-mint ramp in one line. Here are the five hex codes; the deep dive (roles, CSS variables, accessibility) lives in the{' '}
-                    <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze palette guide</InlineTagLink>.
-                  </p>
-                  <p className="mb-4 text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg not-prose flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm">
-                    <CopyableHex hex="#0EA5E9" />
-                    <span>·</span>
-                    <CopyableHex hex="#06B6D4" />
-                    <span>·</span>
-                    <CopyableHex hex="#14B8A6" />
-                    <span>·</span>
-                    <CopyableHex hex="#10B981" />
-                    <span>·</span>
-                    <CopyableHex hex="#34D399" />
-                  </p>
-                  <p className="mb-6">
-                    Ocean Breeze shares two greens with the forest palette (<CopyableHex hex="#10B981" />, <CopyableHex hex="#34D399" />), so you can bridge a calm blue UI into natural green accents without inventing new tokens.
-                  </p>
-
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
                     HSL, CMYK, and design-token formats
                   </h2>
                   <p className="mb-4">
@@ -498,9 +468,6 @@ export default function ForestGreenHexCodePage() {
                       <InlineTagLink href="/blog/terracotta-hex-code">Terracotta Hex Code</InlineTagLink> — warm clay accent that pairs with natural greens
                     </li>
                     <li>
-                      <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze Hex Codes</InlineTagLink> — blue-to-mint ramp that bridges cool UI into green accents
-                    </li>
-                    <li>
                       <InlineTagLink href="/blog/olive-green-hex-code">olive green hex code</InlineTagLink> — earthy yellow-green for organic and heritage brands
                     </li>
                   </ul>
@@ -511,9 +478,6 @@ export default function ForestGreenHexCodePage() {
                   <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300">
                     <li>
                       <InlineTagLink href="/blog/forest-green-hex-code">Forest green hex code, shades &amp; pairings</InlineTagLink>
-                    </li>
-                    <li>
-                      <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze: full palette and accessibility notes</InlineTagLink>
                     </li>
                     <li>
                       <InlineTagLink href="/tools/palette-generator">Generate harmonies from any forest green hex</InlineTagLink>
@@ -533,12 +497,6 @@ export default function ForestGreenHexCodePage() {
                       Forest green palette (copy hex)
                     </h3>
                     <ColorPaletteClient colors={FOREST_PALETTE} designTitle="Forest Green" showHexCopyIcon />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                      Ocean Breeze quick copy
-                    </h3>
-                    <ColorPaletteClient colors={OCEAN_BREEZE_QUICK} designTitle="Ocean Breeze" showHexCopyIcon />
                   </div>
                 </div>
               </aside>

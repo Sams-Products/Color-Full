@@ -55,28 +55,41 @@ export default function AboutPage() {
             </ul>
           </section>
 
-          <section className="mb-8">
+          <section id="editorial-standards" className="mb-8 scroll-mt-24">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Editorial Standards &amp; Accuracy</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              All content, guides, and tools published on Theme &amp; Color adhere to strict accuracy and technical standards:
+              Every guide and tool on Theme &amp; Color is written and checked by the person named below. This is how we keep the numbers right:
             </p>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">WCAG 2.1 Compliance Math</h3>
                 <p>
-                  Our contrast evaluation algorithms strictly implement the official W3C Web Content Accessibility Guidelines (WCAG 2.1). Ratios are calculated using standardized relative luminance formulas (<code className="text-base">L = 0.2126R + 0.7152G + 0.0722B</code>) after sRGB gamma expansion, ensuring 100% reliable pass/fail ratings for AA and AAA compliance.
+                  Our contrast evaluation algorithms strictly implement the official W3C Web Content Accessibility Guidelines (WCAG 2.1). Ratios are calculated using standardized relative luminance formulas (<code className="text-base">L = 0.2126R + 0.7152G + 0.0722B</code>) after sRGB gamma expansion, so the pass/fail ratings for AA and AAA match what the W3C formula gives.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Empirical Design Research</h3>
                 <p>
-                  Our color system breakdowns (e.g., Discord Dark Mode, Instagram Dark Mode, VS Code color themes) are empirically extracted directly from verified application style sheets, design tokens, and official design system specifications.
+                  Our app color breakdowns (for example Discord, Instagram, WhatsApp and YouTube dark mode) are taken from the apps&apos; own stylesheets, design tokens and published design system specifications. Apps update their themes, so a value can drift over time; when we re-check a post we change its &ldquo;Updated&rdquo; date.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Updates and corrections</h3>
+                <p>
+                  A post&apos;s &ldquo;Updated&rdquo; date only changes when its content changes, not for layout or styling tweaks. If you find a hex code, contrast ratio or app color that is wrong or out of date, email us from the{' '}
+                  <a href="/contact" className="text-purple-600 dark:text-purple-400 hover:underline">contact page</a> and we will check it and fix the post.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Advertising and independence</h3>
+                <p>
+                  The site is free to use and may show ads from Google AdSense to cover hosting. Advertisers do not choose topics, review articles or influence which tools and colors we recommend.
                 </p>
               </div>
             </div>
           </section>
 
-          <section className="mb-8">
+          <section id="author" className="mb-8 scroll-mt-24">
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Who Builds Theme &amp; Color</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Theme &amp; Color is built and maintained by <strong>{SITE_AUTHOR.name}</strong>, a software engineer. He started it after

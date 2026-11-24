@@ -16,8 +16,9 @@ import {
 } from '../../../lib/getBlogArticleSchema';
 import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/yellow-green-hex-code',
@@ -178,7 +179,9 @@ export default function YellowGreenHexCodePage() {
             />
             <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-lime-100/85 text-sm">
               <AuthorByline />
-              <time dateTime="2026-05-30">May 30, 2026</time>
+              <time dateTime="2026-05-30">Published May 30, 2026</time>
+              <span>•</span>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>5 min read</span>
             </div>
@@ -201,8 +204,16 @@ export default function YellowGreenHexCodePage() {
 
                 <PaletteShadesTable
                   title="Yellow Green Shades — Hex Code Table"
-                  description="Ten stops from light tint through chartreuse, lawn green, and the canonical #9ACD32 row to dark olive. Brighter rows suit badges; #9ACD32 balances energy and readability on white."
+                  description="Ten stops from light tint through chartreuse, lawn green, and the canonical #9ACD32 row to dark olive. Brighter rows suit badges; #9ACD32 works best as a fill behind dark text."
                   shades={YELLOW_GREEN_SHADES}
+                />
+
+                <ShadeAccessibility
+                  title="Yellow Green Accessibility: Contrast by Shade"
+                  colorName="yellow green"
+                  main={{ name: 'yellow green', hex: '#9ACD32' }}
+                  shades={YELLOW_GREEN_SHADES}
+                  tokenPrefix="yellow-green"
                 />
 
                 <PalettePairingsSection
@@ -226,8 +237,8 @@ export default function YellowGreenHexCodePage() {
                     <strong className="text-gray-900 dark:text-white">Sports and outdoor brands.</strong> Yellow-green CTAs on navy heroes (#000080) signal go/action without alarm red. White product cards keep catalogs readable; use chartreuse (#7FFF00) only for small badges where saturation helps visibility.
                   </p>
                   <p className="mb-4">
-                    <strong className="text-gray-900 dark:text-white">Agriculture and climate dashboards.</strong> Map growth metrics with #9ACD32 series colors; pair with orange (#F97316) for harvest seasons and charcoal (#374151) for chrome. Run yellow-green on white through the{' '}
-                    <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink>—large buttons often pass; small caption text may need dark olive (#556B2F).
+                    <strong className="text-gray-900 dark:text-white">Agriculture and climate dashboards.</strong> Map growth metrics with #9ACD32 series colors; pair with orange (#F97316) for harvest seasons and charcoal (#374151) for chrome. Yellow-green text on white scores only 1.88:1, which fails WCAG even for large text, so use #9ACD32 as a fill with black labels (11.15:1) and switch to dark olive (#556B2F, 5.94:1 on white) for captions and links. Check other pairs in the{' '}
+                    <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink>.
                   </p>
                   <p className="mb-4">
                     <strong className="text-gray-900 dark:text-white">Health and fitness apps.</strong> Lime green (#32CD32) suits completion states; yellow-green (#9ACD32) works for progress rings that should feel upbeat but not clinical. Generate harmonized ramps from #9ACD32 in the{' '}

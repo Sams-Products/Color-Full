@@ -110,14 +110,14 @@ export default function TintShadeGeneratorPage() {
           <section>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Tints vs Shades — What is the Difference?</h2>
             <p className="leading-relaxed mb-4">
-              A <strong className="text-gray-900 dark:text-white">tint</strong> is your color mixed with white. Forest green #228B22 at 30% white might become #4BAF4F—a softer green for table stripes. A <strong className="text-gray-900 dark:text-white">shade</strong> mixes black in. The same green at 40% black could land near #145214 for sidebar backgrounds. Tints read airy; shades read grounded. Using both from one base keeps the family cohesive.
+              A <strong className="text-gray-900 dark:text-white">tint</strong> is your color mixed with white. Forest green #228B22 at 30% white becomes #64AE64—a softer green for table stripes. A <strong className="text-gray-900 dark:text-white">shade</strong> mixes black in. The same green at 40% black becomes #145314, dark enough for sidebar backgrounds. Tints read airy; shades read grounded. Using both from one base keeps the family cohesive.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">How to Use Color Scales in UI Design</h2>
             <p className="leading-relaxed">
-              Map the lightest tint (e.g. 90% white on #228B22 → a pale #E8F5E9) to page backgrounds. Mid tints work for hover on outline buttons. Keep #228B22 as the primary filled CTA. Use 20–40% shades for label text on tinted panels, and the darkest shade for focus rings or dark-mode chrome. Example: background #E8F5E9, primary #228B22, hover tint #4BAF4F, body text #145214—then run #145214 on #E8F5E9 through our{' '}
+              Map the lightest tint (e.g. 90% white on #228B22 → a pale #E9F3E9) to page backgrounds. Mid tints work for hover on outline buttons. Keep #228B22 as the primary filled CTA, but note that white text on it scores only 4.38:1, just under the 4.5:1 WCAG AA asks for normal text, so use bold 18.66px+ labels or a darker shade for the button. Use 20–40% shades for label text on tinted panels, and the darkest shade for focus rings or dark-mode chrome. Example: background #E9F3E9, primary #228B22, hover tint #64AE64, body text #145314. That text pair scores 8.10:1, passing AAA. Check your own pairs in our{' '}
               <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink> before launch.
             </p>
           </section>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FOREST_SHADES } from './shades';
 
 const copyIcon = (
   <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -59,19 +60,6 @@ function CopyRow({ label, value, mono = true }) {
 }
 
 /** Ten named greens, ordered light → dark by standard sRGB luminance */
-const FOREST_SHADES = [
-  { name: 'Honeydew', hex: '#F0FFF0' },
-  { name: 'Mint cream', hex: '#F5FFFA' },
-  { name: 'Light green', hex: '#90EE90' },
-  { name: 'Medium sea green', hex: '#3CB371' },
-  { name: 'Forest green', hex: '#228B22' },
-  { name: 'Office green', hex: '#008000' },
-  { name: 'Hunter green', hex: '#355E3B' },
-  { name: 'Bottle green', hex: '#006A4E' },
-  { name: 'Dark green', hex: '#006400' },
-  { name: 'Deep forest', hex: '#1A4D1A' },
-];
-
 const FOREST_RGB = 'RGB(34,139,34)';
 
 const FORMAT_ROWS = [

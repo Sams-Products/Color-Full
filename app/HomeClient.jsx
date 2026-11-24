@@ -54,8 +54,8 @@ const homeToolCards = [
     badge: 'RYB & RGB',
     category: 'Pigment & Digital Blending',
     description:
-      'Blend any two colors using realistic subtractive RYB paint theory or digital RGB ratios and inspect exact midpoint hex codes.',
-    swatches: ['#FF69B4', '#BF34CA', '#800080', '#F59E0B', '#16A34A'],
+      'Mix any two colors at any ratio on the painter’s red–yellow–blue wheel and compare the result with the plain screen blend.',
+    swatches: ['#FF69B4', '#C0359A', '#800080', '#F59E0B', '#16A34A'],
     cta: 'Mix Two Colors →',
   },
   {
@@ -99,8 +99,8 @@ const featuredPalettes = [
     id: 4,
     name: 'Pink-Purple Mauve & Orchid',
     tag: 'Beauty & Lifestyle',
-    description: 'Soft dusty mauve (#E0B0FF) and vibrant magenta-purple (#BF34CA) anchored by deep plum and charcoal.',
-    colors: ['#FF69B4', '#BF34CA', '#E0B0FF', '#9966CC', '#374151'],
+    description: 'Soft dusty mauve (#E0B0FF) and deep magenta (#C0359A) anchored by deep plum and charcoal.',
+    colors: ['#FF69B4', '#C0359A', '#E0B0FF', '#9966CC', '#374151'],
     slug: 'pink-purple-color-name',
   },
   {
@@ -202,8 +202,8 @@ const latestPosts = [
     categoryLabel: 'Color Mixing',
     readTime: '3 min read',
     excerpt:
-      'See the exact color pink and purple make across 7 mixing ratios (from 90/10 rose magenta to 50/50 vibrant magenta #BF34CA and 10/90 deep violet).',
-    palette: ['#FF8FC8', '#F06BB8', '#BF34CA', '#A640B0', '#7A2585'],
+      'See the exact color pink and purple make across 7 mixing ratios (from 90/10 rose magenta to 50/50 deep magenta #C0359A and 10/90 rich purple).',
+    palette: ['#F25FAF', '#E654AA', '#C0359A', '#B32A95', '#8D0B85'],
     publishedAt: '2026-06-05',
   },
   {
@@ -298,8 +298,8 @@ const latestPosts = [
     categoryLabel: 'Color Mixing',
     readTime: '3 min read',
     excerpt:
-      'See how blue and yellow blend across 7 ratios—from deep teal-green and forest to balanced green (#008000), chartreuse, and lime.',
-    palette: ['#003300', '#006600', '#008000', '#33AA33', '#99CC00'],
+      'See how blue and yellow mix across 7 ratios, from azure and jade through true green (#008000) to lime, and why a screen blends them to gray.',
+    palette: ['#005CE6', '#00B38F', '#008000', '#47B300', '#B8E600'],
     publishedAt: '2026-05-21',
   },
   {
@@ -310,8 +310,8 @@ const latestPosts = [
     categoryLabel: 'Color Mixing',
     readTime: '3 min read',
     excerpt:
-      'Explore 7 red-to-yellow mixing steps with visual swatches and copy-ready hex codes for red-orange, burnt orange, true orange (#FF8000), and amber.',
-    palette: ['#FF1A00', '#FF5500', '#FF8000', '#FFAA00', '#FFD700'],
+      'Explore 7 red-to-yellow mixing steps with visual swatches and copy-ready hex codes for red-orange, true orange (#FF8000), golden orange, and golden yellow.',
+    palette: ['#FF1A00', '#FF4D00', '#FF8000', '#FFB300', '#FFE600'],
     publishedAt: '2026-05-21',
   },
   {

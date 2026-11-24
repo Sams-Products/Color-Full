@@ -19,8 +19,9 @@ import BlogBreadcrumbs from '../components/BlogBreadcrumbs';
 import AeoDirectAnswer from '../components/AeoDirectAnswer';
 import NavyBlueHexCopyBox from './NavyBlueHexCopyBox';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
 
-const LAST_MODIFIED = '2026-11-01T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/navy-blue-hex-code',
@@ -80,7 +81,7 @@ const NAVY_SHADES = [
 const NAVY_PAIRINGS = [
   {
     title: 'Navy + Gold (classic luxury)',
-    body: 'Deep navy anchors prestige while #FFD700 supplies warmth in logos, foil-stamped accents, and icon strokes. Keep gold away from tiny type on navy unless contrast passes.',
+    body: 'Deep navy anchors prestige while #FFD700 supplies warmth in logos, foil-stamped accents, and icon strokes. Gold on navy scores 11.41:1, so it stays readable even as small type.',
     swatches: ['#000080', '#FFD700', '#FFFBEB'],
   },
   {
@@ -286,7 +287,7 @@ export default function NavyBlueHexCodePage() {
             </p>
             <div className="flex items-center gap-x-4 gap-y-1 flex-wrap text-blue-200/90 text-sm">
               <AuthorByline />
-              Published May 21, 2026 · <time dateTime="2026-11-09">Updated November 9, 2026</time>
+              Published May 21, 2026 · <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>10 min read</span>
             </div>
@@ -311,6 +312,14 @@ export default function NavyBlueHexCodePage() {
                   title="Navy Blue Shades — Hex Code Table"
                   description="Ten stops from airy tints to near-black navy. Use lighter rows for backgrounds and darker rows for navigation, type on light UI, or hero bands. Generate your own lighter and darker steps from #000080 with our tint and shade generator."
                   shades={NAVY_SHADES}
+                />
+
+                <ShadeAccessibility
+                  title="Navy Blue Shades: Which Pass WCAG for Text?"
+                  colorName="navy blue"
+                  main={{ name: 'navy blue', hex: '#000080' }}
+                  shades={NAVY_SHADES}
+                  tokenPrefix="navy"
                 />
                 <p className="text-gray-600 dark:text-gray-400 text-sm -mt-4 mb-8">
                   Need a full scale from one navy hex? Try the{' '}
@@ -472,7 +481,7 @@ export default function NavyBlueHexCodePage() {
                   <p className="mt-8 mb-6">
                     For more palette stories, see the{' '}
                     <InlineTagLink href="/blog/60-30-10-color-rule">60-30-10 color rule</InlineTagLink> for proportion guidance,{' '}
-                    <InlineTagLink href="/blog/ocean-breeze-hex-code">Ocean Breeze hex codes</InlineTagLink>, or{' '}
+                    <InlineTagLink href="/blog/burgundy-hex-code">burgundy hex code</InlineTagLink> for navy + burgundy pairings, or{' '}
                     <InlineTagLink href="/blog/forest-green-hex-code">Forest green hex reference</InlineTagLink>. When you are ready to test production pairs, our{' '}
                     <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink> catches failing white-on-navy combinations before they reach users.
                   </p>

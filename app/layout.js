@@ -48,12 +48,10 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@themeandcolor',
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
-  verification: {
-    // When you get Google Search Console verification code, add: google: "your-code"
-    // When you add AdSense, add: other: { "google-site-verification": "..." } if provided
+  // No site-wide canonical here: a canonical set in the root layout is inherited by every page
+  // that forgets its own and points it at the homepage. Each page sets its own via buildPageMetadata.
+  other: {
+    "google-adsense-account": "ca-pub-8132341163936705",
   },
 };
 

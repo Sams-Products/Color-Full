@@ -11,52 +11,8 @@ export const PRESET_COLORS = [
   { name: 'Brown', hex: '#8B4513' },
 ];
 
-const RYB_ANCHORS = [
-  { ryb: [0, 0, 0], rgb: [0, 0, 0] },
-  { ryb: [1, 0, 0], rgb: [255, 0, 0] },
-  { ryb: [0, 1, 0], rgb: [255, 255, 0] },
-  { ryb: [0, 0, 1], rgb: [0, 0, 255] },
-  { ryb: [1, 1, 0], rgb: [255, 165, 0] },
-  { ryb: [0, 1, 1], rgb: [0, 128, 0] },
-  { ryb: [1, 0, 1], rgb: [128, 0, 128] },
-  { ryb: [1, 1, 1], rgb: [255, 255, 255] },
-];
-
-const NAMED_COLORS = [
-  { name: 'Red', hex: '#FF0000' },
-  { name: 'Blue', hex: '#0000FF' },
-  { name: 'Yellow', hex: '#FFFF00' },
-  { name: 'Green', hex: '#008000' },
-  { name: 'Orange', hex: '#FFA500' },
-  { name: 'Purple', hex: '#800080' },
-  { name: 'Olive Green', hex: '#808000' },
-  { name: 'Teal', hex: '#008080' },
-  { name: 'Navy', hex: '#000080' },
-  { name: 'Brown', hex: '#8B4513' },
-  { name: 'Pink', hex: '#FFC0CB' },
-  { name: 'Magenta', hex: '#FF00FF' },
-  { name: 'Cyan', hex: '#00FFFF' },
-  { name: 'Violet', hex: '#7F00FF' },
-  { name: 'Indigo', hex: '#4B0082' },
-  { name: 'Maroon', hex: '#800000' },
-  { name: 'Gold', hex: '#FFD700' },
-  { name: 'Lime', hex: '#32CD32' },
-  { name: 'Lavender', hex: '#E6E6FA' },
-  { name: 'Gray', hex: '#808080' },
-  { name: 'Black', hex: '#000000' },
-  { name: 'White', hex: '#FFFFFF' },
-];
-
 function clamp01(value) {
   return Math.max(0, Math.min(1, value));
-}
-
-function toLinear(v) {
-  return Math.pow(v / 255, 2.2);
-}
-
-function fromLinear(v) {
-  return Math.round(Math.pow(clamp01(v), 1 / 2.2) * 255);
 }
 
 function normalizeHex(hex) {
@@ -79,136 +35,287 @@ export function rgbToHex({ r, g, b }) {
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
 }
 
-/**
- * Trilinear interpolation on RYB anchor cube.
- */
-export function rybToRgb(ryb) {
-  const [rr, yy, bb] = ryb.map(clamp01);
-  let sumWeight = 0;
-  let r = 0;
-  let g = 0;
-  let b = 0;
+/* -------------------------------------------------------------------------------------------
+ * Painter's-wheel mixing model
+ *
+ * A screen mixes light: blue + yellow averages to gray. Paint does not: blue + yellow gives
+ * green, because on the painter's (red–yellow–blue) wheel green sits between them.
+ *
+ * To imitate that, every color is split into three parts:
+ *   - its hue, placed on the painter's wheel instead of the screen's red–green–blue wheel
+ *   - how much white it contains (its lowest channel)
+ *   - how bright it is (its highest channel)
+ * Hues are mixed around the painter's wheel, white is averaged, and brightness is taken from
+ * the ordinary screen blend, so two strong colors that share little light come out deeper,
+ * the way two paints do. Hues that sit opposite each other (complements) cancel towards a
+ * muddy brown or gray.
+ *
+ * This is a model, not a measurement: real pigments differ in strength and undertone.
+ * ----------------------------------------------------------------------------------------- */
 
-  for (const anchor of RYB_ANCHORS) {
-    const [ar, ay, ab] = anchor.ryb;
-    const w =
-      (ar ? rr : 1 - rr) *
-      (ay ? yy : 1 - yy) *
-      (ab ? bb : 1 - bb);
-    sumWeight += w;
-    r += anchor.rgb[0] * w;
-    g += anchor.rgb[1] * w;
-    b += anchor.rgb[2] * w;
-  }
+/** [screen (RGB) hue, painter's (RYB) hue] pairs: red, orange, yellow, green, blue, purple, red. */
+const HUE_ANCHORS = [
+  [0, 0],
+  [30, 60],
+  [60, 120],
+  [120, 180],
+  [240, 240],
+  [300, 300],
+  [360, 360],
+];
 
-  if (sumWeight === 0) return { r: 0, g: 0, b: 0 };
-  return {
-    r: Math.round(r / sumWeight),
-    g: Math.round(g / sumWeight),
-    b: Math.round(b / sumWeight),
-  };
+/** Mud = dull orange: screen hue 30°, 72% of the blend's brightness, mostly gray. */
+const MUD_HUE = 30;
+const MUD_BRIGHTNESS = 0.72;
+const MUD_GRAYNESS = 0.62;
+
+function wrapHue(h) {
+  return ((h % 360) + 360) % 360;
 }
 
-/**
- * Approximate inverse mapping from RGB to RYB by searching cube.
- * Fast enough for instant UI updates at this scale.
- */
-export function rgbToRyb(rgb) {
-  const target = [rgb.r, rgb.g, rgb.b];
-  let best = { ryb: [0, 0, 0], dist: Number.POSITIVE_INFINITY };
-  const steps = [0, 0.5, 1];
-
-  for (const r of steps) {
-    for (const y of steps) {
-      for (const b of steps) {
-        const candidate = rybToRgb([r, y, b]);
-        const dist =
-          (candidate.r - target[0]) ** 2 +
-          (candidate.g - target[1]) ** 2 +
-          (candidate.b - target[2]) ** 2;
-        if (dist < best.dist) best = { ryb: [r, y, b], dist };
-      }
+function mapHue(h, fromIndex, toIndex) {
+  const hue = wrapHue(h);
+  for (let i = 0; i < HUE_ANCHORS.length - 1; i += 1) {
+    const from0 = HUE_ANCHORS[i][fromIndex];
+    const from1 = HUE_ANCHORS[i + 1][fromIndex];
+    if (hue >= from0 && hue <= from1) {
+      const to0 = HUE_ANCHORS[i][toIndex];
+      const to1 = HUE_ANCHORS[i + 1][toIndex];
+      return to0 + ((hue - from0) / (from1 - from0)) * (to1 - to0);
     }
   }
+  return hue;
+}
 
-  let [cr, cy, cb] = best.ryb;
-  const deltas = [0.25, 0.125, 0.0625, 0.03125];
-  for (const delta of deltas) {
-    let improved = true;
-    while (improved) {
-      improved = false;
-      const neighbors = [
-        [cr + delta, cy, cb],
-        [cr - delta, cy, cb],
-        [cr, cy + delta, cb],
-        [cr, cy - delta, cb],
-        [cr, cy, cb + delta],
-        [cr, cy, cb - delta],
-      ];
+export function rgbHueToRybHue(h) {
+  return wrapHue(mapHue(h, 0, 1));
+}
 
-      for (const [nr, ny, nb] of neighbors) {
-        const candidateRyb = [clamp01(nr), clamp01(ny), clamp01(nb)];
-        const candidateRgb = rybToRgb(candidateRyb);
-        const dist =
-          (candidateRgb.r - target[0]) ** 2 +
-          (candidateRgb.g - target[1]) ** 2 +
-          (candidateRgb.b - target[2]) ** 2;
-        if (dist + 0.0001 < best.dist) {
-          best = { ryb: candidateRyb, dist };
-          [cr, cy, cb] = candidateRyb;
-          improved = true;
-        }
-      }
+export function rybHueToRgbHue(h) {
+  return wrapHue(mapHue(h, 1, 0));
+}
+
+/** Split a color into screen hue (null for grays), highest channel and lowest channel (0–1). */
+function decompose({ r, g, b }) {
+  const rn = r / 255;
+  const gn = g / 255;
+  const bn = b / 255;
+  const max = Math.max(rn, gn, bn);
+  const min = Math.min(rn, gn, bn);
+  const chroma = max - min;
+  let hue = null;
+  if (chroma > 0) {
+    if (max === rn) hue = 60 * (((gn - bn) / chroma) % 6);
+    else if (max === gn) hue = 60 * ((bn - rn) / chroma + 2);
+    else hue = 60 * ((rn - gn) / chroma + 4);
+    hue = wrapHue(hue);
+  }
+  return { hue, max, min, chroma };
+}
+
+/** Rebuild a color from screen hue, highest channel and lowest channel (0–1). */
+function compose(hue, max, min) {
+  const chroma = max - min;
+  if (hue === null || chroma <= 0) {
+    const v = Math.round(max * 255 + 1e-6);
+    return { r: v, g: v, b: v };
+  }
+  const h = wrapHue(hue) / 60;
+  const x = chroma * (1 - Math.abs((h % 2) - 1));
+  let rgb;
+  if (h < 1) rgb = [chroma, x, 0];
+  else if (h < 2) rgb = [x, chroma, 0];
+  else if (h < 3) rgb = [0, chroma, x];
+  else if (h < 4) rgb = [0, x, chroma];
+  else if (h < 5) rgb = [x, 0, chroma];
+  else rgb = [chroma, 0, x];
+  // The tiny nudge keeps exact halves (e.g. 25.5) rounding the same way as the screen blend.
+  const to255 = (v) => Math.round((v + min) * 255 + 1e-6);
+  return { r: to255(rgb[0]), g: to255(rgb[1]), b: to255(rgb[2]) };
+}
+
+function hueDistance(a, b) {
+  const d = Math.abs(wrapHue(a) - wrapHue(b));
+  return Math.min(d, 360 - d);
+}
+
+/**
+ * Ordinary screen blend: each channel averaged in sRGB.
+ * Same result as CSS `color-mix(in srgb, hex1, hex2 <share2>%)`.
+ * @param {string} hex1
+ * @param {string} hex2
+ * @param {number} [share2] share of the second color, 0–1
+ */
+export function mixHexColorsScreen(hex1, hex2, share2 = 0.5) {
+  const t = clamp01(share2);
+  const c1 = hexToRgb(hex1);
+  const c2 = hexToRgb(hex2);
+  const rgb = {
+    r: Math.round(c1.r * (1 - t) + c2.r * t + 1e-6),
+    g: Math.round(c1.g * (1 - t) + c2.g * t + 1e-6),
+    b: Math.round(c1.b * (1 - t) + c2.b * t + 1e-6),
+  };
+  return { hex: rgbToHex(rgb), rgb };
+}
+
+/**
+ * Paint-style mix on the painter's (RYB) wheel.
+ * @param {string} hex1
+ * @param {string} hex2
+ * @param {number} [share2] share of the second color, 0–1 (0.5 = equal parts)
+ */
+export function mixHexColorsRyb(hex1, hex2, share2 = 0.5) {
+  const t = clamp01(share2);
+  const c1 = hexToRgb(hex1);
+  const c2 = hexToRgb(hex2);
+  const a = decompose(c1);
+  const b = decompose(c2);
+
+  // Brightness comes from the screen blend, white content is averaged.
+  const value = Math.max(
+    (c1.r * (1 - t) + c2.r * t) / 255,
+    (c1.g * (1 - t) + c2.g * t) / 255,
+    (c1.b * (1 - t) + c2.b * t) / 255
+  );
+  const white = a.min * (1 - t) + b.min * t;
+
+  // Hue: travel around the painter's wheel, weighted by how much color each side brings.
+  const pullA = a.chroma * (1 - t);
+  const pullB = b.chroma * t;
+  let paintHue = null;
+  let cancel = 0;
+  if (pullA > 0 && pullB > 0) {
+    const hueA = rgbHueToRybHue(a.hue);
+    const hueB = rgbHueToRybHue(b.hue);
+    const shareB = pullB / (pullA + pullB);
+    let delta = hueB - hueA;
+    if (delta > 180) delta -= 360;
+    if (delta < -180) delta += 360;
+    if (Math.abs(Math.abs(delta) - 180) < 1e-6) {
+      // Exact complements: both ways round are equally short. Go through the warm side,
+      // because paint complements mix to browns (dark oranges), not to greens.
+      const warmUp = hueDistance(hueA + 90, 60) <= hueDistance(hueA - 90, 60);
+      delta = warmUp ? 180 : -180;
     }
+    paintHue = wrapHue(hueA + delta * shareB);
+
+    // Opposite hues neutralise each other. Nothing is lost up to 120° apart (primaries make
+    // clean secondaries); the effect is complete at 180° and strongest at equal pull.
+    const s = clamp01((Math.abs(delta) - 120) / 60);
+    cancel = s * s * (3 - 2 * s) * 4 * shareB * (1 - shareB);
+  } else if (pullA > 0) {
+    paintHue = rgbHueToRybHue(a.hue);
+  } else if (pullB > 0) {
+    paintHue = rgbHueToRybHue(b.hue);
   }
 
-  return { r: cr, y: cy, b: cb };
+  let rgb = compose(paintHue === null ? null : rybHueToRgbHue(paintHue), value, white);
+
+  if (cancel > 0) {
+    // What complements cancel into is not a clean gray but "mud": a darker, dull, warm
+    // neutral (a brown), which keeps whatever white the two colors contained.
+    const mudMax = white + (value - white) * MUD_BRIGHTNESS;
+    const mudMin = white + (mudMax - white) * MUD_GRAYNESS;
+    const mud = compose(MUD_HUE, mudMax, mudMin);
+    rgb = {
+      r: Math.round(rgb.r * (1 - cancel) + mud.r * cancel),
+      g: Math.round(rgb.g * (1 - cancel) + mud.g * cancel),
+      b: Math.round(rgb.b * (1 - cancel) + mud.b * cancel),
+    };
+  }
+
+  return { hex: rgbToHex(rgb), rgb };
 }
 
-export function mixHexColorsRyb(hex1, hex2) {
-  const rgb1 = hexToRgb(hex1);
-  const rgb2 = hexToRgb(hex2);
-
-  const ryb1 = rgbToRyb(rgb1);
-  const ryb2 = rgbToRyb(rgb2);
-  const mixedRyb = [
-    (ryb1.r + ryb2.r) / 2,
-    (ryb1.y + ryb2.y) / 2,
-    (ryb1.b + ryb2.b) / 2,
-  ];
-
-  // Pigment-style darkness behavior via linear-space blending
-  const mixedRgbByRyb = rybToRgb(mixedRyb);
-  const blended = {
-    r: fromLinear((toLinear(rgb1.r) + toLinear(rgb2.r) + toLinear(mixedRgbByRyb.r)) / 3),
-    g: fromLinear((toLinear(rgb1.g) + toLinear(rgb2.g) + toLinear(mixedRgbByRyb.g)) / 3),
-    b: fromLinear((toLinear(rgb1.b) + toLinear(rgb2.b) + toLinear(mixedRgbByRyb.b)) / 3),
-  };
-
-  const hex = rgbToHex(blended);
-  return {
-    hex,
-    rgb: blended,
-    ryb: { r: mixedRyb[0], y: mixedRyb[1], b: mixedRyb[2] },
-  };
-}
-
+/**
+ * Everyday name for a color, using the painter's vocabulary (red-orange, blue-green, brown…).
+ * Based on hue, lightness and saturation rather than distance to a short list of swatches,
+ * so a pale red is called pink and a dark orange is called brown.
+ */
 export function getClosestNamedColor(hex) {
-  const target = hexToRgb(hex);
-  let best = null;
+  const { hue, max, min, chroma } = decompose(hexToRgb(hex));
+  const light = (max + min) / 2; // 0 = black, 1 = white
+  const purity = max === 0 ? 0 : chroma / max; // 0 = gray, 1 = pure color
 
-  for (const color of NAMED_COLORS) {
-    const sample = hexToRgb(color.hex);
-    const dist =
-      (target.r - sample.r) ** 2 +
-      (target.g - sample.g) ** 2 +
-      (target.b - sample.b) ** 2;
-    if (!best || dist < best.dist) {
-      best = { ...color, dist };
-    }
+  if (hue === null || chroma < 0.06 || (purity < 0.15 && light <= 0.85)) {
+    if (light < 0.12) return 'Black';
+    if (light > 0.93) return 'White';
+    if (light < 0.35) return 'Dark Gray';
+    if (light > 0.7) return 'Light Gray';
+    return 'Gray';
   }
 
-  return best?.name || 'Custom Mix';
+  const pale = light > 0.72;
+  const dull = purity < 0.5;
+
+  if (hue < 12 || hue >= 345) {
+    if (light >= 0.65) return 'Pink';
+    if (dull) return max < 0.7 ? 'Brown' : 'Pink';
+    return max < 0.55 ? 'Maroon' : 'Red';
+  }
+  if (hue < 45) {
+    if (pale) return 'Peach';
+    if (max < 0.4) return 'Dark Brown';
+    if (max < 0.68) return 'Brown';
+    if (dull) return 'Tan';
+    if (hue < 22) return 'Red-Orange';
+    return hue < 37 ? 'Orange' : 'Yellow-Orange';
+  }
+  if (hue < 70) {
+    if (pale) return 'Light Yellow';
+    if (max < 0.65) return 'Olive';
+    return dull ? 'Tan' : 'Yellow';
+  }
+  if (hue < 100) {
+    if (max < 0.5) return 'Olive Green';
+    return pale ? 'Light Green' : 'Yellow-Green';
+  }
+  if (hue < 160) {
+    if (max < 0.35) return 'Dark Green';
+    return pale ? 'Light Green' : 'Green';
+  }
+  if (hue < 195) {
+    if (max < 0.55) return 'Teal';
+    return pale ? 'Light Blue-Green' : 'Blue-Green';
+  }
+  if (hue < 250) {
+    if (max < 0.55) return hue < 215 ? 'Teal' : 'Navy';
+    return pale ? 'Light Blue' : 'Blue';
+  }
+  if (hue < 285) {
+    if (max < 0.45) return 'Dark Purple';
+    return pale ? 'Lavender' : 'Blue-Violet';
+  }
+  // 285–345: purple, through magenta, to crimson
+  if (light >= 0.62) return hue < 315 ? 'Orchid' : 'Pink';
+  if (dull) {
+    if (max < 0.4) return hue < 325 ? 'Dark Purple' : 'Dark Brown';
+    return 'Mauve';
+  }
+  if (max < 0.6) return hue < 325 ? 'Purple' : 'Burgundy';
+  return hue < 325 ? 'Magenta' : 'Crimson';
+}
+
+/**
+ * Rows for a ratio table: the paint-style mix and the plain screen blend at each share.
+ * @param {{ name: string, hex: string }} color1
+ * @param {{ name: string, hex: string }} color2
+ * @param {number[]} sharesOfColor2 e.g. [0.1, 0.2, 0.5] for 90/10, 80/20, 50/50
+ */
+export function buildMixRows(color1, color2, sharesOfColor2) {
+  return sharesOfColor2.map((share2) => {
+    const percent2 = Math.round(share2 * 100);
+    const paint = mixHexColorsRyb(color1.hex, color2.hex, share2);
+    const screen = mixHexColorsScreen(color1.hex, color2.hex, share2);
+    return {
+      share2,
+      ratio: `${100 - percent2}% ${color1.name} + ${percent2}% ${color2.name}`,
+      hex: paint.hex,
+      rgb: paint.rgb,
+      screenHex: screen.hex,
+      family: getClosestNamedColor(paint.hex),
+    };
+  });
 }
 
 export function getColorLabel(hex) {

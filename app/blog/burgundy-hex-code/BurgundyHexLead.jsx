@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { BURGUNDY_SHADES } from './shades';
 
 const copyIcon = (
   <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -57,19 +58,6 @@ function CopyRow({ label, value, mono = true }) {
     </div>
   );
 }
-
-const BURGUNDY_SHADES = [
-  { name: 'Misty rose', hex: '#FFE4E1' },
-  { name: 'Light blush', hex: '#F5C6CB' },
-  { name: 'Dusty rose', hex: '#BC8F8F' },
-  { name: 'Rose red', hex: '#C04060' },
-  { name: 'Burgundy', hex: '#800020' },
-  { name: 'Wine', hex: '#722F37' },
-  { name: 'Maroon', hex: '#800000' },
-  { name: 'Oxblood', hex: '#4A0E0E' },
-  { name: 'Deep wine', hex: '#3D0814' },
-  { name: 'Near-black burgundy', hex: '#1F0A0D' },
-];
 
 export function BurgundyQuickAnswer() {
   return (

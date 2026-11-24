@@ -206,7 +206,7 @@ export default function WcagAccessibleButtonsAndLinksPage() {
                   </div>
                   <p className="mb-6 leading-relaxed">
                     If you must keep a lighter blue, use it only for <strong>large text</strong> (18pt+ regular or 14pt+ bold) where 3:1 applies, or darken one step for inline links. Our{' '}
-                    <InlineTagLink href="/blog/how-to-check-color-contrast-accessibility">WCAG contrast guide</InlineTagLink> explains the AA thresholds in more detail.
+                    <InlineTagLink href="/blog/accessibility-color-contrast-checker">WCAG contrast guide</InlineTagLink> explains the AA thresholds in more detail.
                   </p>
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -382,7 +382,7 @@ export default function WcagAccessibleButtonsAndLinksPage() {
                 <p className="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                   Go deeper on accessibility: read our{' '}
                   <InlineTagLink href="/blog/accessibility-color-contrast-checker">accessibility color contrast checker</InlineTagLink> guide,{' '}
-                  <InlineTagLink href="/blog/how-to-check-color-contrast-accessibility">how to check color contrast</InlineTagLink> walkthrough, and run every pair through our{' '}
+                  <InlineTagLink href="/blog/accessibility-color-contrast-checker">how to check color contrast</InlineTagLink> walkthrough, and run every pair through our{' '}
                   <InlineTagLink href="/tools/contrast-checker">WCAG contrast checker</InlineTagLink>.
                 </p>
 

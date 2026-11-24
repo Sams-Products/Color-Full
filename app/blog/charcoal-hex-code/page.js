@@ -20,8 +20,10 @@ import {
   CharcoalShadesTable,
 } from './CharcoalHexLead';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
+import { CHARCOAL_SHADES } from './shades';
 
-const LAST_MODIFIED = '2026-06-11T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/charcoal-hex-code',
@@ -31,7 +33,7 @@ export const metadata = buildPageMetadata({
   keywords: ['charcoal hex code', 'charcoal hex', '#36454F', 'charcoal shades', 'dark palette', 'RGB', 'HSL', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
-    publishedTime: LAST_MODIFIED,
+    publishedTime: '2026-06-11T00:00:00.000Z',
     modifiedTime: LAST_MODIFIED,
   },
   other: {
@@ -185,7 +187,9 @@ export default function CharcoalHexCodePage() {
             />
             <div className="flex items-center gap-4 text-slate-300 text-sm flex-wrap">
               <AuthorByline />
-              <time dateTime="2026-06-11">June 11, 2026</time>
+              <time dateTime="2026-06-11">Published June 11, 2026</time>
+              <span>•</span>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>6 min read</span>
             </div>
@@ -218,6 +222,14 @@ export default function CharcoalHexCodePage() {
                 </div>
 
                 <CharcoalShadesTable />
+
+                <ShadeAccessibility
+                  title="Charcoal Shades: Contrast Ratios for Text"
+                  colorName="charcoal"
+                  main={{ name: 'charcoal', hex: '#36454F' }}
+                  shades={CHARCOAL_SHADES}
+                  tokenPrefix="charcoal"
+                />
 
                 <PalettePairingsSection
                   title="Charcoal Dark Palette Pairings"

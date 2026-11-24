@@ -20,8 +20,10 @@ import {
   DustyRoseShadesTable,
 } from './DustyRoseHexLead';
 import AuthorByline from '../components/AuthorByline';
+import ShadeAccessibility from '../components/ShadeAccessibility';
+import { DUSTY_ROSE_SHADES } from './shades';
 
-const LAST_MODIFIED = '2026-06-11T00:00:00.000Z';
+const LAST_MODIFIED = '2026-11-10T00:00:00.000Z';
 
 export const metadata = buildPageMetadata({
   path: '/blog/dusty-rose-hex-code',
@@ -31,7 +33,7 @@ export const metadata = buildPageMetadata({
   keywords: ['dusty rose hex code', 'dusty rose hex', '#DCAE96', 'dusty rose shades', 'dusty rose palette', 'RGB', 'HSL', 'Theme & Color'],
   openGraphType: 'article',
   openGraph: {
-    publishedTime: LAST_MODIFIED,
+    publishedTime: '2026-06-11T00:00:00.000Z',
     modifiedTime: LAST_MODIFIED,
   },
   other: {
@@ -185,7 +187,9 @@ export default function DustyRoseHexCodePage() {
             />
             <div className="flex items-center gap-4 text-rose-100 text-sm flex-wrap">
               <AuthorByline />
-              <time dateTime="2026-06-11">June 11, 2026</time>
+              <time dateTime="2026-06-11">Published June 11, 2026</time>
+              <span>•</span>
+              <time dateTime="2026-11-10">Updated November 10, 2026</time>
               <span>•</span>
               <span>7 min read</span>
             </div>
@@ -218,6 +222,14 @@ export default function DustyRoseHexCodePage() {
                 </div>
 
                 <DustyRoseShadesTable />
+
+                <ShadeAccessibility
+                  title="Can You Put Text on Dusty Rose? Contrast by Shade"
+                  colorName="dusty rose"
+                  main={{ name: 'dusty rose', hex: '#DCAE96' }}
+                  shades={DUSTY_ROSE_SHADES}
+                  tokenPrefix="dusty-rose"
+                />
 
                 <PalettePairingsSection
                   title="Dusty Rose Palette Pairings"
@@ -268,7 +280,7 @@ export default function DustyRoseHexCodePage() {
 
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Dusty rose in UI and accessibility</h2>
                   <p className="mb-4">
-                    Dusty rose works for section bands, testimonial cards, and beauty packaging mockups when contrast is verified. Charcoal text (#36454F) on light dusty rows (#F2E0D4) usually passes WCAG AA for body copy; white text on mid-tone #DCAE96 often fails at 14px—use deep dusty (#8F5E52) or navy for buttons instead. Run every pair through the{' '}
+                    Dusty rose works for section bands, testimonial cards, and beauty packaging mockups when contrast is verified. Charcoal text (#36454F) on the palest row (#F2E0D4) scores 7.72:1 and passes WCAG AAA for body copy; white text on mid-tone #DCAE96 scores only 1.99:1 and fails at any size, so use deep dusty (#8F5E52, 5.39:1 with white text) or navy for buttons instead. Run every pair through the{' '}
                     <InlineTagLink href="/tools/contrast-checker">contrast checker</InlineTagLink> before launch.
                   </p>
                   <p className="mb-4">
